@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Andry — the closing 42</title>
-<meta name="description" content="A gap register against the approved 171: the 42 screens Andry points at but never draws.">
+<meta name="description" content="A gap register against the approved 171: the 42 screens the run pointed at but never drew, all now closed.">
 <meta name="color-scheme" content="light dark">
 </head>
 <body>
@@ -186,6 +186,32 @@ tbody td.n{font-weight:650;}
 .tag--d{background:var(--gold-soft);color:var(--gold-ink);}
 .tag--reuse{background:var(--brand-soft-2);color:var(--brand);}
 
+
+/* --- status, added when the register was closed --- */
+.tag--done{background:var(--ok-soft);color:var(--ok);}
+.tag--done::before{border-radius:50%;}
+
+.closed{margin-top:34px;border:1.5px solid var(--ok);border-radius:var(--radius-lg);
+  background:var(--ok-soft);padding:20px 24px;}
+.closed h2{margin:0 0 8px;font-size:16px;font-weight:750;letter-spacing:-.012em;color:var(--ok);
+  display:flex;align-items:center;gap:9px;}
+.closed p{margin:0 0 12px;font-size:14.5px;line-height:1.6;color:var(--ink-2);max-width:70ch;}
+.closed p:last-child{margin-bottom:0;}
+.closed a{font-weight:650;}
+.closed strong{color:var(--ink);font-weight:680;}
+
+.defects{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+.defect{border:1px solid var(--line);border-left:3px solid var(--warn);
+  border-radius:0 var(--radius) var(--radius) 0;background:var(--surface);padding:16px 18px;}
+.defect b{display:block;font-size:14px;font-weight:730;letter-spacing:-.01em;margin-bottom:6px;}
+.defect p{margin:0 0 8px;font-size:13px;line-height:1.55;color:var(--muted);}
+.defect p:last-child{margin-bottom:0;}
+.defect code{font-family:var(--num);font-size:12px;background:var(--surface-3);
+  padding:1px 5px;border-radius:4px;color:var(--ink-2);}
+.defect .fixed{display:inline-flex;align-items:center;gap:6px;font-family:var(--num);font-size:11px;
+  font-weight:650;padding:3px 9px;border-radius:var(--radius-sm);
+  background:var(--ok-soft);color:var(--ok);margin-top:4px;}
+
 .note{margin-top:56px;border-top:2px solid var(--ink);padding-top:26px;}
 .note h2{margin:0 0 12px;font-size:18px;font-weight:750;letter-spacing:-.015em;}
 .note p{margin:0 0 12px;font-size:14.5px;line-height:1.6;color:var(--ink-2);max-width:72ch;}
@@ -196,13 +222,14 @@ tbody td.n{font-weight:650;}
 <div class="doc">
 
 <header class="mast">
-  <p class="eyebrow">Andry &middot; gap register against the approved 171</p>
+  <p class="eyebrow">Andry &middot; gap register against the approved 171 &middot; closed</p>
   <h1>The closing 42<em>screens the run points at but never draws</em></h1>
 
   <p class="dek">Every affordance on all 171 approved plates was read out of the markup and
     checked against the screens that exist. The approved work is not altered here &mdash; this is
     a register of what sits <em>behind</em> it. <strong>42 screens close every dead end</strong>,
-    of which <strong>13 block a journey from completing at all</strong>.</p>
+    of which <strong>13 block a journey from completing at all</strong>. All 42 have since been
+    drawn.</p>
 
   <p class="dek">The onboarding gap you flagged is real and is the first entry: plate <b>#1</b> is
     titled <em>Onboarding, slide 2 of 3</em> and its pager draws three dots, but slides 1 and 3
@@ -220,6 +247,36 @@ tbody td.n{font-weight:650;}
     <div class="countcard countcard--tot"><b>42</b>
       <span>Total to close the run. Falls to <strong>39</strong> if the four legal documents
         share one viewer template.</span></div>
+  </div>
+
+  <div class="closed">
+    <h2><span aria-hidden="true">&#10003;</span> All 42 are drawn</h2>
+    <p>The register is closed. The <strong>13 flow-blockers</strong> are drawn in
+      <a href="../closers/">the thirteen</a>, and the <strong>29 named destinations</strong> in
+      <a href="../closers-2/">the twenty-nine</a> &mdash; both on the Andry design system, with
+      nothing in the approved 171 altered. Every labelled affordance in the run now points at a
+      screen that exists.</p>
+    <p>The counts below are kept as they were found, so the register still reads as the audit that
+      produced them rather than as a summary written afterwards.</p>
+  </div>
+
+  <div class="defects">
+    <div class="defect">
+      <b>The operator consoles had no frame</b>
+      <p>The desktop token block had lost its selector upstream, so it began mid-comment with
+        orphaned declarations. A browser reads those as a rule prelude and consumes until the next
+        brace &mdash; which belongs to <code>.desk</code> &mdash; swallowing the console frame's
+        whole declaration block. All 19 operator plates were rendering with the rail stacked above
+        the main pane.</p>
+      <span class="fixed">Fixed in the stylesheet</span>
+    </div>
+    <div class="defect">
+      <b>The KYC stepper labels collided</b>
+      <p><code>.kyc__l</code> was defined as a 2px connector line, but every stepper in the product
+        puts its step label inside it &mdash; #11, #103 and #132. The text overflowed that box and
+        ran into the heading beneath.</p>
+      <span class="fixed">Fixed in the stylesheet</span>
+    </div>
   </div>
 </header>
 
@@ -271,7 +328,7 @@ tbody td.n{font-weight:650;}
       drawn first impression and no established premise for the two slides that follow.</p>
     <p class="ev"><b>#1</b> is titled <q>Onboarding, slide 2 of 3</q>; its pager renders three
       dots with the second filled.</p>
-    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the thirteen</span><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-02</div><div class="item__b">
@@ -279,7 +336,7 @@ tbody td.n{font-weight:650;}
     <p>The hand-off slide. <q>Next</q> on plate #1 advances to a slide that does not exist, and
       nothing depicts the transition from onboarding into the signed-out market.</p>
     <p class="ev"><b>#1</b> &rarr; <q>Next</q>, with <q>Step 2 of 3</q> stated beneath it.</p>
-    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the thirteen</span><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-03</div><div class="item__b">
@@ -289,7 +346,7 @@ tbody td.n{font-weight:650;}
       so the primary funding path terminates on a promise.</p>
     <p class="ev"><b>#18</b> <q>Add funds</q> &rarr; <q>Send to the account number shown on the
       next screen. Clears in 2 to 10 minutes.</q></p>
-    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the thirteen</span><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-04</div><div class="item__b">
@@ -298,7 +355,7 @@ tbody td.n{font-weight:650;}
       product asserts a screen the user has supposedly already completed and which nobody has
       designed.</p>
     <p class="ev"><b>#11</b> stepper: <q>Identity &middot; Done</q>.</p>
-    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the thirteen</span><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-05</div><div class="item__b">
@@ -307,7 +364,7 @@ tbody td.n{font-weight:650;}
       purchase, which the plate states explicitly.</p>
     <p class="ev"><b>#11</b> stepper: <q>Bank &middot; Pending</q>; body: <q>This is the only step
       left before your first purchase.</q></p>
-    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the thirteen</span><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-06</div><div class="item__b">
@@ -316,7 +373,7 @@ tbody td.n{font-weight:650;}
       link is sent to, so the recovery journey has no entrance.</p>
     <p class="ev"><b>#8</b> &rarr; <q>Forgot password?</q>; <b>#9</b> is <q>Reset password &mdash;
       link sent</q> and offers <q>Use a different email address</q>, which has no target.</p>
-    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the thirteen</span><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-07</div><div class="item__b">
@@ -325,7 +382,7 @@ tbody td.n{font-weight:650;}
       password rules the create-account plate enforces have no second home.</p>
     <p class="ev"><b>#9</b> &rarr; <q>Open your email app</q> and <q>Resend link</q> both assume
       a destination behind the link.</p>
-    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the thirteen</span><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-08</div><div class="item__b">
@@ -335,7 +392,7 @@ tbody td.n{font-weight:650;}
       plate #90 exists to enforce.</p>
     <p class="ev"><b>#19</b> &rarr; <q>Add a bank account</q>; <b>#87</b> &rarr; <q>Change</q>;
       <b>#90</b> &rarr; <q>Add a different account</q>.</p>
-    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">reused by B and C</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the thirteen</span><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">reused by B and C</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-09</div><div class="item__b">
@@ -344,7 +401,7 @@ tbody td.n{font-weight:650;}
       add one; the capture screen does not exist, and the failed-payment plate routes here too.</p>
     <p class="ev"><b>#19</b> &rarr; <q>Add a card</q>; <b>#20</b> &rarr; <q>Add a different
       card</q>.</p>
-    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the thirteen</span><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-10</div><div class="item__b">
@@ -353,7 +410,7 @@ tbody td.n{font-weight:650;}
       checkbox and the re-consent plate both link to it.</p>
     <p class="ev"><b>#6</b>, <b>#7</b> &rarr; <q>Terms of Service</q>; <b>#98</b> &rarr; <q>Read
       terms of service in full</q>.</p>
-    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">one viewer, four documents</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the thirteen</span><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">one viewer, four documents</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-11</div><div class="item__b">
@@ -362,7 +419,7 @@ tbody td.n{font-weight:650;}
       hand over an identity document. The absence is most acute exactly there.</p>
     <p class="ev"><b>#6</b>, <b>#7</b> &rarr; <q>Privacy Policy</q>; <b>#11</b>, <b>#19</b> &rarr;
       <q>How we handle your data</q>; <b>#98</b> &rarr; <q>Read privacy notice in full</q>.</p>
-    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">one viewer, four documents</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the thirteen</span><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">one viewer, four documents</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-12</div><div class="item__b">
@@ -371,7 +428,7 @@ tbody td.n{font-weight:650;}
       policy has no plate, so the gate asks for acceptance of something unreadable.</p>
     <p class="ev"><b>#13</b> &rarr; <q>Read the full policy</q>; <b>#98</b> &rarr; <q>Read risk
       disclosure in full</q>.</p>
-    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">one viewer, four documents</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the thirteen</span><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">one viewer, four documents</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-13</div><div class="item__b">
@@ -380,7 +437,7 @@ tbody td.n{font-weight:650;}
       defines what a unit actually is.</p>
     <p class="ev"><b>#31</b> <q>Buy &mdash; confirm</q> &rarr; <q>Read the ownership
       agreement</q>.</p>
-    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">one viewer, four documents</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the thirteen</span><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">one viewer, four documents</span></div>
   </div></div>
 
   <h3>Tier 2 &middot; Named destination missing <span class="n">29 screens</span></h3>
@@ -394,14 +451,14 @@ tbody td.n{font-weight:650;}
     <p class="ev"><b>#12</b> &rarr; <q>Talk to a reviewer &middot; Mon&ndash;Sat, 08:00&ndash;19:00
       WAT &middot; usually answers in 4 minutes</q>; <b>#20</b> &rarr; <q>Talk to someone about
       this payment</q>; <b>#44</b> &rarr; <q>Contact support</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-15</div><div class="item__b">
     <h4>Help &mdash; all articles</h4>
     <p>The support hub shows four articles and links to sixty-two. The index does not exist.</p>
     <p class="ev"><b>#77</b> &rarr; <q>All 62</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-16</div><div class="item__b">
@@ -411,14 +468,14 @@ tbody td.n{font-weight:650;}
     <p class="ev"><b>#77</b> rows &rarr; <q>Proof of life is late</q>, <q>I cannot withdraw</q>,
       <q>KYC was rejected</q>, <q>How maturity works</q>; <b>#12</b> &rarr; <q>Which documents are
       accepted</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-17</div><div class="item__b">
     <h4>Support &mdash; my requests</h4>
     <p>The hub links to a history of the user's own contacts with support. Nothing depicts it.</p>
     <p class="ev"><b>#77</b> &rarr; <q>History</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-18</div><div class="item__b">
@@ -427,7 +484,7 @@ tbody td.n{font-weight:650;}
       plates exist, but the hub that reaches them, and the device list, do not.</p>
     <p class="ev"><b>#92</b> &rarr; <q>Security &middot; Password, sign-in devices &middot; 2FA
       on</q>. The phrase appears nowhere else in the run.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-19</div><div class="item__b">
@@ -436,7 +493,7 @@ tbody td.n{font-weight:650;}
       on the rate this screen would govern.</p>
     <p class="ev"><b>#92</b> &rarr; <q>Currency &amp; region &middot; Naira (&#8358;) &middot;
       Nigeria &middot; English</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-20</div><div class="item__b">
@@ -444,7 +501,7 @@ tbody td.n{font-weight:650;}
     <p>The rewards plate promises a dated ledger of every credit and redemption.</p>
     <p class="ev"><b>#95</b> &rarr; <q>Points statement &middot; Every credit and redemption,
       dated</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-21</div><div class="item__b">
@@ -452,14 +509,14 @@ tbody td.n{font-weight:650;}
     <p>Four priced redemption buttons with no confirmation step between the tap and the spend.</p>
     <p class="ev"><b>#95</b> &rarr; <q>150 pts</q>, <q>1,000 pts</q>, <q>2,500 pts</q>,
       <q>5,000 pts</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-22</div><div class="item__b">
     <h4>Referrals &mdash; all</h4>
     <p>The referral plate summarises invitees and links to the full list.</p>
     <p class="ev"><b>#94</b> &rarr; <q>View all</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-23</div><div class="item__b">
@@ -468,7 +525,7 @@ tbody td.n{font-weight:650;}
       document is a core trust artefact and has no plate.</p>
     <p class="ev"><b>#26</b> &rarr; <q>View full pedigree certificate</q>. The phrase appears
       nowhere else in the run.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-24</div><div class="item__b">
@@ -476,7 +533,7 @@ tbody td.n{font-weight:650;}
     <p>The assign-supervisor plate shows four candidates and links to twelve. The browsable
       directory does not exist &mdash; the hosts directory at #71 is a different list.</p>
     <p class="ev"><b>#67</b> &rarr; <q>See all 12</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-25</div><div class="item__b">
@@ -484,7 +541,7 @@ tbody td.n{font-weight:650;}
     <p>A supervisor's profile cites their filing count and rating count as links. Both are the
       evidence an owner would want before assigning an animal, and neither opens.</p>
     <p class="ev"><b>#68</b> &rarr; <q>All 148</q> and <q>All 214</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-26</div><div class="item__b">
@@ -492,7 +549,7 @@ tbody td.n{font-weight:650;}
     <p>The offers plate offers to track a transfer in progress. The owner-side tracking view is
       undrawn; the host-side confirmation plates are a different actor's screens.</p>
     <p class="ev"><b>#81</b> &rarr; <q>Track unit transfer</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-27</div><div class="item__b">
@@ -501,7 +558,7 @@ tbody td.n{font-weight:650;}
       are offered.</p>
     <p class="ev"><b>#124</b> &rarr; <q>States &middot; Oyo, Osun, Kwara &middot; 2 host ranches,
       61 animals</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-28</div><div class="item__b">
@@ -509,7 +566,7 @@ tbody td.n{font-weight:650;}
     <p>Named twice, including as an onboarding task while an application is under review.</p>
     <p class="ev"><b>#124</b> &rarr; <q>Payout &middot; GTBank &lowast;&lowast;&lowast;&lowast;4419
       &middot; paid on the 7th</q>; <b>#104</b> &rarr; <q>Add the account we should pay into</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span><span class="tag tag--reuse">may share C-08</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span><span class="tag tag--reuse">may share C-08</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-29</div><div class="item__b">
@@ -518,7 +575,7 @@ tbody td.n{font-weight:650;}
       inspect and control that exposure.</p>
     <p class="ev"><b>#124</b> &rarr; <q>Privacy and what owners see &middot; Name, licence
       reference, states and filing record</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-30</div><div class="item__b">
@@ -526,7 +583,7 @@ tbody td.n{font-weight:650;}
     <p>Offered to applicants waiting on review, and the safest way to learn the filing standard
       before a real record counts against them.</p>
     <p class="ev"><b>#104</b> &rarr; <q>Practise a record &mdash; nothing is filed</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-31</div><div class="item__b">
@@ -535,14 +592,14 @@ tbody td.n{font-weight:650;}
       vet. It is the welfare path and it opens onto nothing.</p>
     <p class="ev"><b>#111</b> &rarr; <q>Something is wrong with this animal &middot; Raises an
       issue and calls the vet before you file</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-32</div><div class="item__b">
     <h4>Earnings statement &mdash; supervisor</h4>
     <p>The earnings plate summarises and links to the full history of sixty-one entries.</p>
     <p class="ev"><b>#121</b> &rarr; <q>All 61</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-33</div><div class="item__b">
@@ -551,7 +608,7 @@ tbody td.n{font-weight:650;}
       plate at #51 does not carry these controls.</p>
     <p class="ev"><b>#124</b> &rarr; <q>Notifications &middot; Visit reminders on, owner messages
       on, marketing off</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-34</div><div class="item__b">
@@ -560,7 +617,7 @@ tbody td.n{font-weight:650;}
       #138.</p>
     <p class="ev"><b>#148</b> &rarr; <q>Capacity and species &middot; 1,600 places &middot;
       cattle, sheep, goats</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-35</div><div class="item__b">
@@ -569,7 +626,7 @@ tbody td.n{font-weight:650;}
       the escrow confirmations at #139 to #142.</p>
     <p class="ev"><b>#148</b> &rarr; <q>Staff and gate access &middot; 3 people &middot; 1 can
       confirm &middot; 3 hold tag readers</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-36</div><div class="item__b">
@@ -578,7 +635,7 @@ tbody td.n{font-weight:650;}
       owner form.</p>
     <p class="ev"><b>#148</b> &rarr; <q>Payout account &middot; Zenith Bank &bull;&bull;&bull;&bull;8814
       &middot; Ayalar Ranch Limited</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span><span class="tag tag--reuse">may share C-08</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span><span class="tag tag--reuse">may share C-08</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-37</div><div class="item__b">
@@ -587,14 +644,14 @@ tbody td.n{font-weight:650;}
       report plate exists, at #25, and it is the owner-facing view.</p>
     <p class="ev"><b>#147</b> &rarr; <q>All inspection reports &middot; 4 reports since Feb
       2025</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-38</div><div class="item__b">
     <h4>Earnings statement &mdash; host</h4>
     <p>Same shape as the supervisor's, on the host's own figures.</p>
     <p class="ev"><b>#144</b> &rarr; <q>All 37</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-39</div><div class="item__b">
@@ -603,7 +660,7 @@ tbody td.n{font-weight:650;}
       policy worth showing on a screen.</p>
     <p class="ev"><b>#148</b> &rarr; <q>Notifications &middot; Escrow, arrivals and supervisor
       visits are always on</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-40</div><div class="item__b">
@@ -611,7 +668,7 @@ tbody td.n{font-weight:650;}
     <p>The roles console can grant and revoke but has no screen for bringing a new case-worker
       into the estate.</p>
     <p class="ev"><b>#171</b> &rarr; <q>Add an operator</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--d">track D</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--d">track D</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-41</div><div class="item__b">
@@ -620,7 +677,7 @@ tbody td.n{font-weight:650;}
       editor. This is the screen where a conflict flagged on #171 would actually be resolved.</p>
     <p class="ev"><b>#171</b> &rarr; <q>Add a function</q>, <q>Grant</q>, <q>Split the grant</q>,
       <q>Remove approve &mdash; resolve the conflict</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--d">track D</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--d">track D</span></div>
   </div></div>
 
   <div class="item"><div class="item__id">C-42</div><div class="item__b">
@@ -628,7 +685,7 @@ tbody td.n{font-weight:650;}
     <p>Two controls compose an evidence bundle for a regulator or a court. What gets included, and
       over what range, is not shown anywhere.</p>
     <p class="ev"><b>#170</b> &rarr; <q>Bundle these 15 entries</q> and <q>Export a bundle</q>.</p>
-    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--d">track D</span></div>
+    <div class="tags"><span class="tag tag--done">Drawn &middot; the twenty-nine</span><span class="tag tag--t2">named destination</span><span class="tag tag--d">track D</span></div>
   </div></div>
 </section>
 
@@ -667,9 +724,12 @@ tbody td.n{font-weight:650;}
     personal and paid on a fixed date, and the ranch's is a company account. If the name-match rule
     at #90 generalises, this is one screen and the total falls to 40 &mdash; or 37 alongside the
     document viewer. If it does not, three plates are the honest answer.</p>
-  <p>Nothing in the approved 171 was modified, moved or re-rendered to produce this. The register
-    was built by parsing the published run, and the affordance counts were verified against the
-    live DOM at <b>adextetoo.github.io/andry-approved-run</b>: 1,296 buttons, 35 links, 171 plates.</p>
+  <p>Nothing in the approved 171 was modified, moved or re-rendered to produce this register. It was
+    built by parsing the published run, and the affordance counts were verified against the live DOM
+    at <b>adextetoo.github.io/andry-approved-run</b>: 1,296 buttons, 35 links, 171 plates.</p>
+  <p>Two stylesheet defects surfaced later, while the 42 were being drawn, and both are now fixed
+    &mdash; in the stylesheet, never in a plate. They are summarised at the top of this page and
+    documented in <b>tools/stylesheet_repairs.py</b>.</p>
 </div>
 
 </div>

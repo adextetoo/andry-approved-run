@@ -13,7 +13,7 @@ is fully self-contained (no scripts, no network requests, no external fonts or i
 | | What it is | Screens |
 | --- | --- | ---: |
 | [`/`](index.html) | **The approved run** — every screen tagged `Approved in review` in either source review | 171 |
-| [`/audit/`](audit/index.html) | **The closing 42** — a register of the screens the run points at but never draws | 42 |
+| [`/audit/`](audit/index.html) | **The closing 42** — the register of screens the run pointed at but never drew, all now closed | 42 |
 | [`/closers/`](closers/index.html) | **The thirteen** — the flow-blocking gaps, drawn as plates | 13 |
 | [`/closers-2/`](closers-2/index.html) | **The twenty-nine** — the named destinations, drawn. Closes the register | 29 |
 
@@ -146,6 +146,7 @@ tools/sections.py             maps every screen to its track and stage
 tools/build.py                assembles the merged run
 tools/affordances.py          inventories every affordance, per screen
 tools/getframe.py             pulls a plate's markup out of the run by number
+tools/update_closing.py       marks the register closed once the 42 were drawn
 tools/plates/plates_a.py      closers C-01 to C-07
 tools/plates/plates_b.py      closers C-08 to C-13
 tools/plates/build_closers.py assembles the thirteen
