@@ -1,0 +1,11 @@
+# the private source artifacts the merge was built from
+artifact-bcb571a9-*.html
+artifact-de881528-*.html
+parsed.json
+sections.json
+preview.html
+
+# local scratch
+*.png
+__pycache__/
+*.pyc
