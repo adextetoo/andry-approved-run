@@ -7,36 +7,9 @@ run = io.open('run.html', encoding='utf-8').read()
 sprite = re.search(r'(<svg width="0" height="0".*?</svg>)', run, re.S).group(1)
 css = re.findall(r'<style>(.*?)</style>', run, re.S)[0]
 
-# ---------------------------------------------------------------------------
-# Repair, not addition.
-#
-# The desktop token block in the inherited stylesheet lost its selector and its
-# first two declarations somewhere upstream. What survives starts mid-comment:
-#
-#     /* queue row with two lines */
-#       --d-rail:236px;
-#       ...
-#     }
-#
-# At top level a browser reads those orphaned declarations as the prelude of a
-# qualified rule and keeps consuming until the next "{" - which belongs to
-# ".desk". The desk frame's whole declaration block is therefore swallowed as
-# the body of an invalid selector and dropped. Exactly one rule is lost, and it
-# is the one that makes a console 1440 x 900.
-#
-# This affects the approved run too: every one of its 19 operator plates renders
-# with the rail stacked above the main pane instead of beside it, at whatever
-# height the content happens to be. Fixing that needs this stylesheet repair
-# rather than a plate edit, so nothing approved is touched here.
-#
-# The repair restores the selector and the two lost tokens. No new rule is
-# introduced - it only makes the existing .desk rule reachable.
-ORPHAN = '/* queue row with two lines */\n  --d-rail:236px;'
-REPAIR = (':root{\n  --d-row:44px;          /* data row height */\n'
-          '  --d-row-lg:56px;       /* queue row with two lines */\n  --d-rail:236px;')
-assert css.count(ORPHAN) == 1, 'stylesheet no longer matches the known defect'
-assert not re.search(r'(?m)^\.desk\{', css) or True
-css = css.replace(ORPHAN, REPAIR)
+# The inherited stylesheet carries two defects; both are corrected in one place.
+import stylesheet_repairs
+css = stylesheet_repairs.repair(css)
 
 PLATES = plates_c.PLATES + plates_d.PLATES + plates_e.PLATES
 assert len(PLATES) == 29, len(PLATES)
@@ -134,15 +107,13 @@ w('''<header class="t2-mast">
     approved 171 altered. With the thirteen already drawn, this closes the register: <strong>42 of
     42</strong>, and every affordance in the run now points at a screen that exists.</p>
   <p class="t2-dek"><strong>A stylesheet defect surfaced while drawing the three consoles, and it
-    affects the approved run.</strong> The desktop token block lost its selector upstream, so it
-    begins mid-comment with orphaned declarations. A browser reads those as the prelude of a rule
-    and keeps consuming until the next brace &mdash; which belongs to <span class="mono">.desk</span>
-    &mdash; so the console frame's entire declaration block is swallowed and dropped. Exactly one
-    rule is lost, and it is the one that makes a console 1440 &times; 900. Every one of the
-    approved run's 19 operator plates is therefore rendering with its rail stacked above the main
-    pane, at whatever height the content happens to reach. This document restores the selector and
-    the two lost tokens so the existing rule is reachable again; no new rule was introduced, and
-    the fix belongs in the stylesheet rather than in any plate.</p>
+    has since been fixed.</strong> The desktop token block had lost its selector upstream, so it
+    began mid-comment with orphaned declarations. A browser read those as the prelude of a rule
+    and consumed until the next brace &mdash; which belongs to <span class="mono">.desk</span>
+    &mdash; swallowing the console frame's whole declaration block. Exactly one rule was lost, and
+    it was the one that makes a console 1440 &times; 900, so all 19 operator plates in the run
+    were rendering with the rail stacked above the main pane. The selector and the two lost tokens
+    are restored, in the stylesheet rather than in any plate.</p>
   <div class="tally">
     <div class="tallycard"><b>13</b><span>Owner<i>Support, settings, records</i></span></div>
     <div class="tallycard"><b>7</b><span>Supervisor<i>Coverage, pay, privacy, welfare</i></span></div>

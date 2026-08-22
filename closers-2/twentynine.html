@@ -503,8 +503,14 @@ img{display:block;max-width:100%;}
   background:var(--surface-3);color:var(--muted);font-size:12px;font-weight:700;font-family:var(--num);}
 .kyc__s.is-done .kyc__d{background:var(--ok);color:#fff;}
 .kyc__s.is-now .kyc__d{background:var(--brand);color:var(--on-brand);}
-.kyc__l{flex:1;height:2px;background:var(--line);}
-.kyc__s.is-done .kyc__l{background:var(--ok);}
+/* --- .kyc__l carries the step label in every stepper in the product, so
+       it is typeset as a label. It was a 2px connector line, which left
+       the text overflowing and colliding with the heading beneath. --- */
+.kyc__l{flex:1;min-width:0;background:none;
+  font-size:11.5px;line-height:1.2;letter-spacing:-.005em;font-weight:640;
+  color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.kyc__s{min-width:0;}
+.kyc__s.is-done .kyc__l{background:none;color:var(--ok);}
 
 /* misc */
 .hr{height:1px;background:var(--line);border:0;margin:16px 0;}
@@ -582,6 +588,9 @@ table.mx code{font-family:var(--num);font-size:12px;background:var(--surface-3);
 .callout-doc p:last-child{margin-bottom:0;}
 
 .foot{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);max-width:74ch;line-height:1.6;}
+/* --- desktop tokens. The selector and the first two declarations were
+       lost upstream, which left these orphaned and swallowed the .desk
+       rule that follows. Restored. --- */
 :root{
   --d-row:44px;          /* data row height */
   --d-row-lg:56px;       /* queue row with two lines */
@@ -979,8 +988,6 @@ table.mx code{font-family:var(--num);font-size:12px;background:var(--surface-3);
   .run-mast{padding:56px 0 36px;}
 }
 
-/* the two row-height tokens the desk tables reference; absent from both sources */
-:root{--d-row:44px;--d-row-lg:56px;}
 
 
 /* ==========================================================================
@@ -1054,15 +1061,13 @@ table.mx code{font-family:var(--num);font-size:12px;background:var(--surface-3);
     approved 171 altered. With the thirteen already drawn, this closes the register: <strong>42 of
     42</strong>, and every affordance in the run now points at a screen that exists.</p>
   <p class="t2-dek"><strong>A stylesheet defect surfaced while drawing the three consoles, and it
-    affects the approved run.</strong> The desktop token block lost its selector upstream, so it
-    begins mid-comment with orphaned declarations. A browser reads those as the prelude of a rule
-    and keeps consuming until the next brace &mdash; which belongs to <span class="mono">.desk</span>
-    &mdash; so the console frame's entire declaration block is swallowed and dropped. Exactly one
-    rule is lost, and it is the one that makes a console 1440 &times; 900. Every one of the
-    approved run's 19 operator plates is therefore rendering with its rail stacked above the main
-    pane, at whatever height the content happens to reach. This document restores the selector and
-    the two lost tokens so the existing rule is reachable again; no new rule was introduced, and
-    the fix belongs in the stylesheet rather than in any plate.</p>
+    has since been fixed.</strong> The desktop token block had lost its selector upstream, so it
+    began mid-comment with orphaned declarations. A browser read those as the prelude of a rule
+    and consumed until the next brace &mdash; which belongs to <span class="mono">.desk</span>
+    &mdash; swallowing the console frame's whole declaration block. Exactly one rule was lost, and
+    it was the one that makes a console 1440 &times; 900, so all 19 operator plates in the run
+    were rendering with the rail stacked above the main pane. The selector and the two lost tokens
+    are restored, in the stylesheet rather than in any plate.</p>
   <div class="tally">
     <div class="tallycard"><b>13</b><span>Owner<i>Support, settings, records</i></span></div>
     <div class="tallycard"><b>7</b><span>Supervisor<i>Coverage, pay, privacy, welfare</i></span></div>

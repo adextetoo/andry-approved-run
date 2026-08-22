@@ -12,6 +12,12 @@ smap = {int(k): v for k, v in sec['map'].items()}
 sprite = re.search(r'(<svg width="0" height="0".*?</svg>)', B, re.S).group(1)
 css = re.findall(r'<style>(.*?)</style>', B, re.S)[1]
 
+# Two defects in the inherited stylesheet, corrected here rather than in any
+# plate: the console frame rule was unreachable, and the KYC stepper labels
+# were typeset as a 2px connector line. See stylesheet_repairs.py.
+import stylesheet_repairs
+css = stylesheet_repairs.repair(css)
+
 # --- assemble the 171 records ----------------------------------------------
 screens = []
 for i in range(171):
@@ -126,8 +132,7 @@ w = out.write
 w('<title>Andry &mdash; the approved run</title>\n')
 w(sprite)
 w('\n<style>\n' + css + '\n' + CHROME + '\n')
-w('/* the two row-height tokens the desk tables reference; absent from both sources */\n')
-w(':root{--d-row:44px;--d-row-lg:56px;}\n</style>\n\n')
+w('</style>\n\n')
 
 w('<div class="doc">\n')
 

@@ -512,8 +512,14 @@ img{display:block;max-width:100%;}
   background:var(--surface-3);color:var(--muted);font-size:12px;font-weight:700;font-family:var(--num);}
 .kyc__s.is-done .kyc__d{background:var(--ok);color:#fff;}
 .kyc__s.is-now .kyc__d{background:var(--brand);color:var(--on-brand);}
-.kyc__l{flex:1;height:2px;background:var(--line);}
-.kyc__s.is-done .kyc__l{background:var(--ok);}
+/* --- .kyc__l carries the step label in every stepper in the product, so
+       it is typeset as a label. It was a 2px connector line, which left
+       the text overflowing and colliding with the heading beneath. --- */
+.kyc__l{flex:1;min-width:0;background:none;
+  font-size:11.5px;line-height:1.2;letter-spacing:-.005em;font-weight:640;
+  color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.kyc__s{min-width:0;}
+.kyc__s.is-done .kyc__l{background:none;color:var(--ok);}
 
 /* misc */
 .hr{height:1px;background:var(--line);border:0;margin:16px 0;}
@@ -591,7 +597,12 @@ table.mx code{font-family:var(--num);font-size:12px;background:var(--surface-3);
 .callout-doc p:last-child{margin-bottom:0;}
 
 .foot{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);max-width:74ch;line-height:1.6;}
-/* queue row with two lines */
+/* --- desktop tokens. The selector and the first two declarations were
+       lost upstream, which left these orphaned and swallowed the .desk
+       rule that follows. Restored. --- */
+:root{
+  --d-row:44px;          /* data row height */
+  --d-row-lg:56px;       /* queue row with two lines */
   --d-rail:236px;        /* function rail */
   --d-insp:380px;        /* inspector / case side panel */
   --d-gut:24px;
@@ -986,8 +997,6 @@ table.mx code{font-family:var(--num);font-size:12px;background:var(--surface-3);
   .run-mast{padding:56px 0 36px;}
 }
 
-/* the two row-height tokens the desk tables reference; absent from both sources */
-:root{--d-row:44px;--d-row-lg:56px;}
 
 
 /* ==========================================================================
@@ -1055,12 +1064,12 @@ table.mx code{font-family:var(--num);font-size:12px;background:var(--surface-3);
   <p class="new-dek">They are drawn at 402 &times; 874 on the same component set as the run, so they
     can be read beside it without translation. Where a plate had to invent a fact &mdash; a bank, a
     fee, a loss rate &mdash; it is consistent with the figures already published across the 171.</p>
-  <p class="new-dek"><strong>One defect surfaced while matching #11.</strong> Its KYC stepper puts the
-    step labels inside <span class="mono">.kyc__l</span>, which the system defines as a 2px connector
-    line. The text overflows that 2px box and collides with the heading beneath it &mdash; visible on
-    the approved plate today. C-04 and C-05 set the same labels in a nowrap span instead, so the new
-    work does not inherit the collision. Fixing #11 itself needs a stylesheet change rather than a
-    plate edit, and nothing approved was touched here.</p>
+  <p class="new-dek"><strong>One defect surfaced while matching #11, and it has since been
+    fixed.</strong> Its KYC stepper put the step labels inside <span class="mono">.kyc__l</span>,
+    which the system defined as a 2px connector line; the text overflowed that box and collided
+    with the heading beneath. The same fault sat on #103 and #132. The class is now typeset as the
+    label it always held, in the stylesheet rather than in any plate, and C-04 and C-05 use it
+    directly.</p>
   <div class="rules">
     <div class="rule"><b>Nothing approved was altered</b><span>No plate in the 171 was edited, moved
       or re-rendered. These sit behind them.</span></div>
@@ -1251,7 +1260,7 @@ table.mx code{font-family:var(--num);font-size:12px;background:var(--surface-3);
 <button class="appbar__btn" aria-label="Back"><svg width="24" height="24"><use href="#i-back"/></svg></button>
 <div class="appbar__title">Verify your identity</div>
 </div>
-<div class="pad" style="padding-bottom:4px"><div class="kyc" style="gap:6px"><div class="kyc__s"><span class="kyc__d" style="background:var(--brand);color:var(--on-brand)">1</span><span style="font-size:11.5px;line-height:1.2;white-space:nowrap;letter-spacing:-.005em;font-weight:700;color:var(--ink)">Identity &middot; Now</span></div><div class="kyc__s"><span class="kyc__d">2</span><span style="font-size:11.5px;line-height:1.2;white-space:nowrap;letter-spacing:-.005em;font-weight:640;color:var(--faint)">Address &middot; Pending</span></div><div class="kyc__s"><span class="kyc__d">3</span><span style="font-size:11.5px;line-height:1.2;white-space:nowrap;letter-spacing:-.005em;font-weight:640;color:var(--faint)">Bank &middot; Pending</span></div></div></div>
+<div class="pad"><div class="kyc"><div class="kyc__s"><span class="kyc__d" style="background:var(--brand);color:var(--on-brand)">1</span><span class="kyc__l" style="color:var(--ink);font-weight:700">Identity &middot; Now</span></div><div class="kyc__s"><span class="kyc__d">2</span><span class="kyc__l">Address</span></div><div class="kyc__s"><span class="kyc__d">3</span><span class="kyc__l">Bank</span></div></div></div>
 <div class="scroll"><div class="pad">
 <h3 style="margin:14px 0 6px;font-size:18px;font-weight:750">Step 1 of 3: who you are</h3>
 <p class="sub">Andry holds money and moves it on your behalf, so the law requires us to know who you are before your wallet opens. Three steps, about six minutes.</p>
@@ -1288,7 +1297,7 @@ table.mx code{font-family:var(--num);font-size:12px;background:var(--surface-3);
 <button class="appbar__btn" aria-label="Back"><svg width="24" height="24"><use href="#i-back"/></svg></button>
 <div class="appbar__title">Verify your identity</div>
 </div>
-<div class="pad" style="padding-bottom:4px"><div class="kyc" style="gap:6px"><div class="kyc__s"><span class="kyc__d" style="background:var(--ok);color:#fff"><svg width="13" height="13"><use href="#i-check"/></svg></span><span style="font-size:11.5px;line-height:1.2;white-space:nowrap;letter-spacing:-.005em;font-weight:640;color:var(--muted)">Identity &middot; <b style="color:var(--ok)">Done</b></span></div><div class="kyc__s"><span class="kyc__d" style="background:var(--ok);color:#fff"><svg width="13" height="13"><use href="#i-check"/></svg></span><span style="font-size:11.5px;line-height:1.2;white-space:nowrap;letter-spacing:-.005em;font-weight:640;color:var(--muted)">Address &middot; <b style="color:var(--ok)">Done</b></span></div><div class="kyc__s"><span class="kyc__d" style="background:var(--brand);color:var(--on-brand)">3</span><span style="font-size:11.5px;line-height:1.2;white-space:nowrap;letter-spacing:-.005em;font-weight:700;color:var(--ink)">Bank &middot; Now</span></div></div></div>
+<div class="pad"><div class="kyc"><div class="kyc__s"><span class="kyc__d" style="background:var(--ok);color:#fff"><svg width="13" height="13"><use href="#i-check"/></svg></span><span class="kyc__l">Identity &middot; Done</span></div><div class="kyc__s"><span class="kyc__d" style="background:var(--ok);color:#fff"><svg width="13" height="13"><use href="#i-check"/></svg></span><span class="kyc__l">Address &middot; Done</span></div><div class="kyc__s"><span class="kyc__d" style="background:var(--brand);color:var(--on-brand)">3</span><span class="kyc__l" style="color:var(--ink);font-weight:700">Bank &middot; Now</span></div></div></div>
 <div class="scroll"><div class="pad">
 <h3 style="margin:14px 0 6px;font-size:18px;font-weight:750">Step 3 of 3: where money returns to</h3>
 <p class="sub">Money can only leave Andry to an account in your own name. Setting that account now is what stops a withdrawal being blocked later, when you actually want the cash.</p>

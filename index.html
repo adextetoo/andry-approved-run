@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Andry &mdash; the approved run</title>
-<meta name="description" content="Every Andry screen carrying an Approved in review tag in either source review - 66 from the complete-171 build, 105 from the approved-171 build - gathered into one run.">
+<meta name="description" content="Every Andry screen carrying an Approved in review tag in either source review.">
 <meta name="color-scheme" content="light dark">
 </head>
 <body>
@@ -511,8 +511,14 @@ img{display:block;max-width:100%;}
   background:var(--surface-3);color:var(--muted);font-size:12px;font-weight:700;font-family:var(--num);}
 .kyc__s.is-done .kyc__d{background:var(--ok);color:#fff;}
 .kyc__s.is-now .kyc__d{background:var(--brand);color:var(--on-brand);}
-.kyc__l{flex:1;height:2px;background:var(--line);}
-.kyc__s.is-done .kyc__l{background:var(--ok);}
+/* --- .kyc__l carries the step label in every stepper in the product, so
+       it is typeset as a label. It was a 2px connector line, which left
+       the text overflowing and colliding with the heading beneath. --- */
+.kyc__l{flex:1;min-width:0;background:none;
+  font-size:11.5px;line-height:1.2;letter-spacing:-.005em;font-weight:640;
+  color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.kyc__s{min-width:0;}
+.kyc__s.is-done .kyc__l{background:none;color:var(--ok);}
 
 /* misc */
 .hr{height:1px;background:var(--line);border:0;margin:16px 0;}
@@ -590,7 +596,12 @@ table.mx code{font-family:var(--num);font-size:12px;background:var(--surface-3);
 .callout-doc p:last-child{margin-bottom:0;}
 
 .foot{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);max-width:74ch;line-height:1.6;}
-/* queue row with two lines */
+/* --- desktop tokens. The selector and the first two declarations were
+       lost upstream, which left these orphaned and swallowed the .desk
+       rule that follows. Restored. --- */
+:root{
+  --d-row:44px;          /* data row height */
+  --d-row-lg:56px;       /* queue row with two lines */
   --d-rail:236px;        /* function rail */
   --d-insp:380px;        /* inspector / case side panel */
   --d-gut:24px;
@@ -985,8 +996,6 @@ table.mx code{font-family:var(--num);font-size:12px;background:var(--surface-3);
   .run-mast{padding:56px 0 36px;}
 }
 
-/* the two row-height tokens the desk tables reference; absent from both sources */
-:root{--d-row:44px;--d-row-lg:56px;}
 </style>
 
 <div class="doc">

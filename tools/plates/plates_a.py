@@ -32,34 +32,31 @@ def dots(active):
 
 
 def kyc(step):
-    """Stepper for the KYC flow.
+    """Stepper for the KYC flow, in the same markup #11 uses.
 
-    #11 puts its step labels inside .kyc__l, which the system defines as a 2px
-    connector line - the text overflows it and collides with the heading below.
-    The same three labels are set here in a nowrap span sized to fit the frame,
-    so the new plates do not inherit that collision. No CSS rule was changed;
-    fixing #11 itself would need a stylesheet edit, which is out of scope.
+    .kyc__l was defined as a 2px connector line while every stepper in the
+    product put its step label inside it, so the text overflowed and collided
+    with the heading beneath. That is now fixed in the stylesheet, which means
+    these plates can use the class directly rather than restyling it inline.
     """
-    lab = ('font-size:11.5px;line-height:1.2;white-space:nowrap;letter-spacing:-.005em')
     labels = [('Identity', 1), ('Address', 2), ('Bank', 3)]
     cells = []
     for name, n in labels:
         if n < step:
             cells.append('<div class="kyc__s"><span class="kyc__d" style="background:var(--ok);color:#fff">'
                          '<svg width="13" height="13"><use href="#i-check"/></svg></span>'
-                         '<span style="%s;font-weight:640;color:var(--muted)">%s &middot; '
-                         '<b style="color:var(--ok)">Done</b></span></div>' % (lab, name))
+                         '<span class="kyc__l">%s &middot; Done</span></div>' % name)
         elif n == step:
             cells.append('<div class="kyc__s"><span class="kyc__d" style="background:var(--brand);'
-                         'color:var(--on-brand)">%d</span>'
-                         '<span style="%s;font-weight:700;color:var(--ink)">%s &middot; Now</span></div>'
-                         % (n, lab, name))
+                         'color:var(--on-brand)">%d</span><span class="kyc__l" style="color:var(--ink);'
+                         'font-weight:700">%s &middot; Now</span></div>' % (n, name))
         else:
+            # A step that is neither done nor current is named without a state.
+            # On step 1 that avoids saying "Pending" twice, and keeps the
+            # longest label inside the third of the frame each step is given.
             cells.append('<div class="kyc__s"><span class="kyc__d">%d</span>'
-                         '<span style="%s;font-weight:640;color:var(--faint)">%s &middot; Pending</span>'
-                         '</div>' % (n, lab, name))
-    return ('<div class="pad" style="padding-bottom:4px"><div class="kyc" style="gap:6px">'
-            + ''.join(cells) + '</div></div>')
+                         '<span class="kyc__l">%s</span></div>' % (n, name))
+    return '<div class="pad"><div class="kyc">' + ''.join(cells) + '</div></div>'
 
 
 PLATES = []

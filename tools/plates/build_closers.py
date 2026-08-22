@@ -7,6 +7,10 @@ run = io.open('run.html', encoding='utf-8').read()
 sprite = re.search(r'(<svg width="0" height="0".*?</svg>)', run, re.S).group(1)
 css = re.findall(r'<style>(.*?)</style>', run, re.S)[0]
 
+# The inherited stylesheet carries two defects; both are corrected in one place.
+import stylesheet_repairs
+css = stylesheet_repairs.repair(css)
+
 PLATES = plates_a.PLATES + plates_b.PLATES
 assert len(PLATES) == 13, len(PLATES)
 assert [p['id'] for p in PLATES] == ['C-%02d' % i for i in range(1, 14)]
@@ -97,12 +101,12 @@ w('''<header class="new-mast">
   <p class="new-dek">They are drawn at 402 &times; 874 on the same component set as the run, so they
     can be read beside it without translation. Where a plate had to invent a fact &mdash; a bank, a
     fee, a loss rate &mdash; it is consistent with the figures already published across the 171.</p>
-  <p class="new-dek"><strong>One defect surfaced while matching #11.</strong> Its KYC stepper puts the
-    step labels inside <span class="mono">.kyc__l</span>, which the system defines as a 2px connector
-    line. The text overflows that 2px box and collides with the heading beneath it &mdash; visible on
-    the approved plate today. C-04 and C-05 set the same labels in a nowrap span instead, so the new
-    work does not inherit the collision. Fixing #11 itself needs a stylesheet change rather than a
-    plate edit, and nothing approved was touched here.</p>
+  <p class="new-dek"><strong>One defect surfaced while matching #11, and it has since been
+    fixed.</strong> Its KYC stepper put the step labels inside <span class="mono">.kyc__l</span>,
+    which the system defined as a 2px connector line; the text overflowed that box and collided
+    with the heading beneath. The same fault sat on #103 and #132. The class is now typeset as the
+    label it always held, in the stylesheet rather than in any plate, and C-04 and C-05 use it
+    directly.</p>
   <div class="rules">
     <div class="rule"><b>Nothing approved was altered</b><span>No plate in the 171 was edited, moved
       or re-rendered. These sit behind them.</span></div>

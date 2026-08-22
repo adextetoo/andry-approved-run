@@ -20,23 +20,28 @@ is fully self-contained (no scripts, no network requests, no external fonts or i
 The register is now closed: 42 of 42 drawn, and every labelled affordance in the run points at
 a screen that exists.
 
-## Two defects found in the approved run
+## Two stylesheet defects, found and fixed
 
-Both surfaced while matching the new plates to existing ones. Neither was introduced here, and
-neither is fixed here — both need a stylesheet change rather than a plate edit, and nothing
-approved was altered.
+Both surfaced while matching new plates to existing ones. Neither was introduced here. Both are
+fixed in [`tools/stylesheet_repairs.py`](tools/stylesheet_repairs.py), which every build applies —
+**in the stylesheet, never in a plate.** No plate markup was edited to fix either one, and the
+repair is idempotent and asserts each defect is present before touching anything.
 
-**The operator consoles have no frame.** The desktop token block in the stylesheet lost its
-selector upstream, so it begins mid-comment with orphaned declarations. A browser reads those as
-the prelude of a rule and consumes until the next `{` — which belongs to `.desk` — so the console
-frame's whole declaration block is swallowed and dropped. Exactly one rule is lost, and it is the
-one that makes a console 1440 × 900. All 19 operator plates render with the rail stacked above the
-main pane at whatever height the content reaches. Restoring the selector and the two lost tokens
-(`--d-row`, `--d-row-lg`) makes the existing rule reachable again; `tools/plates/build_tier2.py`
-does exactly that and documents it.
+**The operator consoles had no frame.** The desktop token block lost its selector upstream, so it
+began mid-comment with orphaned declarations. A browser reads those as the prelude of a rule and
+consumes until the next `{` — which belongs to `.desk` — so the console frame's whole declaration
+block was swallowed and dropped. Exactly one rule was lost, and it was the one that makes a console
+1440 × 900, a two-column grid, and clipped. All 19 operator plates were rendering with the rail
+stacked above the main pane at whatever height the content reached. The repair restores the
+selector and the two lost tokens (`--d-row`, `--d-row-lg`); the existing rule is now reachable and
+all 19 measure 1440 × 900.
 
-**The KYC stepper labels collide.** `#11` puts its step labels inside `.kyc__l`, which the system
-defines as a 2px connector line. The text overflows that box and runs into the heading beneath it.
+**The KYC stepper labels collided with the heading.** `.kyc__l` was defined as a 2px connector
+line, but every stepper in the product puts its step label inside it — `#11`, `#103` and `#132`.
+The text overflowed a 2px box, wrapped, and ran into the heading below. There is no separate
+connector element in the markup, so the label is what the class had to be: it is now typeset as
+one, with `nowrap` and an ellipsis for narrow steps, and the done state moved from background to
+text colour. All three steppers measure 26px with no collision and no clipping.
 
 The audit was produced by parsing the run for every interactive element and checking each
 labelled destination against the screens that exist. The count was verified against the live
@@ -133,6 +138,7 @@ artifact/approved-run.html    artifact form of the run (no <html>/<head>)
 audit/closing.html            artifact form of the register
 closers/thirteen.html         artifact form of the thirteen
 
+tools/stylesheet_repairs.py   the two stylesheet fixes, applied by every build
 tools/extract.py              parses both sources into structured records
 tools/sections.py             maps every screen to its track and stage
 tools/build.py                assembles the merged run
@@ -144,7 +150,7 @@ tools/plates/build_closers.py assembles the thirteen
 tools/plates/plates_c.py      closers C-14 to C-26, track A
 tools/plates/plates_d.py      closers C-27 to C-39, tracks B and C
 tools/plates/plates_e.py      closers C-40 to C-42, the operator consoles
-tools/plates/build_tier2.py   assembles the twenty-nine, and repairs the .desk rule
+tools/plates/build_tier2.py   assembles the twenty-nine
 ```
 
 The two source artifacts are not included in this repository — they are private design
