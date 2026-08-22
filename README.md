@@ -116,11 +116,11 @@ Nothing else was removed from any caption.
 - The `approved-171` stylesheet is reused verbatim, so the plates render exactly as they
   do at source. All document chrome added here is namespaced to classes the Andry design
   system does not define (`.run-*`, `.ledger`, `.prov`), and overrides nothing.
-- Two additions were necessary:
-  - `--d-row` / `--d-row-lg` — the operator desk tables reference these tokens, but
-    neither source defines them.
-  - `color` stated explicitly on the ledger table, which does not inherit colour in
-    quirks mode.
+- Two corrections were necessary, both in the stylesheet and neither in a plate: the
+  malformed token block that made `.desk` unreachable, and `.kyc__l` being a connector
+  line rather than the label it holds. See the section above.
+- `color` is stated explicitly on the ledger table, which does not inherit colour in
+  quirks mode.
 - Per-stage horizontal shelves were changed to a wrapping grid so a whole stage reads at
   once. Below 940px it falls back to a shelf rather than shrinking the frames — a
   402 × 874 mock is only honest at 402 × 874.
@@ -133,10 +133,12 @@ Nothing else was removed from any caption.
 index.html                    the approved run — open this
 audit/index.html              the closing 42, the gap register
 closers/index.html            the thirteen flow-blockers, drawn
+closers-2/index.html          the twenty-nine named destinations, drawn
 
 artifact/approved-run.html    artifact form of the run (no <html>/<head>)
 audit/closing.html            artifact form of the register
 closers/thirteen.html         artifact form of the thirteen
+closers-2/twentynine.html     artifact form of the twenty-nine
 
 tools/stylesheet_repairs.py   the two stylesheet fixes, applied by every build
 tools/extract.py              parses both sources into structured records
