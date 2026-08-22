@@ -8,6 +8,19 @@ source reviews, gathered into a single document with each plate's origin recorde
 Open [`index.html`](index.html) in a browser, or serve the folder and visit it — the page
 is fully self-contained (no scripts, no network requests, no external fonts or images).
 
+## Three documents
+
+| | What it is | Screens |
+| --- | --- | ---: |
+| [`/`](index.html) | **The approved run** — every screen tagged `Approved in review` in either source review | 171 |
+| [`/audit/`](audit/index.html) | **The closing 42** — a register of the screens the run points at but never draws | 42 |
+| [`/closers/`](closers/index.html) | **The thirteen** — the flow-blocking gaps, drawn as plates | 13 |
+
+The audit was produced by parsing the run for every interactive element and checking each
+labelled destination against the screens that exist. The count was verified against the live
+DOM: 1,296 buttons and 35 links across 171 plates. The thirteen closers are built on the
+Andry design system with no rule added to it, and nothing in the approved 171 was altered.
+
 ---
 
 ## What was extracted
@@ -90,11 +103,22 @@ Nothing else was removed from any caption.
 ## Layout
 
 ```
-index.html                  standalone page — open this
-artifact/approved-run.html  the same document in Claude artifact form (no <html>/<head>)
-tools/extract.py            parses both sources into structured records
-tools/sections.py           maps every screen to its track and stage
-tools/build.py              assembles the merged document
+index.html                    the approved run — open this
+audit/index.html              the closing 42, the gap register
+closers/index.html            the thirteen flow-blockers, drawn
+
+artifact/approved-run.html    artifact form of the run (no <html>/<head>)
+audit/closing.html            artifact form of the register
+closers/thirteen.html         artifact form of the thirteen
+
+tools/extract.py              parses both sources into structured records
+tools/sections.py             maps every screen to its track and stage
+tools/build.py                assembles the merged run
+tools/affordances.py          inventories every affordance, per screen
+tools/getframe.py             pulls a plate's markup out of the run by number
+tools/plates/plates_a.py      closers C-01 to C-07
+tools/plates/plates_b.py      closers C-08 to C-13
+tools/plates/build_closers.py assembles the thirteen
 ```
 
 The two source artifacts are not included in this repository — they are private design

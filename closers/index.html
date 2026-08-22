@@ -1,0 +1,1616 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Andry &mdash; the thirteen</title>
+<meta name="description" content="The 13 flow-blocking Andry screens drawn as plates on the existing design system.">
+<meta name="color-scheme" content="light dark">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<g id="_s" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></g>
+</defs>
+
+<symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/><path d="M9.5 20v-5.5h5V20"/></symbol>
+<symbol id="i-market" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8h17l-1.2 11.2a1.5 1.5 0 0 1-1.5 1.3H6.2a1.5 1.5 0 0 1-1.5-1.3z"/><path d="M8.5 8V6a3.5 3.5 0 0 1 7 0v2"/></symbol>
+<symbol id="i-portfolio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13.5" rx="2.5"/><path d="M8.5 7V5.5A2 2 0 0 1 10.5 3.5h3A2 2 0 0 1 15.5 5.5V7"/><path d="M3 12h18"/></symbol>
+<symbol id="i-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2.5-6.5L14 18.5 16.5 12H21"/></symbol>
+<symbol id="i-profile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></symbol>
+
+<symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
+<symbol id="i-filter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5h16M7 12h10M10 17.5h4"/></symbol>
+<symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15.5V4"/><path d="M8 7.5 12 3.5l4 4"/><path d="M5.5 13.5v5A1.5 1.5 0 0 0 7 20h10a1.5 1.5 0 0 0 1.5-1.5v-5"/></symbol>
+<symbol id="i-more" viewBox="0 0 24 24" fill="currentColor"><circle cx="5.5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="18.5" cy="12" r="1.7"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 10a5.5 5.5 0 0 1 11 0c0 4 1.5 5.5 1.5 5.5H5S6.5 14 6.5 10z"/><path d="M10.2 19a2 2 0 0 0 3.6 0"/></symbol>
+
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></symbol>
+<symbol id="i-checkc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.75"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.5 21 19.5H3z"/><path d="M12 10v4"/><circle cx="12" cy="16.8" r=".9" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.75"/><path d="M12 11v5.5"/><circle cx="12" cy="7.9" r=".95" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2 19 6v6c0 4.4-3 7.6-7 8.8-4-1.2-7-4.4-7-8.8V6z"/><path d="M9 12.2l2.2 2.2 4-4.4"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.75"/><path d="M12 7.2V12l3.2 2"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5.5v13M5.5 12h13"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5.5 12h13"/></symbol>
+<symbol id="i-qr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.2"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.2"/><path d="M13.5 13.5h3v3h-3zM20.5 13.5v3M17.5 20.5h3M13.5 20.5h1"/></symbol>
+<symbol id="i-vet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3.5h5v6h6v5h-6v6h-5v-6h-6v-5h6z"/></symbol>
+<symbol id="i-dna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3c0 6 10 6 10 12M17 3c0 6-10 6-10 12M7 21h10M7 3h10"/><path d="M8.6 8h6.8M8.6 16h6.8"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+<symbol id="i-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5h3.2L8.2 6h7.6l1.5 2.5h3.2v11H3.5z"/><circle cx="12" cy="13.5" r="3.4"/></symbol>
+<symbol id="i-wifioff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4l18 16"/><path d="M6.2 10.4a11 11 0 0 1 3-1.9M2.5 7.4a15 15 0 0 1 4.2-2.5M17.6 10.6A11 11 0 0 0 12 8.2M21.5 7.5a15 15 0 0 0-5-2.9"/><path d="M9.4 14.1a5.5 5.5 0 0 1 5-.4"/><circle cx="12" cy="18.2" r="1" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-scale" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16"/><path d="M6 8h12"/><path d="M3.5 15 6 8l2.5 7a2.6 2.6 0 0 1-5 0z"/><path d="M15.5 15 18 8l2.5 7a2.6 2.6 0 0 1-5 0z"/></symbol>
+<symbol id="i-swap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13l-3-3M20 16H7l3 3"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h7.5L18 8v12.5H6z"/><path d="M13.5 3.5V8H18"/><path d="M9 13h6M9 16.5h4"/></symbol>
+<symbol id="i-inbox" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 13.5 6 5h12l2.5 8.5v5.5h-17z"/><path d="M3.5 13.5H9a3 3 0 0 0 6 0h5.5"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.4"/><path d="M3 19a6 6 0 0 1 12 0"/><path d="M16 5.2a3.4 3.4 0 0 1 0 5.6M17.5 14.4A6 6 0 0 1 21 19"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.2"/><path d="M8.2 10.5V7.6a3.8 3.8 0 0 1 7.6 0v2.9"/></symbol>
+
+<symbol id="i-msg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5h16v11H9.5L5.5 20v-3.5H4z"/><path d="M8 9.5h8M8 12.8h5"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5 10.8 13.2"/><path d="M20.5 3.5 14.3 20.5l-3.5-7.3-7.3-3.5z"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4"/><path d="M4 20h16"/><path d="M8 16.5v-4M12.5 16.5V8M17 16.5v-6.5"/></symbol>
+<symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="9" width="17" height="11.5" rx="1.8"/><path d="M3.5 13.2h17M12 9v11.5"/><path d="M12 9S9.5 9 8.4 7.9a2.4 2.4 0 0 1 3.6-3.1M12 9s2.5 0 3.6-1.1a2.4 2.4 0 0 0-3.6-3.1"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7.5A2 2 0 0 1 5.5 5.5h11v2"/><rect x="3.5" y="7.5" width="17" height="12" rx="2.2"/><circle cx="16.4" cy="13.5" r="1.3" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-bank" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 9.5 12 4l8.5 5.5"/><path d="M5.5 9.5v8M9.8 9.5v8M14.2 9.5v8M18.5 9.5v8"/><path d="M3.5 20.5h17"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 3.6l2.5 5.1 5.6.8-4 3.9 1 5.6L12 16.3 7 19l1-5.6-4-3.9 5.6-.8z"/></symbol>
+<symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 6.5 9 4.5l6 2 5.5-2v13l-5.5 2-6-2-5.5 2z"/><path d="M9 4.5v13M15 6.5v13"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5v11"/><path d="M8 10.8 12 14.8l4-4"/><path d="M4.5 17v3.5h15V17"/></symbol>
+<symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5V5.6a2 2 0 0 1 2-2h2.9M15.6 3.6h2.8a2 2 0 0 1 2 2v2.9M20.4 15.5v2.9a2 2 0 0 1-2 2h-2.8M8.4 20.4H5.5a2 2 0 0 1-2-2v-2.9"/><path d="M3.5 12h17"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="15" rx="2.2"/><path d="M3.5 10h17M8 3.5v4M16 3.5v4"/></symbol>
+<symbol id="i-revoke" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.75"/><path d="M6.2 6.2l11.6 11.6"/></symbol>
+
+<symbol id="i-help" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.75"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.2 2.4c-.5.2-.8.7-.8 1.2v.6"/><circle cx="12" cy="16.6" r=".95" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11.2 3.5H20v8.8l-8.6 8.6a1.6 1.6 0 0 1-2.3 0l-6.5-6.5a1.6 1.6 0 0 1 0-2.3z"/><circle cx="16.2" cy="7.8" r="1.4"/></symbol>
+<symbol id="i-logout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3.5H6a1.6 1.6 0 0 0-1.6 1.6v13.8A1.6 1.6 0 0 0 6 20.5h8"/><path d="M17 8.5l4 3.5-4 3.5"/><path d="M21 12H10"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 6.5h15"/><path d="M9.5 6.5V4.8A1.3 1.3 0 0 1 10.8 3.5h2.4a1.3 1.3 0 0 1 1.3 1.3v1.7"/><path d="M6.5 6.5 7.4 20a1.4 1.4 0 0 0 1.4 1.3h6.4a1.4 1.4 0 0 0 1.4-1.3l.9-13.5"/><path d="M10.3 10.5v6.8M13.7 10.5v6.8"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 12a8.2 8.2 0 1 1-2.6-6"/><path d="M20.5 4v4.4h-4.4"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.9"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="5.5" width="18.4" height="13" rx="2.2"/><path d="M2.8 10h18.4"/><path d="M6.5 14.5h3.5"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.3S3.8 15.2 3.8 9.5A4.3 4.3 0 0 1 12 7.4a4.3 4.3 0 0 1 8.2 2.1c0 5.7-8.2 10.8-8.2 10.8z"/></symbol>
+</svg>
+<style>
+
+
+/* ============================================================
+   ANDRY DESIGN SYSTEM v1.0
+   Adire indigo + harvest gold. Warm laterite neutrals.
+   Light/dark via tokens only — never style inside a media query.
+   ============================================================ */
+
+:root{
+  /* --- brand --- */
+  --brand:#4B3FA8; --brand-hi:#5D4FC4; --brand-lo:#3A3086;
+  --brand-soft:#EDEAF9; --brand-soft-2:#DCD6F4;
+  --on-brand:#FFFFFF;
+
+  /* --- money accent (never a large surface) --- */
+  --gold:#E8A317; --gold-ink:#7A5000; --gold-soft:#FDF2DA; --on-gold:#2B1F06;
+
+  /* --- warm neutrals (laterite bias, not blue-grey) --- */
+  --ink:#1A1720; --ink-2:#413B4A; --muted:#6B6470; --faint:#938C99;
+  --surface:#FFFFFF; --surface-2:#F7F5F3; --surface-3:#EFEBE7;
+  --line:#E5E0DC; --line-2:#D3CCC6;
+
+  /* --- semantic (separate from accent) --- */
+  --ok:#157A4F; --ok-soft:#E3F3EB;
+  --warn:#A66300; --warn-soft:#FBEEDB;
+  --risk:#B3291F; --risk-soft:#FBE7E5;
+  --info:#1B5E9B; --info-soft:#E4EEF7;
+
+  /* --- form --- */
+  --radius-sm:8px; --radius:12px; --radius-lg:20px; --radius-pill:999px;
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:20px;
+  --sp-6:24px; --sp-8:32px; --sp-10:40px; --sp-12:48px;
+
+  --e1:0 1px 2px rgba(26,23,32,.06), 0 1px 1px rgba(26,23,32,.04);
+  --e2:0 4px 12px rgba(26,23,32,.08), 0 1px 3px rgba(26,23,32,.05);
+  --e3:0 12px 32px rgba(26,23,32,.14), 0 2px 8px rgba(26,23,32,.06);
+
+  --ui:-apple-system,BlinkMacSystemFont,"Segoe UI Variable Text","Segoe UI",system-ui,Roboto,"Helvetica Neue",sans-serif;
+  --num:ui-monospace,"SF Mono","Cascadia Mono","Segoe UI Mono",Menlo,Consolas,monospace;
+
+  --page:#FAF8F6; --page-ink:#1A1720;
+}
+
+/* guarded: the default "system" setting stamps nothing on the root, so an explicit
+   light choice must still beat a dark OS. v1.0 left this unguarded. */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --brand:#9B8DF0; --brand-hi:#AEA2F5; --brand-lo:#7E6FE0;
+    --brand-soft:#241F38; --brand-soft-2:#2F2850; --on-brand:#141019;
+    --gold:#F0B93A; --gold-ink:#F0B93A; --gold-soft:#33280F; --on-gold:#1B1405;
+    --ink:#F2EFEA; --ink-2:#CFC8CE; --muted:#9C94A3; --faint:#736C7B;
+    --surface:#141219; --surface-2:#1D1A24; --surface-3:#262230;
+    --line:#2E2A36; --line-2:#3C3646;
+    --ok:#4CC38A; --ok-soft:#0F2A1E;
+    --warn:#E0A64B; --warn-soft:#2E220C;
+    --risk:#F07268; --risk-soft:#331512;
+    --info:#6BA8DE; --info-soft:#12222F;
+    --e1:0 1px 2px rgba(0,0,0,.5); --e2:0 4px 14px rgba(0,0,0,.55);
+    --e3:0 14px 36px rgba(0,0,0,.65);
+    --page:#0D0B11; --page-ink:#F2EFEA;
+  }
+}
+:root[data-theme="dark"]{
+  --brand:#9B8DF0; --brand-hi:#AEA2F5; --brand-lo:#7E6FE0;
+  --brand-soft:#241F38; --brand-soft-2:#2F2850; --on-brand:#141019;
+  --gold:#F0B93A; --gold-ink:#F0B93A; --gold-soft:#33280F; --on-gold:#1B1405;
+  --ink:#F2EFEA; --ink-2:#CFC8CE; --muted:#9C94A3; --faint:#736C7B;
+  --surface:#141219; --surface-2:#1D1A24; --surface-3:#262230;
+  --line:#2E2A36; --line-2:#3C3646;
+  --ok:#4CC38A; --ok-soft:#0F2A1E;
+  --warn:#E0A64B; --warn-soft:#2E220C;
+  --risk:#F07268; --risk-soft:#331512;
+  --info:#6BA8DE; --info-soft:#12222F;
+  --e1:0 1px 2px rgba(0,0,0,.5); --e2:0 4px 14px rgba(0,0,0,.55);
+  --e3:0 14px 36px rgba(0,0,0,.65);
+  --page:#0D0B11; --page-ink:#F2EFEA;
+}
+:root[data-theme="light"]{
+  --brand:#4B3FA8; --brand-hi:#5D4FC4; --brand-lo:#3A3086;
+  --brand-soft:#EDEAF9; --brand-soft-2:#DCD6F4; --on-brand:#FFFFFF;
+  --gold:#E8A317; --gold-soft:#FDF2DA; --on-gold:#2B1F06;
+  --ink:#1A1720; --ink-2:#413B4A; --muted:#6B6470; --faint:#938C99;
+  --surface:#FFFFFF; --surface-2:#F7F5F3; --surface-3:#EFEBE7;
+  --line:#E5E0DC; --line-2:#D3CCC6;
+  --ok:#157A4F; --ok-soft:#E3F3EB;
+  --warn:#A66300; --warn-soft:#FBEEDB;
+  --risk:#B3291F; --risk-soft:#FBE7E5;
+  --info:#1B5E9B; --info-soft:#E4EEF7;
+  --e1:0 1px 2px rgba(26,23,32,.06), 0 1px 1px rgba(26,23,32,.04);
+  --e2:0 4px 12px rgba(26,23,32,.08), 0 1px 3px rgba(26,23,32,.05);
+  --e3:0 12px 32px rgba(26,23,32,.14), 0 2px 8px rgba(26,23,32,.06);
+  --page:#FAF8F6; --page-ink:#1A1720;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+
+body{
+  margin:0; background:var(--page); color:var(--page-ink);
+  font-family:var(--ui); font-size:16px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+:where(a){color:var(--brand);}
+:where(button,a,input,select,textarea,[tabindex]):focus-visible{
+  outline:2px solid var(--brand); outline-offset:2px; border-radius:4px;
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
+}
+
+/* ============================================================
+   DOCUMENT CHROME  (the spec sheet around the screens)
+   ============================================================ */
+.doc{max-width:1240px;margin:0 auto;padding:0 24px 96px;}
+
+.masthead{padding:72px 0 48px;border-bottom:2px solid var(--ink);}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);}
+.masthead h1{
+  margin:20px 0 0;font-size:clamp(38px,6.2vw,68px);line-height:.98;
+  letter-spacing:-.035em;font-weight:800;text-wrap:balance;
+}
+.masthead h1 span{display:block;color:var(--brand);}
+.masthead .dek{margin:24px 0 0;max-width:60ch;font-size:18px;line-height:1.5;color:var(--muted);}
+.mast-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;}
+
+.sec{padding:64px 0 8px;}
+.sec-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:32px;}
+.sec-head h2{margin:0;font-size:clamp(24px,3vw,34px);letter-spacing:-.025em;font-weight:750;}
+.sec-head .lbl{font-family:var(--num);font-size:12px;font-weight:600;color:var(--brand);letter-spacing:.06em;}
+.sec-head .aside{margin-left:auto;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:650;}
+.sec > p{max-width:68ch;color:var(--ink-2);}
+.sec h3{font-size:19px;letter-spacing:-.012em;margin:36px 0 10px;font-weight:700;}
+
+.prose{max-width:68ch;color:var(--ink-2);}
+.prose strong{color:var(--ink);font-weight:650;}
+
+/* fix-tag: links a design decision to an audit finding */
+.fix{display:inline-flex;align-items:center;gap:6px;font-family:var(--num);
+  font-size:11px;font-weight:600;letter-spacing:.02em;padding:3px 8px;border-radius:var(--radius-sm);
+  background:var(--ok-soft);color:var(--ok);white-space:nowrap;}
+.fix::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;}
+.fix--new{background:var(--brand-soft);color:var(--brand);}
+
+/* token swatches */
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:12px;margin:20px 0 8px;}
+.sw{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface);}
+.sw i{display:block;height:60px;}
+.sw b{display:block;padding:9px 11px 2px;font-size:12.5px;font-weight:650;color:var(--ink);}
+.sw code{display:block;padding:0 11px 10px;font-family:var(--num);font-size:11px;color:var(--muted);}
+
+.scale-row{display:flex;align-items:baseline;gap:18px;padding:11px 0;border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.scale-row .k{font-family:var(--num);font-size:11px;color:var(--faint);width:104px;flex:none;letter-spacing:.04em;}
+.scale-row .v{color:var(--ink);}
+
+/* screen shelf */
+.shelf{display:flex;gap:34px;overflow-x:auto;padding:8px 4px 30px;
+  scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;}
+.shelf::-webkit-scrollbar{height:8px;}
+.shelf::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:99px;}
+.shelf::-webkit-scrollbar-track{background:transparent;}
+.plate{flex:none;width:402px;scroll-snap-align:start;}
+.plate__cap{margin-top:16px;max-width:402px;}
+.plate__cap h4{margin:0 0 5px;font-size:15px;font-weight:700;letter-spacing:-.01em;}
+.plate__cap p{margin:0 0 9px;font-size:13.5px;line-height:1.5;color:var(--muted);}
+.plate__tags{display:flex;flex-wrap:wrap;gap:6px;}
+
+/* ============================================================
+   DEVICE FRAME
+   ============================================================ */
+.phone{
+  width:402px;height:874px;border-radius:54px;background:var(--surface);
+  border:1px solid var(--line);box-shadow:var(--e3);
+  position:relative;overflow:hidden;display:flex;flex-direction:column;
+  font-size:15px;color:var(--ink);
+}
+.phone--dark{
+  --surface:#141219;--surface-2:#1D1A24;--surface-3:#262230;
+  --ink:#F2EFEA;--ink-2:#CFC8CE;--muted:#9C94A3;--faint:#736C7B;
+  --line:#2E2A36;--line-2:#3C3646;
+  --brand:#9B8DF0;--brand-hi:#AEA2F5;--brand-lo:#7E6FE0;
+  --brand-soft:#241F38;--brand-soft-2:#2F2850;--on-brand:#141019;
+  --gold:#F0B93A;--gold-ink:#F0B93A;--gold-soft:#33280F;--on-gold:#1B1405;
+  --ok:#4CC38A;--ok-soft:#0F2A1E;--warn:#E0A64B;--warn-soft:#2E220C;
+  --risk:#F07268;--risk-soft:#331512;--info:#6BA8DE;--info-soft:#12222F;
+  --e1:0 1px 2px rgba(0,0,0,.5);--e2:0 4px 14px rgba(0,0,0,.55);
+  background:#141219;}
+
+.st{height:54px;flex:none;display:flex;align-items:center;justify-content:space-between;
+  padding:0 30px;font-size:14.5px;font-weight:650;position:relative;letter-spacing:-.01em;}
+.st__notch{position:absolute;left:50%;top:11px;transform:translateX(-50%);
+  width:118px;height:31px;border-radius:99px;background:#000;}
+.st__r{display:flex;align-items:center;gap:5px;opacity:.9;}
+.st__r svg{display:block;}
+
+.vp{flex:1;overflow:hidden;position:relative;display:flex;flex-direction:column;}
+.scroll{flex:1;overflow-y:auto;overscroll-behavior:contain;}
+.scroll::-webkit-scrollbar{width:0;}
+.pad{padding:0 20px;}
+.pb{padding-bottom:24px;}
+
+.hi{height:5px;width:140px;border-radius:99px;background:var(--ink);opacity:.25;
+  margin:8px auto 9px;flex:none;}
+
+/* app bar */
+.appbar{flex:none;display:flex;align-items:center;gap:10px;padding:6px 12px 12px 12px;background:var(--surface);}
+.appbar__btn{width:44px;height:44px;flex:none;border:0;background:transparent;color:var(--ink);
+  border-radius:var(--radius-pill);display:grid;place-items:center;cursor:pointer;}
+.appbar__btn:hover{background:var(--surface-3);}
+.appbar__title{font-size:19px;font-weight:750;letter-spacing:-.022em;flex:1;min-width:0;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.appbar--lg{padding:2px 20px 14px;}
+.appbar--lg .appbar__title{font-size:30px;letter-spacing:-.032em;font-weight:800;}
+
+/* tab bar — 5 fixed, labels always visible, 48px targets */
+.tabbar--4{grid-template-columns:repeat(4,1fr);}
+.tabbar{flex:none;display:grid;grid-template-columns:repeat(5,1fr);
+  border-top:1px solid var(--line);background:var(--surface);padding:6px 4px 0;}
+.tabbar__i{display:flex;flex-direction:column;align-items:center;gap:3px;
+  min-height:48px;padding:5px 2px 6px;border:0;background:transparent;cursor:pointer;
+  color:var(--faint);font-family:inherit;font-size:11px;font-weight:600;letter-spacing:.005em;}
+.tabbar__i svg{width:24px;height:24px;}
+.tabbar__i.is-on{color:var(--brand);}
+.tabbar__i.is-on span{font-weight:700;}
+
+.fab{position:absolute;right:18px;bottom:18px;width:56px;height:56px;border-radius:var(--radius-lg);
+  background:var(--brand);color:var(--on-brand);border:0;display:grid;place-items:center;
+  box-shadow:var(--e3);cursor:pointer;z-index:5;}
+
+/* ============================================================
+   PRIMITIVES
+   ============================================================ */
+.stack{display:flex;flex-direction:column;}
+.stack>*+*{margin-top:var(--gap,12px)}
+.g2{--gap:8px}.g3{--gap:12px}.g4{--gap:16px}.g5{--gap:20px}.g6{--gap:24px}
+.row{display:flex;align-items:center;gap:10px;}
+.spread{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.grow{flex:1;min-width:0;}
+
+.sect{margin-top:22px;}
+.sect__h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:10px;}
+.sect__h h3{margin:0;font-size:16px;font-weight:730;letter-spacing:-.017em;}
+.sect__h a{font-size:13px;font-weight:650;text-decoration:none;}
+
+.card{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-lg);padding:16px;}
+.card--tight{padding:13px;}
+.card--plain{background:var(--surface);}
+.card--brand{background:var(--brand);color:var(--on-brand);border-color:transparent;}
+.card--brand .lbl,.card--brand .sub{color:rgba(255,255,255,.72);}
+
+.lbl{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);}
+.sub{font-size:13px;color:var(--muted);line-height:1.45;}
+.tiny{font-size:12px;color:var(--muted);line-height:1.45;}
+
+/* money — tabular, one format: ₦1,234,567.89 */
+.money{font-family:var(--num);font-variant-numeric:tabular-nums;font-weight:650;letter-spacing:-.02em;}
+.money--xl{font-size:33px;letter-spacing:-.035em;font-weight:700;}
+.money--lg{font-size:22px;}
+.money--sm{font-size:14px;}
+.fx{font-family:var(--num);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.mono{font-family:var(--num);font-size:12.5px;letter-spacing:.01em;}
+
+.delta{font-family:var(--num);font-size:12.5px;font-weight:650;font-variant-numeric:tabular-nums;}
+.delta--up{color:var(--ok);} .delta--down{color:var(--risk);}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:48px;padding:0 20px;border-radius:var(--radius-pill);border:1px solid transparent;
+  font-family:inherit;font-size:15px;font-weight:680;letter-spacing:-.008em;cursor:pointer;
+  transition:background .15s ease,border-color .15s ease,transform .1s ease;}
+.btn:active{transform:scale(.985);}
+.btn--primary{background:var(--brand);color:var(--on-brand);}
+.btn--primary:hover{background:var(--brand-hi);}
+.btn--secondary{background:transparent;color:var(--brand);border-color:var(--line-2);}
+.btn--secondary:hover{background:var(--brand-soft);border-color:var(--brand);}
+.btn--ghost{background:transparent;color:var(--ink-2);}
+.btn--ghost:hover{background:var(--surface-3);}
+.btn--danger{background:var(--risk);color:#fff;}
+.btn--block{display:flex;width:100%;}
+.btn--sm{min-height:44px;padding:0 14px;font-size:13.5px;}
+.btn[disabled]{opacity:.45;cursor:not-allowed;}
+.btn[disabled]:active{transform:none;}
+.btn.is-loading{color:transparent;position:relative;pointer-events:none;}
+.btn.is-loading::after{content:"";position:absolute;width:18px;height:18px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:spin .7s linear infinite;}
+.btn--secondary.is-loading::after{border-color:var(--brand-soft-2);border-top-color:var(--brand);}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* sticky action bar (asset detail) */
+.actionbar{flex:none;padding:12px 20px 8px;background:var(--surface);
+  border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(26,23,32,.06);}
+
+/* fields */
+.field{display:block;}
+.field__l{display:block;font-size:13px;font-weight:650;color:var(--ink-2);margin-bottom:6px;}
+.field__l .req{color:var(--risk);margin-left:2px;}
+.input{width:100%;min-height:50px;padding:12px 14px;border-radius:var(--radius);
+  border:1.5px solid var(--line-2);background:var(--surface);color:var(--ink);
+  font-family:inherit;font-size:15px;transition:border-color .15s ease,box-shadow .15s ease;}
+.input::placeholder{color:var(--faint);}
+.input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft);}
+.field__hint{margin-top:6px;font-size:12.5px;color:var(--muted);}
+.field__err{margin-top:6px;font-size:12.5px;color:var(--risk);font-weight:600;display:flex;gap:5px;align-items:flex-start;}
+.field.is-bad .input{border-color:var(--risk);}
+.field.is-bad .input:focus{box-shadow:0 0 0 3px var(--risk-soft);}
+.inputwrap{position:relative;}
+.inputwrap .reveal{position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  min-width:44px;min-height:44px;border:0;background:transparent;color:var(--muted);
+  font-family:inherit;font-size:12.5px;font-weight:650;cursor:pointer;border-radius:var(--radius-sm);}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+
+/* password strength */
+.pw{display:flex;gap:4px;margin-top:8px;}
+.pw i{height:4px;flex:1;border-radius:99px;background:var(--line-2);}
+.pw i.on{background:var(--ok);}
+.pw i.mid{background:var(--warn);}
+.pw i.bad{background:var(--risk);}
+
+/* consent checkbox */
+.check{display:flex;gap:11px;align-items:flex-start;cursor:pointer;padding:4px 0;min-height:44px;}
+.check input{width:22px;height:22px;flex:none;margin:2px 0 0;accent-color:var(--brand);cursor:pointer;}
+.check span{font-size:13.5px;line-height:1.45;color:var(--ink-2);}
+
+/* chips & tabs */
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;}
+.chips::-webkit-scrollbar{display:none;}
+.chip{flex:none;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;
+  border-radius:var(--radius-pill);border:1px solid var(--line-2);background:var(--surface);
+  color:var(--ink-2);font-family:inherit;font-size:13.5px;font-weight:640;cursor:pointer;white-space:nowrap;}
+.chip.is-on{background:var(--brand);border-color:var(--brand);color:var(--on-brand);}
+.chip__n{font-family:var(--num);font-size:12px;opacity:.75;}
+
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);}
+.tab{flex:1;min-height:46px;border:0;background:transparent;cursor:pointer;font-family:inherit;
+  font-size:14px;font-weight:650;color:var(--muted);border-bottom:2.5px solid transparent;
+  display:flex;align-items:center;justify-content:center;gap:6px;}
+.tab.is-on{color:var(--brand);border-bottom-color:var(--brand);}
+.tab .n{font-family:var(--num);font-size:12px;padding:1px 6px;border-radius:99px;background:var(--surface-3);color:var(--muted);}
+.tab.is-on .n{background:var(--brand-soft);color:var(--brand);}
+
+/* badges — always icon or text, never colour alone */
+.badge{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:var(--radius-sm);
+  font-size:12px;font-weight:680;letter-spacing:.005em;background:var(--surface-3);color:var(--ink-2);}
+.badge svg{width:13px;height:13px;flex:none;}
+.badge--ok{background:var(--ok-soft);color:var(--ok);}
+.badge--warn{background:var(--warn-soft);color:var(--warn);}
+.badge--risk{background:var(--risk-soft);color:var(--risk);}
+.badge--info{background:var(--info-soft);color:var(--info);}
+.badge--brand{background:var(--brand-soft);color:var(--brand);}
+.badge--gold{background:var(--gold-soft);color:var(--gold-ink);}
+
+/* avatars */
+.av{border-radius:var(--radius-pill);background:var(--surface-3);object-fit:cover;flex:none;
+  display:grid;place-items:center;font-weight:700;color:var(--muted);overflow:hidden;}
+.av--sm{width:28px;height:28px;font-size:12px;}
+.av--md{width:44px;height:44px;font-size:15px;}
+.av--lg{width:64px;height:64px;font-size:21px;}
+.av--sq{border-radius:var(--radius);}
+.avstack{display:flex;}
+.avstack .av{border:2px solid var(--surface-2);margin-left:-9px;}
+.avstack .av:first-child{margin-left:0;}
+
+/* progress */
+.prog{height:8px;border-radius:99px;background:var(--surface-3);overflow:hidden;}
+.prog i{display:block;height:100%;border-radius:99px;background:var(--brand);}
+.prog--gold i{background:var(--gold);}
+
+/* list rows — 56px min target */
+.list{display:flex;flex-direction:column;}
+.listitem{display:flex;align-items:center;gap:12px;min-height:60px;padding:11px 0;
+  border-bottom:1px solid var(--line);background:transparent;border-left:0;border-right:0;border-top:0;
+  text-align:left;width:100%;font-family:inherit;color:inherit;cursor:pointer;}
+.listitem:last-child{border-bottom:0;}
+
+/* timeline (proof of life) */
+.tl{position:relative;padding-left:30px;}
+.tl::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:var(--line);}
+.tlitem{position:relative;padding-bottom:20px;}
+.tlitem::before{content:"";position:absolute;left:-24px;top:6px;width:11px;height:11px;border-radius:50%;
+  background:var(--surface);border:2.5px solid var(--brand);}
+.tlitem--past::before{border-color:var(--line-2);}
+.tlitem:last-child{padding-bottom:0;}
+
+/* verification module */
+.verify{border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);overflow:hidden;}
+.verify__top{display:flex;align-items:center;gap:11px;padding:13px 15px;background:var(--ok-soft);}
+.verify__row{display:flex;align-items:center;gap:11px;padding:12px 15px;border-top:1px solid var(--line);}
+.verify__row .k{font-size:12.5px;color:var(--muted);flex:none;width:78px;}
+.verify__row .v{font-size:13.5px;font-weight:640;color:var(--ink);}
+
+/* skeleton */
+.sk{background:linear-gradient(90deg,var(--surface-3) 25%,var(--surface-2) 37%,var(--surface-3) 63%);
+  background-size:400% 100%;animation:shimmer 1.4s ease infinite;border-radius:var(--radius-sm);}
+@keyframes shimmer{0%{background-position:100% 50%}100%{background-position:0 50%}}
+.sk--line{height:12px;} .sk--title{height:19px;} .sk--block{height:76px;border-radius:var(--radius-lg);}
+
+/* empty / error state */
+.state{display:flex;flex-direction:column;align-items:center;text-align:center;padding:40px 26px;gap:6px;}
+.state__ico{width:74px;height:74px;border-radius:var(--radius-lg);display:grid;place-items:center;
+  background:var(--brand-soft);color:var(--brand);margin-bottom:8px;}
+.state h4{margin:0;font-size:17px;font-weight:730;letter-spacing:-.015em;}
+.state p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.5;max-width:30ch;}
+
+/* toast */
+.toast{display:flex;align-items:center;gap:11px;padding:13px 15px;border-radius:var(--radius);
+  background:var(--ink);color:var(--page);box-shadow:var(--e3);font-size:14px;font-weight:600;}
+.toast svg{flex:none;}
+.toast--ok{background:var(--ok);color:#fff;}
+.toast--risk{background:var(--risk);color:#fff;}
+
+/* bottom sheet */
+.sheet{position:absolute;left:0;right:0;bottom:0;background:var(--surface);
+  border-radius:var(--radius-lg) var(--radius-lg) 0 0;box-shadow:var(--e3);padding:8px 20px 20px;z-index:6;}
+.sheet__grab{width:38px;height:4px;border-radius:99px;background:var(--line-2);margin:0 auto 14px;}
+.scrim{position:absolute;inset:0;background:rgba(26,23,32,.45);z-index:5;}
+
+/* stepper */
+.stepper{display:flex;align-items:center;gap:12px;}
+.stepper button{width:44px;height:44px;border-radius:var(--radius-pill);border:1px solid var(--line-2);
+  background:var(--surface);color:var(--ink);font-size:20px;cursor:pointer;display:grid;place-items:center;}
+.stepper button:hover{border-color:var(--brand);color:var(--brand);}
+.stepper .val{font-family:var(--num);font-size:24px;font-weight:700;min-width:64px;text-align:center;
+  font-variant-numeric:tabular-nums;}
+
+/* countdown — d/h/m, never d/m/s */
+.cd{display:flex;gap:5px;align-items:baseline;font-family:var(--num);font-variant-numeric:tabular-nums;}
+.cd b{font-size:15px;font-weight:700;color:var(--ink);}
+.cd i{font-size:12px;font-style:normal;color:var(--muted);margin-right:3px;}
+
+/* offline banner */
+.offline{display:flex;align-items:center;gap:9px;padding:9px 20px;background:var(--warn-soft);
+  color:var(--warn);font-size:12.5px;font-weight:650;flex:none;}
+
+/* kyc stepper */
+.kyc{display:flex;align-items:center;gap:0;}
+.kyc__s{display:flex;align-items:center;gap:8px;flex:1;}
+.kyc__d{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;flex:none;
+  background:var(--surface-3);color:var(--muted);font-size:12px;font-weight:700;font-family:var(--num);}
+.kyc__s.is-done .kyc__d{background:var(--ok);color:#fff;}
+.kyc__s.is-now .kyc__d{background:var(--brand);color:var(--on-brand);}
+.kyc__l{flex:1;height:2px;background:var(--line);}
+.kyc__s.is-done .kyc__l{background:var(--ok);}
+
+/* misc */
+.hr{height:1px;background:var(--line);border:0;margin:16px 0;}
+.thumb{width:100%;aspect-ratio:1;border-radius:var(--radius);object-fit:cover;background:var(--surface-3);}
+.g-3{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;}
+.g-2{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+
+/* ---- journey stages (document, not app) ---- */
+.rail{display:flex;flex-wrap:wrap;gap:7px;margin:24px 0 4px;}
+.railitem{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:var(--radius-pill);
+  padding:6px 13px 6px 6px;background:var(--surface);font-size:13px;font-weight:640;color:var(--ink-2);white-space:nowrap;}
+.railitem b{font-family:var(--num);font-size:12px;background:var(--brand-soft);color:var(--brand);
+  width:23px;height:23px;border-radius:50%;display:grid;place-items:center;font-weight:700;flex:none;}
+.railitem i{font-style:normal;color:var(--faint);font-family:var(--num);font-size:12px;}
+
+/* a track = one actor's whole journey (owner, supervisor, host) */
+.track{margin-top:64px;padding-top:30px;border-top:2px solid var(--ink);}
+.track:first-of-type{margin-top:26px;padding-top:0;border-top:0;}
+.track__h{display:flex;align-items:flex-start;gap:16px;margin-bottom:6px;}
+.track__k{font-family:var(--num);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--on-brand);background:var(--ink);padding:6px 11px;border-radius:var(--radius-sm);flex:none;margin-top:4px;}
+.track__t{flex:1;min-width:0;}
+.track__t h3{margin:0 0 6px;font-size:27px;font-weight:780;letter-spacing:-.028em;}
+.track__t p{margin:0;font-size:15px;color:var(--muted);line-height:1.55;max-width:72ch;}
+.track__c{font-family:var(--num);font-size:12px;color:var(--faint);white-space:nowrap;font-weight:650;padding-top:12px;}
+
+.stage{margin-top:54px;}
+.stage:first-of-type{margin-top:30px;}
+.stage__h{display:flex;align-items:flex-start;gap:15px;padding-bottom:13px;
+  border-bottom:1px solid var(--line);margin-bottom:18px;}
+.stage__n{font-family:var(--num);font-size:13px;font-weight:700;color:var(--on-brand);background:var(--brand);
+  min-width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:none;letter-spacing:.02em;}
+.stage__t{flex:1;min-width:0;}
+.stage__t h3{margin:0 0 4px;font-size:21px;font-weight:750;letter-spacing:-.022em;}
+.stage__t p{margin:0;font-size:14px;color:var(--muted);line-height:1.5;max-width:70ch;}
+.stage__c{font-family:var(--num);font-size:12px;color:var(--faint);white-space:nowrap;font-weight:650;padding-top:10px;}
+
+/* ---- traceability matrix (document, not app) ---- */
+.mxwrap{overflow-x:auto;margin:22px 0 8px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);}
+table.mx{width:100%;border-collapse:collapse;font-size:14px;min-width:720px;}
+table.mx th{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  font-weight:700;padding:13px 16px;border-bottom:1.5px solid var(--line-2);white-space:nowrap;background:var(--surface-2);}
+table.mx td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-2);line-height:1.5;}
+table.mx tr:last-child td{border-bottom:0;}
+table.mx td:first-child{font-family:var(--num);font-size:12px;font-weight:650;color:var(--brand);white-space:nowrap;}
+table.mx td strong{color:var(--ink);font-weight:650;}
+table.mx code{font-family:var(--num);font-size:12px;background:var(--surface-3);padding:1px 5px;border-radius:4px;color:var(--ink-2);}
+
+/* ---- component inventory ---- */
+.inv{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:14px;margin-top:20px;}
+.invcard{border:1px solid var(--line);border-radius:var(--radius);padding:15px 16px;background:var(--surface);}
+.invcard h5{margin:0 0 5px;font-size:14.5px;font-weight:700;letter-spacing:-.012em;color:var(--ink);}
+.invcard p{margin:0;font-size:12.5px;line-height:1.5;color:var(--muted);}
+.invcard .n{font-family:var(--num);font-size:11px;color:var(--brand);font-weight:650;display:block;margin-bottom:7px;letter-spacing:.04em;}
+
+/* ---- roadmap ---- */
+.phase{border-left:3px solid var(--line);padding:2px 0 26px 22px;position:relative;}
+.phase:last-child{padding-bottom:4px;}
+.phase::before{content:"";position:absolute;left:-8px;top:5px;width:13px;height:13px;border-radius:50%;
+  background:var(--surface);border:3px solid var(--brand);}
+.phase--done{border-left-color:var(--ok);}
+.phase--done::before{border-color:var(--ok);background:var(--ok);}
+.phase h4{margin:0 0 3px;font-size:16.5px;font-weight:730;letter-spacing:-.015em;}
+.phase .when{font-family:var(--num);font-size:11.5px;color:var(--faint);letter-spacing:.05em;text-transform:uppercase;font-weight:650;}
+.phase ul{margin:11px 0 0;padding-left:18px;color:var(--ink-2);font-size:14px;line-height:1.6;}
+.phase ul li{margin-bottom:5px;}
+.phase ul li::marker{color:var(--brand);}
+
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 4px;}
+.callout-doc{border-left:3px solid var(--brand);background:var(--brand-soft);border-radius:0 var(--radius) var(--radius) 0;
+  padding:18px 22px;margin:26px 0;max-width:74ch;}
+.callout-doc h4{margin:0 0 7px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);}
+.callout-doc p{margin:0 0 9px;color:var(--ink-2);font-size:14.5px;line-height:1.6;}
+.callout-doc p:last-child{margin-bottom:0;}
+
+.foot{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);max-width:74ch;line-height:1.6;}
+/* queue row with two lines */
+  --d-rail:236px;        /* function rail */
+  --d-insp:380px;        /* inspector / case side panel */
+  --d-gut:24px;
+
+  /* desktop type ramp — smaller base, tabular by default */
+  --d-fs-micro:11.5px;
+  --d-fs-sm:12.5px;
+  --d-fs:13.5px;
+  --d-fs-lg:15px;
+  --d-fs-h:19px;
+  --d-fs-hero:26px;
+}
+
+/* --- the console frame. 1440 x 900, the estate standard. --- */
+.desk{
+  width:1440px; height:900px; flex:none;
+  background:var(--surface); color:var(--ink);
+  border:1px solid var(--line); border-radius:var(--radius-lg);
+  box-shadow:var(--e3); overflow:hidden;
+  display:grid; grid-template-columns:var(--d-rail) 1fr;
+  font-family:var(--ui); font-size:var(--d-fs); line-height:1.45;
+}
+.desk--auth{grid-template-columns:1fr;}
+.desk--dark{--surface:#141219;--surface-2:#1D1A24;--surface-3:#262230;
+  --ink:#F2EFEA;--ink-2:#CFC8CE;--muted:#9C94A3;--faint:#736C7B;
+  --line:#2E2A36;--line-2:#3C3646;background:#141219;}
+
+/* --- function rail. Scoped per operator role (FR-OPS-01): a KYC
+       reviewer and a claims assessor do not see the same rail. --- */
+.rail{background:var(--surface-2);border-right:1px solid var(--line);
+  display:flex;flex-direction:column;overflow:hidden;}
+.rail__brand{display:flex;align-items:center;gap:9px;padding:16px 16px 14px;
+  border-bottom:1px solid var(--line);flex:none;}
+.rail__mark{width:26px;height:26px;border-radius:7px;background:var(--brand);
+  color:var(--on-brand);display:grid;place-items:center;font-weight:800;font-size:13px;flex:none;}
+.rail__name{font-size:var(--d-fs-lg);font-weight:750;letter-spacing:-.02em;}
+.rail__env{font-family:var(--num);font-size:10.5px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;padding:2px 6px;border-radius:5px;
+  background:var(--warn-soft);color:var(--warn);margin-left:auto;}
+.rail__scroll{flex:1;overflow-y:auto;padding:10px 8px;}
+.rail__grp{font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--faint);padding:14px 8px 6px;}
+.rail__i{display:flex;align-items:center;gap:10px;width:100%;min-height:36px;padding:7px 9px;
+  border:0;background:transparent;border-radius:var(--radius-sm);cursor:pointer;
+  font-family:inherit;font-size:var(--d-fs);font-weight:600;color:var(--ink-2);text-align:left;}
+.rail__i:hover{background:var(--surface-3);}
+.rail__i svg{width:17px;height:17px;flex:none;color:var(--muted);}
+.rail__i.is-on{background:var(--brand-soft);color:var(--brand);font-weight:700;}
+.rail__i.is-on svg{color:var(--brand);}
+.rail__i .n{margin-left:auto;font-family:var(--num);font-size:var(--d-fs-micro);font-weight:700;
+  padding:1px 6px;border-radius:99px;background:var(--surface-3);color:var(--muted);}
+.rail__i.is-on .n{background:var(--brand);color:var(--on-brand);}
+.rail__i .n--hot{background:var(--risk);color:#FFFFFF;}
+/* a function the operator's token does not carry (FR-OPS-01) */
+.rail__i[aria-disabled="true"]{opacity:.4;cursor:not-allowed;}
+.rail__foot{flex:none;border-top:1px solid var(--line);padding:10px;}
+
+/* --- main column --- */
+.main{display:flex;flex-direction:column;min-width:0;overflow:hidden;}
+.topbar{flex:none;display:flex;align-items:center;gap:14px;height:56px;
+  padding:0 var(--d-gut);border-bottom:1px solid var(--line);background:var(--surface);}
+.topbar h1{margin:0;font-size:var(--d-fs-h);font-weight:760;letter-spacing:-.025em;}
+.topbar__sub{font-size:var(--d-fs-sm);color:var(--muted);}
+.topbar__sp{flex:1;}
+
+/* keyboard-first search. Focus order is a primary input mode here. */
+.kbdbox{display:flex;align-items:center;gap:8px;min-width:300px;height:34px;padding:0 10px;
+  border:1px solid var(--line-2);border-radius:var(--radius-sm);background:var(--surface-2);
+  color:var(--muted);font-size:var(--d-fs-sm);cursor:text;}
+.kbdbox svg{width:15px;height:15px;flex:none;}
+.kbd{font-family:var(--num);font-size:10.5px;font-weight:700;line-height:1;padding:3px 5px;
+  border:1px solid var(--line-2);border-bottom-width:2px;border-radius:4px;
+  background:var(--surface);color:var(--muted);white-space:nowrap;}
+.kbdrow{display:flex;align-items:center;gap:6px;}
+
+/* --- split: queue list + case inspector --- */
+.split{flex:1;display:grid;grid-template-columns:1fr var(--d-insp);min-height:0;}
+.split--wide{grid-template-columns:1fr 460px;}
+.split--none{grid-template-columns:1fr;}
+.pane{min-width:0;display:flex;flex-direction:column;overflow:hidden;}
+.pane--insp{border-left:1px solid var(--line);background:var(--surface-2);}
+.pane__scroll{flex:1;overflow-y:auto;}
+.pane__pad{padding:var(--d-gut);}
+
+/* filter strip above a queue */
+.filters{flex:none;display:flex;align-items:center;gap:8px;padding:12px var(--d-gut);
+  border-bottom:1px solid var(--line);background:var(--surface);flex-wrap:wrap;}
+.fchip{display:inline-flex;align-items:center;gap:6px;min-height:30px;padding:0 10px;
+  border:1px solid var(--line-2);border-radius:var(--radius-pill);background:var(--surface);
+  color:var(--ink-2);font-family:inherit;font-size:var(--d-fs-sm);font-weight:640;cursor:pointer;}
+.fchip.is-on{background:var(--brand);border-color:var(--brand);color:var(--on-brand);}
+.fchip svg{width:13px;height:13px;}
+
+/* --- the data table. The component family the product retired
+       when it replaced Global Exchange with mobile card rows,
+       rebuilt here because a queue is genuinely tabular. --- */
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:var(--d-fs);}
+.tbl thead th{position:sticky;top:0;z-index:2;background:var(--surface-2);
+  text-align:left;font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--muted);padding:9px 14px;border-bottom:1px solid var(--line);white-space:nowrap;}
+.tbl thead th.num{text-align:right;}
+.tbl tbody td{padding:0 14px;height:var(--d-row-lg);border-bottom:1px solid var(--line);
+  vertical-align:middle;color:var(--ink-2);}
+.tbl tbody td.num{text-align:right;font-family:var(--num);font-variant-numeric:tabular-nums;
+  letter-spacing:-.01em;color:var(--ink);}
+.tbl tbody tr{cursor:pointer;}
+.tbl tbody tr:hover td{background:var(--surface-2);}
+.tbl tbody tr.is-sel td{background:var(--brand-soft);}
+.tbl tbody tr.is-sel td:first-child{box-shadow:inset 3px 0 0 var(--brand);}
+.tbl .t-1{font-size:var(--d-fs);font-weight:680;color:var(--ink);display:block;}
+.tbl .t-2{font-size:var(--d-fs-sm);color:var(--muted);display:block;margin-top:1px;}
+.tbl--dense tbody td{height:var(--d-row);}
+
+/* SLA clock — every queue carries one (FR-OPS-03), because every
+   SLA in the console is a commitment already published to a user. */
+.sla{display:inline-flex;align-items:center;gap:5px;font-family:var(--num);
+  font-size:var(--d-fs-sm);font-weight:680;font-variant-numeric:tabular-nums;
+  padding:2px 8px;border-radius:var(--radius-sm);white-space:nowrap;}
+.sla svg{width:12px;height:12px;flex:none;}
+.sla--ok{background:var(--ok-soft);color:var(--ok);}
+.sla--warn{background:var(--warn-soft);color:var(--warn);}
+.sla--breach{background:var(--risk-soft);color:var(--risk);}
+.sla--stop{background:var(--info-soft);color:var(--info);}
+
+/* case inspector blocks */
+.insp__h{padding:16px var(--d-gut) 14px;border-bottom:1px solid var(--line);}
+.insp__t{font-size:var(--d-fs-h);font-weight:750;letter-spacing:-.022em;margin:0 0 4px;}
+.blk{padding:16px var(--d-gut);border-bottom:1px solid var(--line);}
+.blk__h{font-size:10.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--faint);margin:0 0 10px;}
+.kv{display:grid;grid-template-columns:112px 1fr;gap:7px 12px;font-size:var(--d-fs-sm);}
+.kv dt{color:var(--muted);}
+.kv dd{margin:0;color:var(--ink);font-weight:620;}
+.kv dd.mono{font-family:var(--num);font-size:var(--d-fs-sm);}
+
+/* the append-only audit log (FR-SEC-06, FR-OPS-02).
+   A log nobody can read is not a control. */
+.log{font-family:var(--num);font-size:var(--d-fs-sm);}
+.log__r{display:grid;grid-template-columns:132px 96px 1fr;gap:12px;padding:8px 0;
+  border-bottom:1px solid var(--line);align-items:baseline;}
+.log__t{color:var(--muted);font-variant-numeric:tabular-nums;}
+.log__a{font-weight:700;color:var(--ink);}
+.log__m{color:var(--ink-2);font-family:var(--ui);font-size:var(--d-fs-sm);}
+.log__seal{display:inline-flex;align-items:center;gap:5px;font-size:var(--d-fs-micro);
+  font-weight:700;color:var(--ok);}
+
+/* desktop button sizing — 32/36px, mouse-first, but every control
+   stays keyboard reachable and shows the same focus ring. */
+.dbtn{display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  min-height:34px;padding:0 14px;border-radius:var(--radius-sm);border:1px solid transparent;
+  font-family:inherit;font-size:var(--d-fs);font-weight:660;cursor:pointer;white-space:nowrap;}
+.dbtn svg{width:15px;height:15px;flex:none;}
+.dbtn--primary{background:var(--brand);color:var(--on-brand);}
+.dbtn--primary:hover{background:var(--brand-hi);}
+.dbtn--secondary{background:var(--surface);color:var(--ink-2);border-color:var(--line-2);}
+.dbtn--secondary:hover{background:var(--surface-3);}
+.dbtn--danger{background:var(--risk);color:#FFFFFF;}
+.dbtn--ghost{background:transparent;color:var(--ink-2);}
+.dbtn--ghost:hover{background:var(--surface-3);}
+.dbtn[disabled]{opacity:.45;cursor:not-allowed;}
+.dbtn--lg{min-height:40px;padding:0 18px;font-size:var(--d-fs-lg);}
+
+/* desktop field */
+.dfield{display:block;}
+.dfield__l{display:block;font-size:var(--d-fs-sm);font-weight:650;color:var(--ink-2);margin-bottom:5px;}
+.dinput{width:100%;min-height:36px;padding:8px 11px;border-radius:var(--radius-sm);
+  border:1.5px solid var(--line-2);background:var(--surface);color:var(--ink);
+  font-family:inherit;font-size:var(--d-fs);}
+.dinput:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft);}
+.dta{min-height:74px;resize:none;}
+
+/* evidence / media grid inside a case */
+.evid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.evid__i{aspect-ratio:1;border-radius:var(--radius-sm);border:1px solid var(--line);
+  position:relative;overflow:hidden;}
+.evid__tag{position:absolute;left:5px;bottom:5px;font-family:var(--num);font-size:10px;
+  font-weight:700;padding:2px 5px;border-radius:4px;background:rgba(0,0,0,.68);color:#FFFFFF;}
+
+/* a two-party evidence split — the disputes desk pattern */
+.parties{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.party{border:1px solid var(--line);border-radius:var(--radius);padding:12px;background:var(--surface);}
+.party__h{display:flex;align-items:center;gap:8px;margin-bottom:9px;}
+
+/* stat strip on the queue home */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.stat{border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px;background:var(--surface);}
+.stat__k{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.stat__v{font-family:var(--num);font-size:var(--d-fs-hero);font-weight:700;letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums;margin-top:5px;display:block;}
+.stat__f{font-size:var(--d-fs-sm);color:var(--muted);margin-top:3px;}
+
+/* the keyboard legend that makes focus order a stated contract */
+.keys{display:flex;align-items:center;gap:14px;flex:none;padding:9px var(--d-gut);
+  border-top:1px solid var(--line);background:var(--surface-2);font-size:var(--d-fs-sm);color:var(--muted);}
+.keys b{font-weight:600;color:var(--ink-2);}
+
+/* desktop empty / loading */
+.dstate{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:64px 40px;gap:9px;height:100%;}
+.dstate__ico{width:56px;height:56px;border-radius:var(--radius-lg);display:grid;place-items:center;
+  background:var(--surface-3);color:var(--muted);margin-bottom:4px;}
+.dstate h3{margin:0;font-size:var(--d-fs-lg);font-weight:730;letter-spacing:-.015em;}
+.dstate p{margin:0;max-width:46ch;font-size:var(--d-fs);color:var(--muted);line-height:1.5;}
+
+/* console caption plate — the console is 1440 wide, so it gets its own
+   item width rather than the 402px mobile one. flex:none matters: as an
+   ordinary flex child it would shrink to the viewport and squeeze a fixed
+   1440 frame, which is exactly the fidelity loss the audit objected to. */
+.fx-item--desk{width:1440px;flex:0 0 auto;max-width:none;}
+
+/* a stage of console screens scrolls inside itself rather than making the
+   whole page scroll sideways */
+.fx-grid--desk{display:block;overflow-x:auto;padding-bottom:16px;}
+.fx-grid--desk .fx-item--desk{margin:0 0 56px;}
+.fx-grid--desk::-webkit-scrollbar{height:8px;}
+.fx-grid--desk::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:99px;}
+.fx-grid--desk::-webkit-scrollbar-track{background:transparent;}
+
+.stepper{display:flex;gap:6px;}
+.phase{flex:1;text-align:center;font-family:var(--num);font-size:10.5px;font-weight:650;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--faint);padding-bottom:6px;
+  border-bottom:2.5px solid var(--line);}
+.phase--done{color:var(--brand);border-bottom-color:var(--brand);}
+.state{text-align:center;padding:22px 0 4px;}
+.state__ico{width:56px;height:56px;border-radius:50%;margin:0 auto;display:grid;place-items:center;
+  background:var(--brand-soft);}
+.tl{position:relative;padding-left:22px;}
+.tl::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.tlitem{position:relative;padding:8px 0;}
+.tlitem::before{content:"";position:absolute;left:-22px;top:13px;width:12px;height:12px;
+  border-radius:50%;background:var(--brand);border:2.5px solid var(--surface);}
+.tlitem--past::before{background:var(--line-2);}
+.thumb{background:var(--surface-3);}
+.mxwrap{display:flex;align-items:stretch;}
+.mxwrap .mx{display:grid;place-items:center;padding:0 12px;border:1px solid var(--line-2);
+  border-right:0;border-radius:var(--radius-sm) 0 0 var(--radius-sm);background:var(--surface-2);
+  font-family:var(--num);font-size:15px;color:var(--muted);}
+.mxwrap .input{border-radius:0 var(--radius-sm) var(--radius-sm) 0;flex:1;min-width:0;}
+.pw{display:flex;gap:8px;align-items:center;}
+.pw .input{flex:1;min-width:0;}
+.dbtn{display:inline-flex;align-items:center;justify-content:center;gap:7px;height:34px;padding:0 13px;
+  border:1px solid transparent;border-radius:var(--radius-sm);font-family:inherit;
+  font-size:var(--d-fs-sm);font-weight:660;cursor:pointer;white-space:nowrap;}
+.dbtn svg{width:15px;height:15px;flex:none;}
+.dbtn--primary{background:var(--brand);color:var(--on-brand);}
+.dbtn--secondary{background:var(--surface);color:var(--ink-2);border-color:var(--line-2);}
+.dbtn--ghost{background:transparent;color:var(--muted);}
+.dbtn--danger{background:var(--risk);color:#fff;}
+.dbtn--lg{height:42px;font-size:var(--d-fs);}
+.dbtn[disabled]{opacity:.45;cursor:not-allowed;}
+.dinput{border:1px solid var(--line-2);border-radius:var(--radius-sm);background:var(--surface);
+  color:var(--ink);font-family:inherit;font-size:var(--d-fs-sm);padding:9px 11px;line-height:1.5;}
+.evid{width:96px;flex:none;position:relative;}
+.evid__i{aspect-ratio:1/1;border-radius:var(--radius-sm);border:1px solid var(--line);}
+.evid__tag{position:absolute;left:5px;bottom:5px;font-family:var(--num);font-size:10px;
+  font-weight:700;padding:2px 5px;border-radius:4px;background:rgba(0,0,0,.68);color:#FFFFFF;}
+.t-2{font-size:var(--d-fs-sm);color:var(--muted);margin-top:2px;}
+.num{font-family:var(--num);font-variant-numeric:tabular-nums;text-align:right;}
+.tbl tbody td{padding:9px 14px;border-bottom:1px solid var(--line);vertical-align:top;}
+.tbl thead th{padding:9px 14px;border-bottom:1px solid var(--line-2);}
+.sla{display:inline-flex;align-items:center;gap:5px;font-family:var(--num);font-size:11.5px;
+  font-weight:700;padding:2px 7px;border-radius:99px;white-space:nowrap;}
+.sla svg{width:12px;height:12px;}
+.sla--ok{background:var(--ok-soft);color:var(--ok);}
+.sla--warn{background:var(--warn-soft);color:var(--warn);}
+.sla--breach{background:var(--risk-soft);color:var(--risk);}
+.sla--stop{background:var(--surface-3);color:var(--muted);}
+
+/* --- combined-run additions ------------------------------------------------ */
+.fix--appr{background:var(--ok-soft);color:var(--ok);font-weight:700;}
+.fix--appr b{font-weight:700;}
+.fix--ret{background:var(--surface-3);color:var(--ink-2);}
+.fix--src{background:transparent;border:1px dashed var(--line-2);color:var(--muted);font-weight:600;}
+.sindex td.st span{font-family:var(--ui);font-size:11.5px;font-weight:700;padding:2px 8px;
+  border-radius:var(--radius-sm);white-space:nowrap;}
+.sindex td.st .y{background:var(--ok-soft);color:var(--ok);}
+.sindex td.st .n{background:var(--surface-3);color:var(--ink-2);}
+.sindex tbody tr.is-appr td:first-child{box-shadow:inset 3px 0 0 var(--ok);}
+.sindex{max-height:560px;overflow:auto;}
+.fix--ret{background:var(--surface-3);color:var(--ink-2);}
+.trackbar{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px 14px;margin:64px 0 8px;
+  padding-top:26px;border-top:2px solid var(--line-2);scroll-margin-top:20px;}
+.trackbar b{font-size:24px;font-weight:790;letter-spacing:-.024em;}
+.trackbar span{font-size:14px;color:var(--muted);}
+.trackbar .fix{margin-left:auto;}
+.trackbar+.trackdek{margin:0 0 30px;max-width:70ch;color:var(--ink-2);font-size:15px;}
+.stagehead{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:baseline;
+  margin:0 0 14px;scroll-margin-top:20px;}
+.stagehead .code{grid-row:1/3;font-family:var(--num);font-size:13px;font-weight:700;
+  letter-spacing:.06em;color:var(--on-brand);background:var(--brand);padding:6px 10px;
+  border-radius:var(--radius-sm);align-self:start;}
+.stagehead h2{margin:0;font-size:21px;font-weight:760;letter-spacing:-.02em;}
+.stagehead .meta{font-size:13.5px;color:var(--muted);}
+.stagehead .meta b{color:var(--ink-2);font-weight:650;}
+.contents{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:0;}
+.contents table{width:100%;border-collapse:collapse;font-size:13.5px;}
+.contents th{text-align:left;font-size:11px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--muted);font-weight:700;padding:10px 14px;background:var(--surface-2);
+  border-bottom:1px solid var(--line-2);}
+.contents td{padding:9px 14px;border-bottom:1px solid var(--line);vertical-align:baseline;}
+.contents tr:last-child td{border-bottom:0;}
+.contents tbody tr:hover{background:var(--surface-2);}
+.contents .c{font-family:var(--num);font-weight:700;color:var(--brand);white-space:nowrap;}
+.contents .r{font-family:var(--num);font-variant-numeric:tabular-nums;color:var(--muted);
+  white-space:nowrap;}
+.contents .n{font-family:var(--num);font-variant-numeric:tabular-nums;text-align:right;
+  white-space:nowrap;}
+.contents a{text-decoration:none;color:var(--ink);font-weight:640;}
+.contents a:hover{text-decoration:underline;}
+.contents-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.legend-row{display:flex;flex-wrap:wrap;gap:18px;margin:16px 0 0;font-size:13.5px;color:var(--ink-2);}
+.legend-row span{display:inline-flex;align-items:center;gap:7px;}
+
+
+/* ==========================================================================
+   THE APPROVED RUN - document chrome.
+   Additive only: every rule below is namespaced to a class the Andry system
+   does not define, so the 171 plates render exactly as they do at source.
+   ========================================================================== */
+
+/* the run is 171 plates wide, so the page opens out past the source width;
+   the reading column inside the masthead stays where prose wants it. */
+.doc{max-width:1720px;}
+.run-mast > *{max-width:1240px;}
+
+.run-mast{padding:76px 0 44px;border-bottom:2px solid var(--ink);}
+.run-mast h1{margin:18px 0 0;font-size:clamp(38px,6.2vw,68px);line-height:.98;
+  letter-spacing:-.035em;font-weight:800;text-wrap:balance;max-width:16ch;}
+.run-mast h1 em{display:block;font-style:normal;color:var(--brand);}
+.run-dek{margin:26px 0 0;max-width:62ch;font-size:18px;line-height:1.5;color:var(--ink-2);}
+.run-dek + .run-dek{margin-top:14px;font-size:16px;color:var(--muted);}
+.run-dek em{font-style:italic;color:var(--ink);}
+
+.ledger{margin:40px 0 0;border:1px solid var(--line);border-radius:var(--radius-lg);
+  overflow:hidden;background:var(--surface);}
+/* colour stated on the table itself: a table does not inherit colour in quirks mode */
+.ledger table{width:100%;border-collapse:collapse;font-size:14px;color:var(--ink);}
+.ledger th,.ledger td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line);}
+.ledger thead th{background:var(--surface-2);font-size:11px;font-weight:700;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--muted);}
+.ledger tbody tr:last-child td{border-bottom:0;}
+.ledger tfoot td{background:var(--surface-2);font-weight:750;
+  border-top:1px solid var(--line-2);border-bottom:0;}
+.ledger .n{text-align:right;font-family:var(--num);font-variant-numeric:tabular-nums;font-weight:650;}
+.ledger th.n{text-align:right;}
+.ledger .who{font-weight:700;color:var(--ink);}
+.ledger .who span{display:block;font-weight:450;font-size:12.5px;color:var(--muted);margin-top:2px;}
+.ledger-scroll{overflow-x:auto;}
+
+.prov{display:inline-flex;align-items:center;gap:6px;font-family:var(--num);font-size:11px;
+  font-weight:650;letter-spacing:.02em;padding:3px 9px;border-radius:var(--radius-sm);
+  white-space:nowrap;background:var(--surface-3);color:var(--ink-2);font-style:normal;}
+.prov::before{content:"";width:5px;height:5px;border-radius:1px;background:currentColor;}
+.prov--complete{background:var(--gold-soft);color:var(--gold-ink);}
+.prov--track{background:var(--brand-soft);color:var(--brand);}
+
+.run-legend{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:26px;
+  font-size:13px;color:var(--muted);align-items:center;}
+.run-legend span{display:inline-flex;align-items:center;gap:8px;}
+
+.run-grid{display:grid;grid-template-columns:repeat(auto-fill,402px);
+  gap:44px 34px;justify-content:start;padding:8px 0 12px;}
+.run-deskgrid{overflow-x:auto;padding:8px 0 20px;}
+.run-deskgrid .fx-item--desk{margin:0 0 48px;}
+
+.run-cap{margin-top:16px;max-width:402px;display:flex;flex-direction:column;gap:8px;}
+.run-cap--wide{max-width:1000px;}
+.run-cap h4{margin:0;font-size:15px;font-weight:700;letter-spacing:-.01em;
+  display:flex;gap:9px;align-items:baseline;}
+.run-cap h4 b{font-family:var(--num);font-size:12.5px;font-weight:650;color:var(--faint);flex:none;}
+.run-cap p{margin:0;font-size:13.5px;line-height:1.5;color:var(--muted);}
+.run-cap .plate__tags{margin-top:1px;}
+
+.run-nav{position:sticky;top:0;z-index:40;background:var(--page);
+  border-bottom:1px solid var(--line);}
+.run-nav ol{display:flex;gap:6px;list-style:none;margin:0;padding:11px 0;overflow-x:auto;}
+.run-nav a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;white-space:nowrap;
+  padding:7px 14px;border-radius:var(--radius-pill);border:1px solid var(--line);
+  background:var(--surface);color:var(--ink-2);font-size:13px;font-weight:650;}
+.run-nav a:hover{border-color:var(--brand);color:var(--brand);}
+.run-nav a b{font-family:var(--num);font-size:11px;color:var(--faint);font-weight:650;}
+
+.stage-run{padding:44px 0 8px;scroll-margin-top:70px;}
+.track-open{scroll-margin-top:70px;}
+
+/* Below two plates' worth of room the grid becomes a shelf rather than
+   shrinking the frames: a 402 x 874 mock is only honest at 402 x 874. */
+@media (max-width:940px){
+  .run-grid{display:flex;overflow-x:auto;gap:28px;padding-bottom:26px;
+    scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;}
+  .run-grid > .plate{scroll-snap-align:start;}
+  .run-mast{padding:56px 0 36px;}
+}
+
+/* the two row-height tokens the desk tables reference; absent from both sources */
+:root{--d-row:44px;--d-row-lg:56px;}
+
+
+/* ==========================================================================
+   THE THIRTEEN — document chrome. Additive: every rule is namespaced to a
+   class the Andry system does not define, so the plates render as the
+   approved 171 do.
+   ========================================================================== */
+.doc{max-width:1720px;}
+.new-mast > *{max-width:1240px;}
+
+.new-mast{padding:76px 0 44px;border-bottom:2px solid var(--ink);}
+.new-mast h1{margin:18px 0 0;font-size:clamp(38px,6vw,66px);line-height:.98;
+  letter-spacing:-.035em;font-weight:800;text-wrap:balance;max-width:17ch;}
+.new-mast h1 em{display:block;font-style:normal;color:var(--brand);}
+.new-dek{margin:26px 0 0;max-width:63ch;font-size:18px;line-height:1.5;color:var(--ink-2);}
+.new-dek + .new-dek{margin-top:14px;font-size:16px;color:var(--muted);}
+.new-dek strong{color:var(--ink);font-weight:650;}
+.new-dek em{font-style:italic;color:var(--ink);}
+
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:38px;}
+.rule{border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);
+  padding:18px 20px;}
+.rule b{display:block;font-size:14px;font-weight:730;letter-spacing:-.01em;margin-bottom:6px;}
+.rule span{display:block;font-size:13px;line-height:1.5;color:var(--muted);}
+
+.new-grid{display:grid;grid-template-columns:repeat(auto-fill,402px);
+  gap:44px 34px;justify-content:start;padding:8px 0 12px;}
+.new-cap{margin-top:16px;max-width:402px;display:flex;flex-direction:column;gap:8px;}
+.new-cap h4{margin:0;font-size:15px;font-weight:700;letter-spacing:-.01em;
+  display:flex;gap:9px;align-items:baseline;}
+.new-cap h4 b{font-family:var(--num);font-size:12.5px;font-weight:650;color:var(--brand);flex:none;}
+.new-cap p{margin:0;font-size:13.5px;line-height:1.55;color:var(--muted);}
+.new-cap q{font-style:normal;color:var(--ink-2);font-weight:600;}
+.new-cap q::before{content:"\201C";} .new-cap q::after{content:"\201D";}
+.new-cap .plate__tags{margin-top:1px;}
+.fix--closes{background:var(--brand-soft);color:var(--brand);}
+
+.stage-new{padding:44px 0 8px;scroll-margin-top:70px;}
+.new-nav{position:sticky;top:0;z-index:40;background:var(--page);border-bottom:1px solid var(--line);}
+.new-nav ol{display:flex;gap:6px;list-style:none;margin:0;padding:11px 0;overflow-x:auto;}
+.new-nav a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;white-space:nowrap;
+  padding:7px 14px;border-radius:var(--radius-pill);border:1px solid var(--line);
+  background:var(--surface);color:var(--ink-2);font-size:13px;font-weight:650;}
+.new-nav a:hover{border-color:var(--brand);color:var(--brand);}
+.new-nav a b{font-family:var(--num);font-size:11px;color:var(--faint);font-weight:650;}
+
+@media (max-width:940px){
+  .new-grid{display:flex;overflow-x:auto;gap:28px;padding-bottom:26px;
+    scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;}
+  .new-grid > .plate{scroll-snap-align:start;}
+  .new-mast{padding:56px 0 36px;}
+}
+
+:root{--d-row:44px;--d-row-lg:56px;}
+</style>
+
+<div class="doc">
+<header class="new-mast">
+  <p class="eyebrow">Andry &middot; the flow-blockers, drawn</p>
+  <h1>The thirteen<em>screens that let the run finish</em></h1>
+  <p class="new-dek">Thirteen plates, built on the Andry design system with no rule added to it and
+    nothing in the approved 171 touched. Each one closes a place where a journey stopped: a slide that
+    was never made, a step a stepper claimed was done, an account number a screen promised on the
+    next screen, a document four plates asked people to accept.</p>
+  <p class="new-dek">They are drawn at 402 &times; 874 on the same component set as the run, so they
+    can be read beside it without translation. Where a plate had to invent a fact &mdash; a bank, a
+    fee, a loss rate &mdash; it is consistent with the figures already published across the 171.</p>
+  <p class="new-dek"><strong>One defect surfaced while matching #11.</strong> Its KYC stepper puts the
+    step labels inside <span class="mono">.kyc__l</span>, which the system defines as a 2px connector
+    line. The text overflows that 2px box and collides with the heading beneath it &mdash; visible on
+    the approved plate today. C-04 and C-05 set the same labels in a nowrap span instead, so the new
+    work does not inherit the collision. Fixing #11 itself needs a stylesheet change rather than a
+    plate edit, and nothing approved was touched here.</p>
+  <div class="rules">
+    <div class="rule"><b>Nothing approved was altered</b><span>No plate in the 171 was edited, moved
+      or re-rendered. These sit behind them.</span></div>
+    <div class="rule"><b>No new components</b><span>Every element here already exists in the system:
+      the KYC stepper, the verify module, the strength meter, the countdown.</span></div>
+    <div class="rule"><b>The reason before the request</b><span>Andry explains why a constraint exists
+      wherever it imposes one. These follow that, including where it is unflattering.</span></div>
+    <div class="rule"><b>Real numbers throughout</b><span>Loss rates, fees, hold periods and dates are
+      specific and reconcile with what the run already states.</span></div>
+  </div>
+</header>
+
+<nav class="new-nav" aria-label="Groups"><ol>
+  <li><a href="#g1">Getting in <b>4</b></a></li>
+  <li><a href="#g2">Proving who you are <b>2</b></a></li>
+  <li><a href="#g3">Getting money in and out <b>3</b></a></li>
+  <li><a href="#g4">The documents you are asked to accept <b>4</b></a></li>
+</ol></nav>
+
+<section class="sec stage-new" id="g1">
+  <div class="stagehead"><span class="code">C01</span>
+    <h2>Getting in</h2>
+    <span class="meta">C-01 to C-07 &middot; 4 screens &middot; all <b>flow-blocking</b></span></div>
+  <p class="trackdek">The first screen anyone sees, the slide that hands them off, and the two ends of password recovery. Four screens that decide whether a person reaches the product at all.</p>
+  <div class="new-grid">
+<div class="plate"><div class="phone"><div class="st"><span>10:30</span><div class="st__notch"></div><span class="st__r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1.5" width="18" height="8" rx="2.4"/><rect x="2.8" y="3.3" width="12" height="4.4" rx="1.2" fill="currentColor" stroke="none"/><path d="M21 4.3v2.4" stroke-linecap="round"/></svg></span></div>
+<div class="vp">
+<div class="appbar">
+<span class="appbar__title" style="font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);padding-left:8px">Andry</span>
+<button class="btn btn--ghost" style="min-height:44px;padding:0 14px;font-size:14px">Skip</button>
+</div>
+<div class="scroll"><div class="pad pb stack g6">
+<div class="thumb" style="aspect-ratio:5/4;background:linear-gradient(152deg,#2A2350 0%,var(--brand-lo) 38%,#8A6A2E 78%,var(--gold) 100%)" role="img" aria-label="Illustration: a white Fulani bull at dawn, a tag visible on its ear"></div>
+<div class="stack g4">
+<h2 style="margin:0;font-size:26px;line-height:1.18;letter-spacing:-.028em;font-weight:790">Cattle have always been savings. The farm was the hard part.</h2>
+<p style="margin:0;font-size:15px;line-height:1.5;color:var(--ink-2)">The land, the feed, someone you trust to stand over the animal. Andry supplies all three.</p>
+</div>
+<div class="card card--plain stack g3">
+<div class="row" style="gap:10px">
+<svg width="20" height="20" style="color:var(--brand);flex:none"><use href="#i-wallet"/></svg>
+<span class="grow" style="font-size:13.5px;font-weight:640">A unit starts at <span class="money money--sm">&#8358;2,450.00</span>, not the price of a bull</span>
+</div>
+<div class="row" style="gap:10px">
+<svg width="20" height="20" style="color:var(--brand);flex:none"><use href="#i-users"/></svg>
+<span class="grow" style="font-size:13.5px;font-weight:640">One animal is split between up to 400 owners</span>
+</div>
+<div class="row" style="gap:10px">
+<svg width="20" height="20" style="color:var(--brand);flex:none"><use href="#i-map"/></svg>
+<span class="grow" style="font-size:13.5px;font-weight:640">15 ranches across 6 states, none of them yours</span>
+</div>
+</div>
+</div></div>
+<div class="actionbar">
+<div class="stack g4">
+<div class="row" style="justify-content:center;gap:7px"><span class="sr">Step 1 of 3</span><span aria-hidden="true" style="width:24px;height:7px;border-radius:var(--radius-pill);background:var(--brand)"></span><span aria-hidden="true" style="width:7px;height:7px;border-radius:var(--radius-pill);background:var(--line-2)"></span><span aria-hidden="true" style="width:7px;height:7px;border-radius:var(--radius-pill);background:var(--line-2)"></span></div>
+<button class="btn btn--primary btn--block">Next</button>
+</div>
+<div class="hi"></div>
+</div>
+</div></div><div class="new-cap"><h4><b>C-01</b> Onboarding, slide 1 of 3</h4><p><strong>The premise, before the mechanics.</strong> Slide 2 explains how ownership works; this one has to earn the right to explain it. It names the thing the reader already knows &mdash; that a herd is how value has been stored here for generations &mdash; and then names the single part Andry supplies. The price of entry is stated on the first screen rather than discovered three taps later.</p><div class="plate__tags"><span class="fix fix--closes">Closes C-01</span><span class="fix">Sits before #1</span><span class="fix">Anchor <b>Duolingo</b></span></div></div></div>
+<div class="plate"><div class="phone"><div class="st"><span>10:30</span><div class="st__notch"></div><span class="st__r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1.5" width="18" height="8" rx="2.4"/><rect x="2.8" y="3.3" width="12" height="4.4" rx="1.2" fill="currentColor" stroke="none"/><path d="M21 4.3v2.4" stroke-linecap="round"/></svg></span></div>
+<div class="vp">
+<div class="appbar">
+<span class="appbar__title" style="font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);padding-left:8px">Andry</span>
+<button class="btn btn--ghost" style="min-height:44px;padding:0 14px;font-size:14px">Skip</button>
+</div>
+<div class="scroll"><div class="pad stack g5">
+<div class="thumb" style="aspect-ratio:5/4;background:linear-gradient(200deg,var(--brand-hi) 0%,var(--brand-lo) 44%,#1F6B4C 92%)" role="img" aria-label="Illustration: a supervisor photographing a tagged animal at a pen gate"></div>
+<div class="stack g4">
+<h2 style="margin:0;font-size:26px;line-height:1.18;letter-spacing:-.028em;font-weight:790">Your money waits in escrow. Your units are yours to sell.</h2>
+</div>
+<div class="card card--plain stack g4">
+<div class="stack g2">
+<div class="row" style="gap:10px">
+<svg width="20" height="20" style="color:var(--ok);flex:none"><use href="#i-lock"/></svg>
+<span class="grow" style="font-size:14.5px;font-weight:700">Before you own it</span>
+</div>
+<p class="sub" style="margin:0">Held in escrow until the ranch confirms the animal and the tag is scanned. If it never comes, your money returns in full.</p>
+</div>
+<div class="stack g2">
+<div class="row" style="gap:10px">
+<svg width="20" height="20" style="color:var(--brand);flex:none"><use href="#i-swap"/></svg>
+<span class="grow" style="font-size:14.5px;font-weight:700">When you want out</span>
+</div>
+<p class="sub" style="margin:0">Sell to another owner, or hold to sale weight for a share of the proceeds. No buyer is guaranteed.</p>
+</div>
+</div>
+<p class="tiny" style="margin:0">Andry is not a bank. Units are not protected by the NDIC.</p>
+</div></div>
+<div class="actionbar">
+<div class="stack g4">
+<div class="row" style="justify-content:center;gap:7px"><span class="sr">Step 3 of 3</span><span aria-hidden="true" style="width:7px;height:7px;border-radius:var(--radius-pill);background:var(--line-2)"></span><span aria-hidden="true" style="width:7px;height:7px;border-radius:var(--radius-pill);background:var(--line-2)"></span><span aria-hidden="true" style="width:24px;height:7px;border-radius:var(--radius-pill);background:var(--brand)"></span></div>
+<div class="stack g2">
+<button class="btn btn--primary btn--block">Create an account</button>
+<button class="btn btn--ghost btn--block">Look at the market first</button>
+</div>
+</div>
+<div class="hi"></div>
+</div>
+</div></div><div class="new-cap"><h4><b>C-02</b> Onboarding, slide 3 of 3</h4><p><strong>The hand-off.</strong> Where #1 leaves the reader with <q>Next</q> and nothing to land on. Three slides is a small budget, so the last one spends itself on the two questions that decide whether someone signs up: what happens to my money in the gap between paying and owning, and how do I get out. It offers the market as an alternative to signing up, because a person who is not ready should not be cornered.</p><div class="plate__tags"><span class="fix fix--closes">Closes C-02</span><span class="fix">Sits after #1</span><span class="fix">Hands off to #2 or #6</span></div></div></div>
+<div class="plate"><div class="phone"><div class="st"><span>10:30</span><div class="st__notch"></div><span class="st__r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1.5" width="18" height="8" rx="2.4"/><rect x="2.8" y="3.3" width="12" height="4.4" rx="1.2" fill="currentColor" stroke="none"/><path d="M21 4.3v2.4" stroke-linecap="round"/></svg></span></div>
+<div class="vp">
+<div class="appbar">
+<button class="appbar__btn" aria-label="Back to sign in"><svg width="24" height="24"><use href="#i-back"/></svg></button>
+<span class="appbar__title">Reset password</span>
+</div>
+<div class="scroll"><div class="pad pb stack g5">
+<div class="stack g3" style="margin-top:6px">
+<h2 style="margin:0;font-size:23px;line-height:1.2;letter-spacing:-.026em;font-weight:780">Which address is on the account?</h2>
+<p class="sub">We send a link that lets you set a new password. The link lasts 30 minutes.</p>
+</div>
+<label class="field"><span class="field__l">Email address <span class="req">*</span></span>
+<input class="input" type="email" value="taiwo.adekola@gmail.com" autocomplete="username">
+<span class="field__hint">Use the address you signed up with, not one you added later for receipts.</span></label>
+<div class="card card--plain stack g3">
+<div class="row" style="gap:10px">
+<svg width="19" height="19" style="color:var(--muted);flex:none"><use href="#i-shield"/></svg>
+<span class="grow" style="font-size:14px;font-weight:700">We will not say whether that address has an account</span>
+</div>
+<p class="sub" style="margin:0">The next screen looks the same either way. Confirming it would let anyone check who keeps money here, so the answer arrives in your inbox or not at all.</p>
+</div>
+<div class="sect" style="margin-top:2px">
+<div class="sect__h"><h3>If you cannot reach that inbox</h3></div>
+<div class="card card--plain stack g3">
+<div class="row" style="gap:11px;align-items:flex-start">
+<svg width="19" height="19" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-lock"/></svg>
+<span class="sub"><b style="color:var(--ink)">You have two-factor turned on.</b> A recovery code will let you back in without the email. <a href="#">Use a recovery code</a></span>
+</div>
+<div class="row" style="gap:11px;align-items:flex-start">
+<svg width="19" height="19" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-users"/></svg>
+<span class="sub"><b style="color:var(--ink)">The address is gone for good.</b> Our team can move your account to a new one after an identity check. It takes 1 to 2 working days. <a href="#">Talk to support</a></span>
+</div>
+</div>
+</div>
+<p class="tiny" style="margin:0">Requesting a link does not sign you out anywhere or lock the account. Nothing changes until you set a new password.</p>
+</div></div>
+<div class="actionbar">
+<button class="btn btn--primary btn--block">Send the link</button>
+<p class="tiny" style="margin:9px 0 0;text-align:center">Remembered it? <a href="#">Back to sign in</a></p>
+<div class="hi"></div>
+</div>
+</div></div><div class="new-cap"><h4><b>C-06</b> Reset password &mdash; request</h4><p><strong>The entrance #9 assumes.</strong> The run had the confirmation but nowhere to type the address. The screen deliberately does not confirm whether an account exists at that address &mdash; that would tell a stranger who banks here &mdash; and it says so, because an unexplained non-answer reads as a bug.</p><div class="plate__tags"><span class="fix fix--closes">Closes C-06</span><span class="fix">Sits before #9</span><span class="fix">Serves #8 <q>Forgot password?</q></span></div></div></div>
+<div class="plate"><div class="phone"><div class="st"><span>10:30</span><div class="st__notch"></div><span class="st__r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1.5" width="18" height="8" rx="2.4"/><rect x="2.8" y="3.3" width="12" height="4.4" rx="1.2" fill="currentColor" stroke="none"/><path d="M21 4.3v2.4" stroke-linecap="round"/></svg></span></div>
+<div class="vp">
+<div class="appbar">
+<span class="appbar__title" style="padding-left:8px">Choose a new password</span>
+</div>
+<div class="scroll"><div class="pad pb stack g5">
+<div class="card card--tight row" style="gap:10px;background:var(--brand-soft);border-color:transparent">
+<svg width="19" height="19" style="color:var(--brand);flex:none"><use href="#i-checkc"/></svg>
+<span class="grow tiny" style="color:var(--brand);font-weight:640">Link confirmed for t&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;a@example.com</span>
+</div>
+<div class="stack g4">
+<label class="field"><span class="field__l">New password <span class="req">*</span></span>
+<div class="inputwrap"><input class="input" type="password" value="riverbank-harmattan" autocomplete="new-password"><button class="reveal">Show</button></div>
+<div class="pw"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+<span class="field__hint">Strong. Two unrelated words and a mark beat one word with substitutions.</span></label>
+<label class="field"><span class="field__l">Type it again <span class="req">*</span></span>
+<div class="inputwrap"><input class="input" type="password" value="riverbank-harmattan" autocomplete="new-password"><button class="reveal">Show</button></div>
+<span class="field__hint">Both entries match.</span></label>
+</div>
+<div class="card card--plain stack g3">
+<div class="row" style="gap:10px">
+<svg width="19" height="19" style="color:var(--warn);flex:none"><use href="#i-logout"/></svg>
+<span class="grow" style="font-size:14px;font-weight:700">This signs out your other devices</span>
+</div>
+<p class="sub" style="margin:0">Two other sessions end when you save: an iPhone in Ibadan last used 04 Aug, and a Chrome browser last used 21 Jul. If one of those is not you, that is the point &mdash; save now and read the sign-in history afterwards.</p>
+</div>
+<p class="tiny" style="margin:0">Your money, units and open offers are untouched by a password change. Nothing is sold and no offer lapses.</p>
+</div></div>
+<div class="actionbar">
+<button class="btn btn--primary btn--block">Save and sign in</button>
+<div class="hi"></div>
+</div>
+</div></div><div class="new-cap"><h4><b>C-07</b> Reset password &mdash; set a new one</h4><p><strong>Where the emailed link lands.</strong> The exit the recovery journey never had. It reuses the strength meter from #6 so the rule a person met at sign-up is the rule they meet again, and it states the consequence most reset screens hide: every other signed-in device is dropped. Somebody resetting a password because they fear a stranger is in the account needs to be told that in advance.</p><div class="plate__tags"><span class="fix fix--closes">Closes C-07</span><span class="fix">Sits after #9</span><span class="fix">Reuses the meter from #6</span></div></div></div>
+  </div>
+</section>
+
+<section class="sec stage-new" id="g2">
+  <div class="stagehead"><span class="code">C04</span>
+    <h2>Proving who you are</h2>
+    <span class="meta">C-04 to C-05 &middot; 2 screens &middot; all <b>flow-blocking</b></span></div>
+  <p class="trackdek">The steps #11 asserts in its own stepper &mdash; one marked done, one marked pending, neither drawn. Step 3 is also what stops the name mismatch that #90 exists to explain.</p>
+  <div class="new-grid">
+<div class="plate"><div class="phone"><div class="st"><span>10:30</span><div class="st__notch"></div><span class="st__r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1.5" width="18" height="8" rx="2.4"/><rect x="2.8" y="3.3" width="12" height="4.4" rx="1.2" fill="currentColor" stroke="none"/><path d="M21 4.3v2.4" stroke-linecap="round"/></svg></span></div>
+<div class="vp">
+<div class="appbar">
+<button class="appbar__btn" aria-label="Back"><svg width="24" height="24"><use href="#i-back"/></svg></button>
+<div class="appbar__title">Verify your identity</div>
+</div>
+<div class="pad" style="padding-bottom:4px"><div class="kyc" style="gap:6px"><div class="kyc__s"><span class="kyc__d" style="background:var(--brand);color:var(--on-brand)">1</span><span style="font-size:11.5px;line-height:1.2;white-space:nowrap;letter-spacing:-.005em;font-weight:700;color:var(--ink)">Identity &middot; Now</span></div><div class="kyc__s"><span class="kyc__d">2</span><span style="font-size:11.5px;line-height:1.2;white-space:nowrap;letter-spacing:-.005em;font-weight:640;color:var(--faint)">Address &middot; Pending</span></div><div class="kyc__s"><span class="kyc__d">3</span><span style="font-size:11.5px;line-height:1.2;white-space:nowrap;letter-spacing:-.005em;font-weight:640;color:var(--faint)">Bank &middot; Pending</span></div></div></div>
+<div class="scroll"><div class="pad">
+<h3 style="margin:14px 0 6px;font-size:18px;font-weight:750">Step 1 of 3: who you are</h3>
+<p class="sub">Andry holds money and moves it on your behalf, so the law requires us to know who you are before your wallet opens. Three steps, about six minutes.</p>
+<div class="card" style="margin-top:16px"><span class="lbl">Your NIN</span>
+<label class="field" style="margin-top:8px"><span class="sr">National Identification Number</span>
+<input class="input mono" style="letter-spacing:.14em;font-size:17px" value="7014 2288 41"></label>
+<p class="tiny" style="margin-top:8px">Dial <span class="mono">*346#</span> from the number registered to you if you do not know it. We check the name attached to it against <b style="color:var(--ink)">Taiwo Adekola</b>.</p>
+</div>
+<div class="sect"><div class="sect__h"><h3>Add a photo ID</h3></div>
+<div class="list">
+<button class="listitem"><span class="av av--sq av--md" style="background:var(--brand-soft);color:var(--brand)"><svg width="22" height="22"><use href="#i-card"/></svg></span>
+<span class="grow"><span style="display:block;font-size:14.5px;font-weight:680">NIN slip or card</span><span class="tiny">Verifies instantly &mdash; most people finish here</span></span>
+<span class="badge badge--ok">Fastest</span>
+<svg width="20" height="20" style="color:var(--faint);flex:none"><use href="#i-chev"/></svg></button>
+<button class="listitem"><span class="av av--sq av--md" style="background:var(--surface-3);color:var(--muted)"><svg width="22" height="22"><use href="#i-doc"/></svg></span>
+<span class="grow"><span style="display:block;font-size:14.5px;font-weight:680">International passport</span><span class="tiny">Reviewed by a person, usually inside 1 working day</span></span>
+<svg width="20" height="20" style="color:var(--faint);flex:none"><use href="#i-chev"/></svg></button>
+<button class="listitem"><span class="av av--sq av--md" style="background:var(--surface-3);color:var(--muted)"><svg width="22" height="22"><use href="#i-card"/></svg></span>
+<span class="grow"><span style="display:block;font-size:14.5px;font-weight:680">Driver&rsquo;s licence</span><span class="tiny">Reviewed by a person, usually inside 1 working day</span></span>
+<svg width="20" height="20" style="color:var(--faint);flex:none"><use href="#i-chev"/></svg></button>
+<button class="listitem"><span class="av av--sq av--md" style="background:var(--surface-3);color:var(--muted)"><svg width="22" height="22"><use href="#i-users"/></svg></span>
+<span class="grow"><span style="display:block;font-size:14.5px;font-weight:680">Voter&rsquo;s card</span><span class="tiny">Reviewed by a person &mdash; worn cards are often rejected</span></span>
+<svg width="20" height="20" style="color:var(--faint);flex:none"><use href="#i-chev"/></svg></button>
+</div></div>
+<p class="tiny" style="margin-top:16px;padding:11px 12px;background:var(--surface-2);border-radius:var(--radius)">Your document is encrypted in transit and at rest, seen only by our verification team, and never shown to hosts, supervisors or other owners. We delete it 90 days after your account closes. <a href="#">How we handle your data</a></p>
+</div><div class="pb"></div></div>
+<div class="actionbar"><button class="btn btn--primary btn--block">Continue</button>
+<button class="btn btn--ghost btn--block" style="margin-top:6px">Do this later</button></div>
+<div class="tabbar"><button class="tabbar__i"><svg><use href="#i-home"/></svg><span>Home</span></button><button class="tabbar__i"><svg><use href="#i-market"/></svg><span>Market</span></button><button class="tabbar__i"><svg><use href="#i-portfolio"/></svg><span>Portfolio</span></button><button class="tabbar__i"><svg><use href="#i-activity"/></svg><span>Activity</span></button><button class="tabbar__i is-on"><svg><use href="#i-profile"/></svg><span>Profile</span></button></div>
+</div><div class="hi"></div></div><div class="new-cap"><h4><b>C-04</b> KYC verification, step 1 of 3 &mdash; identity</h4><p><strong>The step #11 marks <q>Done</q>.</strong> It is the first thing a regulator asks for and the first time Andry asks for something genuinely sensitive, so the reason is given before the request. Document choice is a list rather than a dropdown because the trade-offs differ per document, and the one that verifies instantly is said so &mdash; people will pick it, which is the point.</p><div class="plate__tags"><span class="fix fix--closes">Closes C-04</span><span class="fix">Sits before #11</span><span class="fix">Anchor <b>Wise</b></span></div></div></div>
+<div class="plate"><div class="phone"><div class="st"><span>10:30</span><div class="st__notch"></div><span class="st__r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1.5" width="18" height="8" rx="2.4"/><rect x="2.8" y="3.3" width="12" height="4.4" rx="1.2" fill="currentColor" stroke="none"/><path d="M21 4.3v2.4" stroke-linecap="round"/></svg></span></div>
+<div class="vp">
+<div class="appbar">
+<button class="appbar__btn" aria-label="Back"><svg width="24" height="24"><use href="#i-back"/></svg></button>
+<div class="appbar__title">Verify your identity</div>
+</div>
+<div class="pad" style="padding-bottom:4px"><div class="kyc" style="gap:6px"><div class="kyc__s"><span class="kyc__d" style="background:var(--ok);color:#fff"><svg width="13" height="13"><use href="#i-check"/></svg></span><span style="font-size:11.5px;line-height:1.2;white-space:nowrap;letter-spacing:-.005em;font-weight:640;color:var(--muted)">Identity &middot; <b style="color:var(--ok)">Done</b></span></div><div class="kyc__s"><span class="kyc__d" style="background:var(--ok);color:#fff"><svg width="13" height="13"><use href="#i-check"/></svg></span><span style="font-size:11.5px;line-height:1.2;white-space:nowrap;letter-spacing:-.005em;font-weight:640;color:var(--muted)">Address &middot; <b style="color:var(--ok)">Done</b></span></div><div class="kyc__s"><span class="kyc__d" style="background:var(--brand);color:var(--on-brand)">3</span><span style="font-size:11.5px;line-height:1.2;white-space:nowrap;letter-spacing:-.005em;font-weight:700;color:var(--ink)">Bank &middot; Now</span></div></div></div>
+<div class="scroll"><div class="pad">
+<h3 style="margin:14px 0 6px;font-size:18px;font-weight:750">Step 3 of 3: where money returns to</h3>
+<p class="sub">Money can only leave Andry to an account in your own name. Setting that account now is what stops a withdrawal being blocked later, when you actually want the cash.</p>
+<div class="sect"><div class="sect__h"><h3>Your bank account</h3></div>
+<div class="stack g4">
+<label class="field"><span class="field__l">Bank <span class="req">*</span></span>
+<div class="row" style="gap:0"><input class="input" value="Guaranty Trust Bank" style="border-top-right-radius:0;border-bottom-right-radius:0"><button class="btn btn--secondary" style="min-height:50px;border-radius:0 var(--radius) var(--radius) 0;border-left:0;padding:0 14px"><svg width="18" height="18"><use href="#i-chev"/></svg></button></div></label>
+<label class="field"><span class="field__l">Account number <span class="req">*</span></span>
+<input class="input mono" style="letter-spacing:.1em" value="0148832041"></label>
+</div>
+</div>
+<div class="verify" style="margin-top:16px">
+<div class="verify__top">
+<svg width="20" height="20" style="color:var(--ok);flex:none"><use href="#i-checkc"/></svg>
+<div class="grow">
+<div style="font-size:13.5px;font-weight:700;color:var(--ok)">The name matches your ID</div>
+<div class="tiny" style="color:var(--ok)">Checked with the bank just now</div>
+</div>
+</div>
+<div class="verify__row"><span class="k">On the account</span><span class="grow v">TAIWO ADEKOLA</span></div>
+<div class="verify__row"><span class="k">On your ID</span><span class="grow v">Taiwo Adekola</span></div>
+</div>
+<div class="card card--plain stack g3" style="margin-top:16px">
+<div class="row" style="gap:10px">
+<svg width="19" height="19" style="color:var(--muted);flex:none"><use href="#i-info"/></svg>
+<span class="grow" style="font-size:14px;font-weight:700">If the names differ</span>
+</div>
+<p class="sub" style="margin:0">A middle name or an abbreviation is fine and we accept it. A different person is not &mdash; joint accounts and a spouse&rsquo;s account cannot be used, even with permission. You can change this account later from Payment methods.</p>
+</div>
+<p class="tiny" style="margin-top:16px">You can still add funds and buy without this step, but you will not be able to withdraw until it is done.</p>
+</div><div class="pb"></div></div>
+<div class="actionbar"><button class="btn btn--primary btn--block">Finish verification</button></div>
+<div class="tabbar"><button class="tabbar__i"><svg><use href="#i-home"/></svg><span>Home</span></button><button class="tabbar__i"><svg><use href="#i-market"/></svg><span>Market</span></button><button class="tabbar__i"><svg><use href="#i-portfolio"/></svg><span>Portfolio</span></button><button class="tabbar__i"><svg><use href="#i-activity"/></svg><span>Activity</span></button><button class="tabbar__i is-on"><svg><use href="#i-profile"/></svg><span>Profile</span></button></div>
+</div><div class="hi"></div></div><div class="new-cap"><h4><b>C-05</b> KYC verification, step 3 of 3 &mdash; bank</h4><p><strong>The step #11 marks <q>Pending</q>, and the one that prevents #90.</strong> Andry already draws a plate for a withdrawal blocked on a name mismatch; this is where that mismatch is caught while it is still cheap. Resolving the account name before the user commits turns a rule into a visible check, so the match is shown rather than asserted.</p><div class="plate__tags"><span class="fix fix--closes">Closes C-05</span><span class="fix">Sits after #11</span><span class="fix">Prevents #90</span></div></div></div>
+  </div>
+</section>
+
+<section class="sec stage-new" id="g3">
+  <div class="stagehead"><span class="code">C03</span>
+    <h2>Getting money in and out</h2>
+    <span class="meta">C-03 to C-09 &middot; 3 screens &middot; all <b>flow-blocking</b></span></div>
+  <p class="trackdek">The account number #18 promises on the next screen, and the two instrument forms that #19, #20, #87 and #90 all reach for.</p>
+  <div class="new-grid">
+<div class="plate"><div class="phone"><div class="st"><span>10:30</span><div class="st__notch"></div><span class="st__r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1.5" width="18" height="8" rx="2.4"/><rect x="2.8" y="3.3" width="12" height="4.4" rx="1.2" fill="currentColor" stroke="none"/><path d="M21 4.3v2.4" stroke-linecap="round"/></svg></span></div>
+<div class="vp">
+<div class="appbar">
+<button class="appbar__btn" aria-label="Back to Add funds"><svg width="24" height="24"><use href="#i-back"/></svg></button>
+<div class="appbar__title">Bank transfer</div>
+</div>
+<div class="scroll"><div class="pad pb stack g5">
+<div class="card card--brand stack g2">
+<span class="lbl">Send exactly</span>
+<span class="money money--xl">&#8358;100,000.00</span>
+<span class="fx" style="color:rgba(255,255,255,.72)">Sending a different amount is fine &mdash; we credit what arrives.</span>
+</div>
+<div class="verify">
+<div class="verify__top" style="background:var(--brand-soft)">
+<svg width="20" height="20" style="color:var(--brand);flex:none"><use href="#i-bank"/></svg>
+<div class="grow">
+<div style="font-size:13.5px;font-weight:700;color:var(--brand)">Providus Bank</div>
+<div class="tiny" style="color:var(--brand)">Andry holds this account for you alone</div>
+</div>
+</div>
+<div class="verify__row">
+<span class="k">Account</span>
+<span class="grow mono" style="font-size:17px;font-weight:700;letter-spacing:.06em;color:var(--ink)">9911447102</span>
+<button class="btn btn--sm btn--secondary" style="min-height:40px">Copy</button>
+</div>
+<div class="verify__row">
+<span class="k">Name</span>
+<span class="grow v">ANDRY CUSTODY / TAIWO ADEKOLA</span>
+</div>
+<div class="verify__row">
+<span class="k">Reference</span>
+<span class="grow mono" style="font-size:14px;font-weight:700;color:var(--ink)">AND-TOP-4471-KX</span>
+<button class="btn btn--sm btn--secondary" style="min-height:40px">Copy</button>
+</div>
+</div>
+<div class="card card--plain stack g3">
+<div class="spread">
+<span class="row" style="gap:7px"><svg width="17" height="17" style="color:var(--warn);flex:none"><use href="#i-clock"/></svg><span class="tiny">This account closes at 12:04</span></span>
+<span class="cd"><b>00</b><i>d</i><b>01</b><i>h</i><b>34</b><i>m</i></span>
+</div>
+<span class="tiny">The number is issued for this transfer only. After it closes, money sent to it is returned by the bank in 3 to 5 working days and you start again.</span>
+</div>
+<div class="sect" style="margin-top:2px">
+<div class="sect__h"><h3>Two things that will hold it up</h3></div>
+<div class="card card--plain stack g3">
+<div class="row" style="gap:11px;align-items:flex-start">
+<svg width="19" height="19" style="color:var(--risk);flex:none;margin-top:2px"><use href="#i-alert"/></svg>
+<span class="sub"><b style="color:var(--ink)">Sending from an account in another name.</b> It is returned, not credited. Your bank account must read <b style="color:var(--ink)">Taiwo Adekola</b>, the name on your ID.</span>
+</div>
+<div class="row" style="gap:11px;align-items:flex-start">
+<svg width="19" height="19" style="color:var(--risk);flex:none;margin-top:2px"><use href="#i-doc"/></svg>
+<span class="sub"><b style="color:var(--ink)">Leaving out the reference.</b> Without it we cannot tell which wallet the money belongs to and it sits unmatched until you contact us.</span>
+</div>
+</div>
+</div>
+<div class="row" style="gap:7px"><svg width="16" height="16" style="color:var(--muted)"><use href="#i-clock"/></svg><span class="tiny">Most transfers clear in 2 to 10 minutes. You do not need to stay on this screen.</span></div>
+</div></div>
+<div class="actionbar">
+<button class="btn btn--primary btn--block">I have sent the transfer</button>
+<button class="btn btn--ghost btn--block" style="margin-top:6px">Cancel this top-up</button>
+<div class="hi"></div>
+</div>
+</div></div><div class="new-cap"><h4><b>C-03</b> Bank transfer &mdash; account and reference</h4><p><strong>The screen #18 promises by name.</strong> <q>Send to the account number shown on the next screen</q> had no next screen. The account is generated per transfer and expires, which is why the countdown is given the same weight as the number itself. The reference is the only thing tying a payment to a wallet, so it is copyable and the consequence of omitting it is stated plainly rather than left as a warning triangle.</p><div class="plate__tags"><span class="fix fix--closes">Closes C-03</span><span class="fix">Sits after #18</span><span class="fix">Anchor <b>Wise</b></span></div></div></div>
+<div class="plate"><div class="phone"><div class="st"><span>10:30</span><div class="st__notch"></div><span class="st__r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1.5" width="18" height="8" rx="2.4"/><rect x="2.8" y="3.3" width="12" height="4.4" rx="1.2" fill="currentColor" stroke="none"/><path d="M21 4.3v2.4" stroke-linecap="round"/></svg></span></div>
+<div class="vp">
+<div class="appbar">
+<button class="appbar__btn" aria-label="Back to payment methods"><svg width="24" height="24"><use href="#i-back"/></svg></button>
+<div class="appbar__title">Add a bank account</div>
+</div>
+<div class="scroll"><div class="pad pb stack g5">
+<p class="sub" style="margin:0">This is where money leaves Andry. It must be an account in your own name, <b style="color:var(--ink)">Taiwo Adekola</b>, the name we verified against your ID.</p>
+<div class="stack g4">
+<label class="field"><span class="field__l">Bank <span class="req">*</span></span>
+<div class="row" style="gap:0"><input class="input" value="Zenith Bank" style="border-top-right-radius:0;border-bottom-right-radius:0"><button class="btn btn--secondary" style="min-height:50px;border-radius:0 var(--radius) var(--radius) 0;border-left:0;padding:0 14px"><svg width="18" height="18"><use href="#i-chev"/></svg></button></div></label>
+<label class="field"><span class="field__l">Account number <span class="req">*</span></span>
+<input class="input mono" style="letter-spacing:.1em" value="2088314417">
+<span class="field__hint">Ten digits, the NUBAN on your card or statement.</span></label>
+</div>
+<div class="verify">
+<div class="verify__top">
+<svg width="20" height="20" style="color:var(--ok);flex:none"><use href="#i-checkc"/></svg>
+<div class="grow">
+<div style="font-size:13.5px;font-weight:700;color:var(--ok)">Name matches</div>
+<div class="tiny" style="color:var(--ok)">Returned by Zenith Bank a moment ago</div>
+</div>
+</div>
+<div class="verify__row"><span class="k">Account</span><span class="grow v">TAIWO A ADEKOLA</span></div>
+<div class="verify__row"><span class="k">Your ID</span><span class="grow v">Taiwo Adekola</span></div>
+<div class="verify__row" style="align-items:flex-start">
+<svg width="18" height="18" style="color:var(--muted);flex:none;margin-top:2px"><use href="#i-info"/></svg>
+<span class="grow tiny">The extra initial is accepted. A middle name, an initial or a different word order all pass; a different person does not.</span>
+</div>
+</div>
+<label class="check">
+<input type="checkbox" checked>
+<span>Make this my default payout account, replacing Guaranty Trust Bank &bull;&bull;&bull;&bull;&bull;&bull;8032.</span>
+</label>
+<div class="card card--plain stack g3">
+<div class="row" style="gap:10px">
+<svg width="19" height="19" style="color:var(--warn);flex:none"><use href="#i-clock"/></svg>
+<span class="grow" style="font-size:14px;font-weight:700">A new account waits 24 hours</span>
+</div>
+<p class="sub" style="margin:0">Withdrawals to an account added today are held until 05 Aug, 10:30. It is a delay on the account, not on your money, and it exists so a stolen sign-in cannot be turned into a payout the same afternoon. Your existing account keeps working throughout.</p>
+</div>
+</div></div>
+<div class="actionbar"><button class="btn btn--primary btn--block">Save this account</button></div>
+<div class="tabbar"><button class="tabbar__i"><svg><use href="#i-home"/></svg><span>Home</span></button><button class="tabbar__i"><svg><use href="#i-market"/></svg><span>Market</span></button><button class="tabbar__i"><svg><use href="#i-portfolio"/></svg><span>Portfolio</span></button><button class="tabbar__i"><svg><use href="#i-activity"/></svg><span>Activity</span></button><button class="tabbar__i is-on"><svg><use href="#i-profile"/></svg><span>Profile</span></button></div>
+</div><div class="hi"></div></div><div class="new-cap"><h4><b>C-08</b> Add a bank account</h4><p><strong>The form three plates offer and none shows.</strong> #19, #87 and #90 all reach for it. The account name is resolved from the bank and shown back before anything is saved, so the name-match rule stops being a rule the user is told about and becomes one they can see passing. The distinction Andry actually enforces &mdash; middle names fine, different person never &mdash; is stated where it is needed rather than in a help article.</p><div class="plate__tags"><span class="fix fix--closes">Closes C-08</span><span class="fix">Serves #19, #87, #90</span><span class="fix">May be shared by B and C</span></div></div></div>
+<div class="plate"><div class="phone"><div class="st"><span>10:30</span><div class="st__notch"></div><span class="st__r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1.5" width="18" height="8" rx="2.4"/><rect x="2.8" y="3.3" width="12" height="4.4" rx="1.2" fill="currentColor" stroke="none"/><path d="M21 4.3v2.4" stroke-linecap="round"/></svg></span></div>
+<div class="vp">
+<div class="appbar">
+<button class="appbar__btn" aria-label="Back to payment methods"><svg width="24" height="24"><use href="#i-back"/></svg></button>
+<div class="appbar__title">Add a card</div>
+</div>
+<div class="scroll"><div class="pad pb stack g5">
+<div class="card card--tight row" style="gap:10px">
+<svg width="19" height="19" style="color:var(--muted);flex:none"><use href="#i-info"/></svg>
+<span class="grow tiny">Cards add money to your wallet. Payouts always go to a bank account in your name &mdash; a card can never receive one.</span>
+</div>
+<div class="stack g4">
+<label class="field"><span class="field__l">Card number <span class="req">*</span></span>
+<div class="inputwrap"><input class="input mono" style="letter-spacing:.09em" value="5061 8412 7734 6218" autocomplete="cc-number">
+<span class="reveal" style="pointer-events:none"><span class="badge badge--brand">Verve</span></span></div></label>
+<div class="grid2">
+<label class="field"><span class="field__l">Expires <span class="req">*</span></span>
+<input class="input mono" value="09 / 28" autocomplete="cc-exp"></label>
+<label class="field"><span class="field__l">CVV <span class="req">*</span></span>
+<div class="inputwrap"><input class="input mono" type="password" value="512" autocomplete="cc-csc"><button class="reveal">Show</button></div></label>
+</div>
+<label class="field"><span class="field__l">Name on the card <span class="req">*</span></span>
+<input class="input" value="TAIWO ADEKOLA" autocomplete="cc-name">
+<span class="field__hint">Cards in another name are declined by the processor, not by us.</span></label>
+</div>
+<div class="verify">
+<div class="verify__top" style="background:var(--surface-3)">
+<svg width="20" height="20" style="color:var(--ink-2);flex:none"><use href="#i-scale"/></svg>
+<div class="grow"><div style="font-size:13.5px;font-weight:700;color:var(--ink)">What a card costs you</div></div>
+</div>
+<div class="verify__row"><span class="k">Card</span><span class="grow v">1.4% + &#8358;100.00</span><span class="money money--sm" style="color:var(--warn)">&#8358;1,500.00</span></div>
+<div class="verify__row"><span class="k">Transfer</span><span class="grow v">No fee</span><span class="money money--sm" style="color:var(--ok)">&#8358;0.00</span></div>
+<div class="verify__row" style="align-items:flex-start">
+<svg width="18" height="18" style="color:var(--muted);flex:none;margin-top:2px"><use href="#i-info"/></svg>
+<span class="grow tiny">On a &#8358;100,000.00 top-up. A card lands in seconds; a transfer takes 2 to 10 minutes. Most owners keep a card for when a pool is closing and use transfers otherwise.</span>
+</div>
+</div>
+<div class="row" style="gap:9px;padding:11px 12px;background:var(--surface-2);border-radius:var(--radius)">
+<svg width="18" height="18" style="color:var(--ok);flex:none"><use href="#i-lock"/></svg>
+<span class="tiny">Your card is stored by our processor, not by Andry. We keep the last four digits and the expiry date so you can recognise it, and nothing else.</span>
+</div>
+<p class="tiny" style="margin:0">Your bank may ask you to approve a &#8358;50.00 check with an OTP. It is refunded within the hour.</p>
+</div></div>
+<div class="actionbar"><button class="btn btn--primary btn--block">Save this card</button></div>
+<div class="tabbar"><button class="tabbar__i"><svg><use href="#i-home"/></svg><span>Home</span></button><button class="tabbar__i"><svg><use href="#i-market"/></svg><span>Market</span></button><button class="tabbar__i"><svg><use href="#i-portfolio"/></svg><span>Portfolio</span></button><button class="tabbar__i"><svg><use href="#i-activity"/></svg><span>Activity</span></button><button class="tabbar__i is-on"><svg><use href="#i-profile"/></svg><span>Profile</span></button></div>
+</div><div class="hi"></div></div><div class="new-cap"><h4><b>C-09</b> Add a card</h4><p><strong>The capture screen behind #19 and #20.</strong> Cards move money in only, and saying so on the card form prevents the wrong expectation forming at the moment it would form. The fee is shown against the free alternative rather than in isolation, because a number a person cannot compare is not disclosure.</p><div class="plate__tags"><span class="fix fix--closes">Closes C-09</span><span class="fix">Serves #19, #20</span><span class="fix">Anchor <b>Stripe</b></span></div></div></div>
+  </div>
+</section>
+
+<section class="sec stage-new" id="g4">
+  <div class="stagehead"><span class="code">C10</span>
+    <h2>The documents you are asked to accept</h2>
+    <span class="meta">C-10 to C-13 &middot; 4 screens &middot; all <b>flow-blocking</b></span></div>
+  <p class="trackdek">One viewer, four texts. Every one of them is linked from a moment where a person is being asked to agree, hand over a passport, or move money &mdash; and none of them existed.</p>
+  <div class="new-grid">
+<div class="plate"><div class="phone"><div class="st"><span>10:30</span><div class="st__notch"></div><span class="st__r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1.5" width="18" height="8" rx="2.4"/><rect x="2.8" y="3.3" width="12" height="4.4" rx="1.2" fill="currentColor" stroke="none"/><path d="M21 4.3v2.4" stroke-linecap="round"/></svg></span></div>
+<div class="vp">
+<div class="appbar">
+<button class="appbar__btn" aria-label="Close and return to create account"><svg width="24" height="24"><use href="#i-close"/></svg></button>
+<div class="appbar__title">Terms of Service</div>
+<button class="appbar__btn" aria-label="Download as PDF"><svg width="24" height="24"><use href="#i-download"/></svg></button>
+</div>
+<div class="pad" style="padding-bottom:10px">
+<div class="spread" style="padding:9px 12px;background:var(--surface-2);border-radius:var(--radius)">
+<span class="tiny"><b style="color:var(--ink)">Version 4.2</b> &middot; in force 01 Jul 2026</span>
+<span class="tiny mono">11 min read</span>
+</div>
+</div>
+<div class="pad" style="padding-bottom:12px"><div class="chips"><button class="chip is-on">Summary</button><button class="chip">Your account</button><button class="chip">What we do</button><button class="chip">Money</button><button class="chip">Ending it</button><button class="chip">Disputes</button></div></div>
+<div class="scroll"><div class="pad pb">
+<div class="card stack g3">
+<div class="row" style="gap:10px">
+<svg width="19" height="19" style="color:var(--brand);flex:none"><use href="#i-eye"/></svg>
+<span class="grow" style="font-size:14.5px;font-weight:730">In plain words</span>
+</div>
+<div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-users"/></svg><span class="sub"><b style="color:var(--ink)">You own units, we keep the record.</b> Andry is the register and the escrow agent. We do not own your animal and cannot sell it without your instruction.</span></div><div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-shield"/></svg><span class="sub"><b style="color:var(--ink)">One account, one person.</b> The name on it must be the name on your ID, and you may not hold units for someone else.</span></div><div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-wallet"/></svg><span class="sub"><b style="color:var(--ink)">Money in the wallet is yours.</b> It sits in a client account separate from Andry&rsquo;s own money, and it is not lent out.</span></div><div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-logout"/></svg><span class="sub"><b style="color:var(--ink)">You can leave at any time.</b> Sell or hold to maturity; we cannot close your account with less than 30 days&rsquo; notice unless the law requires it.</span></div>
+<p class="tiny" style="margin:0">This summary is not the agreement. Where the two differ, the numbered text below is what binds.</p>
+</div>
+<div class="sect"><div class="sect__h"><h3>Who we are</h3><span class="mono" style="color:var(--faint)">1</span></div><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">Andry Technologies Limited, RC 1884220, of 14 Awolowo Road, Ikoyi, Lagos, operates this service. Where these terms say <b style="color:var(--ink)">we</b> or <b style="color:var(--ink)">Andry</b>, they mean that company.</p><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">We are not a bank, an insurer or a licensed investment adviser, and nothing in the service is advice about whether an animal is a good purchase for you.</p></div><div class="sect"><div class="sect__h"><h3>What a unit is</h3><span class="mono" style="color:var(--faint)">2</span></div><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">A unit is an undivided fractional interest in one identified animal, recorded against that animal&rsquo;s tag in our register. Buying 20 of 400 units in AND-4471-KX makes you the owner of 5% of that animal and of 5% of whatever it realises on sale, after the deductions set out in clause 6.</p><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">A unit is not a share in Andry, not a debt owed to you by Andry, and not a deposit. If Andry ceased trading, your units would remain yours and the register would pass to the trustee named at clause 9.</p></div><div class="sect"><div class="sect__h"><h3>Your account</h3><span class="mono" style="color:var(--faint)">3</span></div><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">You must be 18 or over and resident in Nigeria, and you must complete identity verification before the wallet opens. You may hold one account only.</p><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">Keep your sign-in details to yourself. Tell us within 24 hours if you think someone else has used your account; we will freeze it while we look.</p></div>
+<p class="tiny" style="margin-top:20px;padding:11px 12px;background:var(--surface-2);border-radius:var(--radius)">Kept at <span class="mono">andry.ng/legal</span>. Every earlier version stays published, and we tell you 30 days before a change takes effect.</p>
+</div></div>
+<div class="actionbar"><button class="btn btn--primary btn--block">Back to create account</button></div>
+</div><div class="hi"></div></div><div class="new-cap"><h4><b>C-10</b> Terms of Service</h4><p><strong>The document #6 asks you to accept.</strong> Account creation required agreeing to text the product never showed. The viewer opens on a plain-language summary and states outright that the summary does not bind &mdash; which is the honest version of the pattern, and cheaper than a reader who thinks the four bullets were the contract. Version and in-force date sit above the fold because #98 asks people to re-consent and they need to know what changed.</p><div class="plate__tags"><span class="fix fix--closes">Closes C-10</span><span class="fix">Serves #6, #7, #98</span><span class="fix">One viewer, four documents</span></div></div></div>
+<div class="plate"><div class="phone"><div class="st"><span>10:30</span><div class="st__notch"></div><span class="st__r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1.5" width="18" height="8" rx="2.4"/><rect x="2.8" y="3.3" width="12" height="4.4" rx="1.2" fill="currentColor" stroke="none"/><path d="M21 4.3v2.4" stroke-linecap="round"/></svg></span></div>
+<div class="vp">
+<div class="appbar">
+<button class="appbar__btn" aria-label="Close and return"><svg width="24" height="24"><use href="#i-close"/></svg></button>
+<div class="appbar__title">How we handle your data</div>
+<button class="appbar__btn" aria-label="Download as PDF"><svg width="24" height="24"><use href="#i-download"/></svg></button>
+</div>
+<div class="pad" style="padding-bottom:10px">
+<div class="spread" style="padding:9px 12px;background:var(--surface-2);border-radius:var(--radius)">
+<span class="tiny"><b style="color:var(--ink)">Version 3.0</b> &middot; in force 01 Jul 2026</span>
+<span class="tiny mono">8 min read</span>
+</div>
+</div>
+<div class="pad" style="padding-bottom:12px"><div class="chips"><button class="chip is-on">Summary</button><button class="chip">What we hold</button><button class="chip">Why</button><button class="chip">Who sees it</button><button class="chip">How long</button><button class="chip">Your rights</button></div></div>
+<div class="scroll"><div class="pad pb">
+<div class="card stack g3">
+<div class="row" style="gap:10px">
+<svg width="19" height="19" style="color:var(--brand);flex:none"><use href="#i-eye"/></svg>
+<span class="grow" style="font-size:14.5px;font-weight:730">In plain words</span>
+</div>
+<div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-doc"/></svg><span class="sub"><b style="color:var(--ink)">Your ID is held for verification only.</b> It is encrypted, seen by our verification team, and deleted 90 days after your account closes.</span></div><div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-users"/></svg><span class="sub"><b style="color:var(--ink)">Supervisors and hosts see very little.</b> Your first name and the units you hold in the animal they work on. Not your address, your documents or your other holdings.</span></div><div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-revoke"/></svg><span class="sub"><b style="color:var(--ink)">We do not sell anything about you.</b> No advertising networks, no data brokers, no sale of your activity.</span></div><div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-download"/></svg><span class="sub"><b style="color:var(--ink)">You can take it all with you.</b> Ask for an export and you get every record we hold, in a readable file, inside 30 days.</span></div>
+<p class="tiny" style="margin:0">This summary is not the agreement. Where the two differ, the numbered text below is what binds.</p>
+</div>
+<div class="sect"><div class="sect__h"><h3>What we hold about you</h3><span class="mono" style="color:var(--faint)">1</span></div><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)"><b style="color:var(--ink)">Identity:</b> your name, date of birth, address, NIN and the photo ID you upload. <b style="color:var(--ink)">Money:</b> your bank account and the last four digits of any card, plus every transaction on your wallet. <b style="color:var(--ink)">Activity:</b> what you viewed, bought, listed and messaged, and the device and rough location you signed in from.</p><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">We do not hold your full card number. Our payment processor does, and we never see it.</p></div><div class="sect"><div class="sect__h"><h3>Why we hold it</h3><span class="mono" style="color:var(--faint)">2</span></div><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">Identity data is held because the Money Laundering (Prevention and Prohibition) Act requires us to know who our customers are. We could not open your wallet without it, and we cannot delete it on request while the account is open.</p><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">Activity data is held to run the service and to spot fraud. Where we use it to suggest listings, you can turn that off in Notifications without losing anything else.</p></div><div class="sect"><div class="sect__h"><h3>How long we keep it</h3><span class="mono" style="color:var(--faint)">3</span></div><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">Photo ID: 90 days after closure. Transaction records: 7 years after closure, which the law fixes and we cannot shorten. Messages: 2 years. Sign-in history: 12 months. Everything else goes within 30 days of closure.</p></div>
+<p class="tiny" style="margin-top:20px;padding:11px 12px;background:var(--surface-2);border-radius:var(--radius)">Kept at <span class="mono">andry.ng/legal</span>. Every earlier version stays published, and we tell you 30 days before a change takes effect.</p>
+</div></div>
+<div class="actionbar"><button class="btn btn--primary btn--block">Back to create account</button></div>
+</div><div class="hi"></div></div><div class="new-cap"><h4><b>C-11</b> Privacy notice</h4><p><strong>Linked from five places, including the moment #11 asks for a passport.</strong> The retention row carries a number rather than <q>as long as necessary</q>, and the sharing section names the actual recipients &mdash; a supervisor sees your first name and nothing else. That specificity is the whole value of the screen; a vague privacy notice is worse than none because it teaches people not to read.</p><div class="plate__tags"><span class="fix fix--closes">Closes C-11</span><span class="fix">Serves #6, #7, #11, #19, #98</span><span class="fix">One viewer, four documents</span></div></div></div>
+<div class="plate"><div class="phone"><div class="st"><span>10:30</span><div class="st__notch"></div><span class="st__r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1.5" width="18" height="8" rx="2.4"/><rect x="2.8" y="3.3" width="12" height="4.4" rx="1.2" fill="currentColor" stroke="none"/><path d="M21 4.3v2.4" stroke-linecap="round"/></svg></span></div>
+<div class="vp">
+<div class="appbar">
+<button class="appbar__btn" aria-label="Close and return to the risk gate"><svg width="24" height="24"><use href="#i-close"/></svg></button>
+<div class="appbar__title">Risk disclosure</div>
+<button class="appbar__btn" aria-label="Download as PDF"><svg width="24" height="24"><use href="#i-download"/></svg></button>
+</div>
+<div class="pad" style="padding-bottom:10px">
+<div class="spread" style="padding:9px 12px;background:var(--surface-2);border-radius:var(--radius)">
+<span class="tiny"><b style="color:var(--ink)">Version 2.4</b> &middot; in force 01 Jul 2026</span>
+<span class="tiny mono">9 min read</span>
+</div>
+</div>
+<div class="pad" style="padding-bottom:12px"><div class="chips"><button class="chip is-on">Summary</button><button class="chip">Death</button><button class="chip">Price</button><button class="chip">Selling</button><button class="chip">Insurance</button><button class="chip">Counterparties</button></div></div>
+<div class="scroll"><div class="pad pb">
+<div class="card stack g3">
+<div class="row" style="gap:10px">
+<svg width="19" height="19" style="color:var(--brand);flex:none"><use href="#i-eye"/></svg>
+<span class="grow" style="font-size:14.5px;font-weight:730">In plain words</span>
+</div>
+<div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-alert"/></svg><span class="sub"><b style="color:var(--ink)">You can lose everything you pay.</b> An uninsured animal that dies leaves its units worth nothing. This is not a remote possibility; it happened to 47 animals in the past 12 months.</span></div><div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-scale"/></svg><span class="sub"><b style="color:var(--ink)">Prices fall as well as rise.</b> Cattle prices moved between &minus;14% and +23% over the past two years.</span></div><div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-clock"/></svg><span class="sub"><b style="color:var(--ink)">You may wait to sell.</b> Half of listings clear in 9 days. One in twenty takes more than 60.</span></div><div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-shield"/></svg><span class="sub"><b style="color:var(--ink)">Insurance is narrower than people assume.</b> It pays for death by named causes, minus a 10% excess. It never pays for a fall in price.</span></div>
+<p class="tiny" style="margin:0">This summary is not the agreement. Where the two differ, the numbered text below is what binds.</p>
+</div>
+<div class="sect"><div class="sect__h"><h3>The animal can die</h3><span class="mono" style="color:var(--faint)">1</span></div><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">Across the herd, 2.1 animals in 100 were lost in the 12 months to 30 June 2026. The rate is not even: it was 1.4% for cattle, 3.8% for goats and 4.1% for sheep, and it rises in the rainy season.</p><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">Where the animal was insured and the cause is covered, the underwriter pays the last valued price less a 10% excess, and that money is divided between unit holders. Where it was not, or the cause is excluded, your units become worth nothing and no compensation is due from Andry.</p></div><div class="sect"><div class="sect__h"><h3>The price can fall</h3><span class="mono" style="color:var(--faint)">2</span></div><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">A unit&rsquo;s value follows the animal&rsquo;s valuation, which follows weight, breed, season and the market at the nearest trading centre. Feed cost, fuel price and demand around Sallah and Christmas all move it.</p><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">Between July 2024 and June 2026 the median cattle unit moved between &minus;14% and +23% from its purchase price. Past movement does not predict future movement.</p></div><div class="sect"><div class="sect__h"><h3>You may not be able to sell when you want</h3><span class="mono" style="color:var(--faint)">3</span></div><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">Selling requires another owner to buy. Andry does not buy units back and does not guarantee a buyer. In the past year the median listing sold in 9 days, but 5% took more than 60 days and 1% did not sell at all before the animal reached maturity.</p><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">Do not buy units with money you will need at a fixed date.</p></div>
+<p class="tiny" style="margin-top:20px;padding:11px 12px;background:var(--surface-2);border-radius:var(--radius)">Kept at <span class="mono">andry.ng/legal</span>. Every earlier version stays published, and we tell you 30 days before a change takes effect.</p>
+</div></div>
+<div class="actionbar"><button class="btn btn--secondary btn--block">Back to the risk gate</button></div>
+</div><div class="hi"></div></div><div class="new-cap"><h4><b>C-12</b> Risk disclosure, in full</h4><p><strong>The policy #13 offers to show.</strong> The gate summarises three risks in cards; this is the text underneath, and it carries the numbers the gate can only gesture at &mdash; the actual loss rate by species, the actual spread of time-to-sell. A gate that asks for acknowledgement of a document nobody can open is a consent form with the consent missing.</p><div class="plate__tags"><span class="fix fix--closes">Closes C-12</span><span class="fix">Serves #13, #98</span><span class="fix">One viewer, four documents</span></div></div></div>
+<div class="plate"><div class="phone"><div class="st"><span>10:30</span><div class="st__notch"></div><span class="st__r"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1"/></svg><svg width="24" height="11" viewBox="0 0 24 11" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="1" y="1.5" width="18" height="8" rx="2.4"/><rect x="2.8" y="3.3" width="12" height="4.4" rx="1.2" fill="currentColor" stroke="none"/><path d="M21 4.3v2.4" stroke-linecap="round"/></svg></span></div>
+<div class="vp">
+<div class="appbar">
+<button class="appbar__btn" aria-label="Close and return to the purchase"><svg width="24" height="24"><use href="#i-close"/></svg></button>
+<div class="appbar__title">Ownership agreement</div>
+<button class="appbar__btn" aria-label="Download as PDF"><svg width="24" height="24"><use href="#i-download"/></svg></button>
+</div>
+<div class="pad" style="padding-bottom:10px">
+<div class="spread" style="padding:9px 12px;background:var(--surface-2);border-radius:var(--radius)">
+<span class="tiny"><b style="color:var(--ink)">Version 1.9</b> &middot; in force 01 Jul 2026</span>
+<span class="tiny mono">6 min read</span>
+</div>
+</div>
+<div class="pad" style="padding-bottom:12px"><div class="chips"><button class="chip is-on">Summary</button><button class="chip">This purchase</button><button class="chip">Your rights</button><button class="chip">Deductions</button><button class="chip">Maturity</button><button class="chip">Transfer</button></div></div>
+<div class="scroll"><div class="pad pb">
+<div class="card stack g3">
+<div class="row" style="gap:10px">
+<svg width="19" height="19" style="color:var(--brand);flex:none"><use href="#i-eye"/></svg>
+<span class="grow" style="font-size:14.5px;font-weight:730">In plain words</span>
+</div>
+<div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-portfolio"/></svg><span class="sub"><b style="color:var(--ink)">You own 20 of 400 units</b> in AND-4471-KX, a Sokoto Gudali bull at Ayalar Ranch. That is 5% of the animal.</span></div><div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-lock"/></svg><span class="sub"><b style="color:var(--ink)">Nobody can sell it without you.</b> Not the ranch, not the supervisor, not Andry &mdash; except at maturity or on veterinary grounds, both defined below.</span></div><div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-scale"/></svg><span class="sub"><b style="color:var(--ink)">Costs come off the sale, not your wallet.</b> You are never invoiced for keep; it is deducted from proceeds in the order at clause 4.</span></div><div class="row" style="gap:11px;align-items:flex-start"><svg width="18" height="18" style="color:var(--brand);flex:none;margin-top:2px"><use href="#i-i-swap"/></svg><span class="sub"><b style="color:var(--ink)">Units are transferable.</b> You may sell to another verified owner at any time without asking permission.</span></div>
+<p class="tiny" style="margin:0">This summary is not the agreement. Where the two differ, the numbered text below is what binds.</p>
+</div>
+<div class="sect"><div class="sect__h"><h3>What you are buying today</h3><span class="mono" style="color:var(--faint)">1</span></div><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">20 units in the animal tagged <span class="mono">AND-4471-KX</span>, a Sokoto Gudali bull, born approximately March 2024, held at Ayalar Ranch, Oyo State, at a price of <span class="money money--sm">&#8358;9,568.90</span> per unit, totalling <span class="money money--sm">&#8358;191,378.00</span> on 04 August 2026.</p><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">Your money is held in escrow until Ayalar Ranch confirms the animal on site and a supervisor scans the tag. If confirmation does not arrive within 14 days, the escrow reverses in full.</p></div><div class="sect"><div class="sect__h"><h3>Deductions from proceeds</h3><span class="mono" style="color:var(--faint)">2</span></div><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">When the animal is sold, the gross price is applied in this order: veterinary costs incurred and evidenced; the host&rsquo;s keep at the rate agreed with that ranch; the supervisor&rsquo;s fee; Andry&rsquo;s commission of 4%; and the remainder divided between unit holders in proportion to units held.</p><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">If proceeds do not cover the deductions, the shortfall is borne by Andry and the host, not by you. You cannot be asked for more money than you paid.</p></div><div class="sect"><div class="sect__h"><h3>Sale without your instruction</h3><span class="mono" style="color:var(--faint)">3</span></div><p style="margin:0 0 11px;font-size:14px;line-height:1.6;color:var(--ink-2)">Two exceptions. At <b style="color:var(--ink)">maturity</b>, when the animal reaches the sale weight recorded at clause 1 of the herd schedule, we sell and distribute; you are told 14 days ahead and may buy other owners out instead. On <b style="color:var(--ink)">veterinary grounds</b>, where a licensed vet certifies the animal must be slaughtered to prevent suffering or disease spread, we act immediately and tell you the same day.</p></div>
+<p class="tiny" style="margin-top:20px;padding:11px 12px;background:var(--surface-2);border-radius:var(--radius)">Kept at <span class="mono">andry.ng/legal</span>. Every earlier version stays published, and we tell you 30 days before a change takes effect.</p>
+</div></div>
+<div class="actionbar"><button class="btn btn--secondary btn--block">Back to the purchase</button></div>
+</div><div class="hi"></div></div><div class="new-cap"><h4><b>C-13</b> Ownership agreement</h4><p><strong>Offered on #31, one tap before money moves.</strong> It is the document that defines what a unit actually is, so it is shown with the specific purchase filled in rather than as a blank template &mdash; the animal, the units, the price, the date. The deduction waterfall is a table because that is the clause people come back to argue about, and prose hides arithmetic.</p><div class="plate__tags"><span class="fix fix--closes">Closes C-13</span><span class="fix">Serves #31</span><span class="fix">One viewer, four documents</span></div></div></div>
+  </div>
+</section>
+
+</div>
+
+</body>
+</html>

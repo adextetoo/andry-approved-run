@@ -1,0 +1,667 @@
+<title>Andry — the closing 42</title>
+
+<style>
+/* ============================================================
+   THE CLOSING 42 — a companion register to the approved 171.
+   Andry design system tokens, carried over so the two documents
+   read as one programme. Light/dark via tokens only.
+   ============================================================ */
+
+:root{
+  --brand:#4B3FA8; --brand-hi:#5D4FC4; --brand-soft:#EDEAF9; --brand-soft-2:#DCD6F4;
+  --on-brand:#FFFFFF;
+  --gold:#E8A317; --gold-ink:#7A5000; --gold-soft:#FDF2DA;
+
+  --ink:#1A1720; --ink-2:#413B4A; --muted:#6B6470; --faint:#938C99;
+  --surface:#FFFFFF; --surface-2:#F7F5F3; --surface-3:#EFEBE7;
+  --line:#E5E0DC; --line-2:#D3CCC6;
+
+  --ok:#157A4F; --ok-soft:#E3F3EB;
+  --warn:#A66300; --warn-soft:#FBEEDB;
+  --risk:#B3291F; --risk-soft:#FBE7E5;
+  --info:#1B5E9B; --info-soft:#E4EEF7;
+
+  --radius-sm:8px; --radius:12px; --radius-lg:20px; --radius-pill:999px;
+
+  --e1:0 1px 2px rgba(26,23,32,.06), 0 1px 1px rgba(26,23,32,.04);
+  --e2:0 4px 12px rgba(26,23,32,.08), 0 1px 3px rgba(26,23,32,.05);
+
+  --ui:-apple-system,BlinkMacSystemFont,"Segoe UI Variable Text","Segoe UI",system-ui,Roboto,"Helvetica Neue",sans-serif;
+  --num:ui-monospace,"SF Mono","Cascadia Mono","Segoe UI Mono",Menlo,Consolas,monospace;
+
+  --page:#FAF8F6; --page-ink:#1A1720;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --brand:#9B8DF0; --brand-hi:#AEA2F5; --brand-soft:#241F38; --brand-soft-2:#2F2850;
+    --on-brand:#141019;
+    --gold:#F0B93A; --gold-ink:#F0B93A; --gold-soft:#33280F;
+    --ink:#F2EFEA; --ink-2:#CFC8CE; --muted:#9C94A3; --faint:#736C7B;
+    --surface:#141219; --surface-2:#1D1A24; --surface-3:#262230;
+    --line:#2E2A36; --line-2:#3C3646;
+    --ok:#4CC38A; --ok-soft:#0F2A1E;
+    --warn:#E0A64B; --warn-soft:#2E220C;
+    --risk:#F07268; --risk-soft:#331512;
+    --info:#6BA8DE; --info-soft:#12222F;
+    --e1:0 1px 2px rgba(0,0,0,.5); --e2:0 4px 14px rgba(0,0,0,.55);
+    --page:#0D0B11; --page-ink:#F2EFEA;
+  }
+}
+:root[data-theme="dark"]{
+  --brand:#9B8DF0; --brand-hi:#AEA2F5; --brand-soft:#241F38; --brand-soft-2:#2F2850;
+  --on-brand:#141019;
+  --gold:#F0B93A; --gold-ink:#F0B93A; --gold-soft:#33280F;
+  --ink:#F2EFEA; --ink-2:#CFC8CE; --muted:#9C94A3; --faint:#736C7B;
+  --surface:#141219; --surface-2:#1D1A24; --surface-3:#262230;
+  --line:#2E2A36; --line-2:#3C3646;
+  --ok:#4CC38A; --ok-soft:#0F2A1E;
+  --warn:#E0A64B; --warn-soft:#2E220C;
+  --risk:#F07268; --risk-soft:#331512;
+  --info:#6BA8DE; --info-soft:#12222F;
+  --e1:0 1px 2px rgba(0,0,0,.5); --e2:0 4px 14px rgba(0,0,0,.55);
+  --page:#0D0B11; --page-ink:#F2EFEA;
+}
+:root[data-theme="light"]{
+  --brand:#4B3FA8; --brand-hi:#5D4FC4; --brand-soft:#EDEAF9; --brand-soft-2:#DCD6F4;
+  --on-brand:#FFFFFF;
+  --gold:#E8A317; --gold-ink:#7A5000; --gold-soft:#FDF2DA;
+  --ink:#1A1720; --ink-2:#413B4A; --muted:#6B6470; --faint:#938C99;
+  --surface:#FFFFFF; --surface-2:#F7F5F3; --surface-3:#EFEBE7;
+  --line:#E5E0DC; --line-2:#D3CCC6;
+  --ok:#157A4F; --ok-soft:#E3F3EB;
+  --warn:#A66300; --warn-soft:#FBEEDB;
+  --risk:#B3291F; --risk-soft:#FBE7E5;
+  --info:#1B5E9B; --info-soft:#E4EEF7;
+  --e1:0 1px 2px rgba(26,23,32,.06), 0 1px 1px rgba(26,23,32,.04);
+  --e2:0 4px 12px rgba(26,23,32,.08), 0 1px 3px rgba(26,23,32,.05);
+  --page:#FAF8F6; --page-ink:#1A1720;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+body{
+  margin:0; background:var(--page); color:var(--page-ink);
+  font-family:var(--ui); font-size:16px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+:where(a){color:var(--brand);}
+:where(a,button,[tabindex]):focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px;}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;}}
+
+.doc{max-width:1180px;margin:0 auto;padding:0 24px 96px;}
+
+/* --- masthead ------------------------------------------------ */
+.mast{padding:76px 0 44px;border-bottom:2px solid var(--ink);}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin:0;}
+.mast h1{margin:18px 0 0;font-size:clamp(38px,6vw,66px);line-height:.98;
+  letter-spacing:-.035em;font-weight:800;text-wrap:balance;max-width:17ch;}
+.mast h1 em{display:block;font-style:normal;color:var(--brand);}
+.dek{margin:26px 0 0;max-width:64ch;font-size:18px;line-height:1.5;color:var(--ink-2);}
+.dek + .dek{margin-top:14px;font-size:16px;color:var(--muted);}
+.dek strong{color:var(--ink);font-weight:650;}
+.dek em{font-style:italic;color:var(--ink);}
+
+/* --- the headline count -------------------------------------- */
+.count{display:flex;flex-wrap:wrap;gap:18px;margin-top:38px;}
+.countcard{flex:1 1 210px;border:1px solid var(--line);border-radius:var(--radius-lg);
+  background:var(--surface);padding:20px 22px;box-shadow:var(--e1);}
+.countcard b{display:block;font-family:var(--num);font-size:44px;font-weight:700;
+  letter-spacing:-.04em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums;}
+.countcard span{display:block;margin-top:9px;font-size:13px;line-height:1.45;color:var(--muted);}
+.countcard--t1 b{color:var(--risk);}
+.countcard--t2 b{color:var(--warn);}
+.countcard--tot{background:var(--brand);border-color:transparent;}
+.countcard--tot b{color:var(--on-brand);}
+.countcard--tot span{color:rgba(255,255,255,.78);}
+:root[data-theme="dark"] .countcard--tot span,
+:root:not([data-theme="light"]) .countcard--tot span{color:rgba(20,16,25,.72);}
+
+/* --- method ---------------------------------------------------*/
+.method{margin-top:44px;border:1px solid var(--line);border-left:3px solid var(--brand);
+  border-radius:0 var(--radius) var(--radius) 0;background:var(--surface-2);padding:20px 24px;}
+.method h2{margin:0 0 10px;font-size:15px;font-weight:750;letter-spacing:-.01em;}
+.method p{margin:0 0 10px;font-size:14px;line-height:1.55;color:var(--ink-2);max-width:72ch;}
+.method p:last-child{margin-bottom:0;}
+.method code{font-family:var(--num);font-size:12.5px;background:var(--surface-3);
+  padding:1px 6px;border-radius:4px;color:var(--ink-2);}
+
+/* --- matrix ---------------------------------------------------*/
+.sec{padding:60px 0 0;}
+.sec-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:26px;}
+.sec-head h2{margin:0;font-size:clamp(22px,2.6vw,30px);letter-spacing:-.025em;font-weight:750;}
+.sec-head .lbl{font-family:var(--num);font-size:12px;font-weight:600;color:var(--brand);letter-spacing:.06em;}
+.sec-head .aside{margin-left:auto;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--faint);font-weight:650;}
+
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);}
+table{width:100%;border-collapse:collapse;font-size:14px;color:var(--ink);min-width:640px;}
+thead th{background:var(--surface-2);text-align:left;font-size:11px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:13px 16px;
+  border-bottom:1px solid var(--line-2);white-space:nowrap;}
+thead th.n,tbody td.n,tfoot td.n{text-align:right;font-family:var(--num);
+  font-variant-numeric:tabular-nums;}
+tbody td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5;}
+tbody tr:last-child td{border-bottom:0;}
+tfoot td{padding:13px 16px;background:var(--surface-2);font-weight:750;
+  border-top:1px solid var(--line-2);}
+tbody td.n{font-weight:650;}
+
+/* --- register -------------------------------------------------*/
+.reg{margin-top:30px;}
+.reg h3{font-size:17px;font-weight:750;letter-spacing:-.015em;margin:34px 0 4px;
+  display:flex;align-items:center;gap:11px;flex-wrap:wrap;}
+.reg h3 .n{font-family:var(--num);font-size:12px;font-weight:650;color:var(--muted);}
+.reg > p{margin:0 0 16px;font-size:14px;color:var(--muted);max-width:70ch;}
+
+.item{display:grid;grid-template-columns:52px 1fr;gap:0 16px;padding:16px 0;
+  border-bottom:1px solid var(--line);align-items:start;}
+.item:last-child{border-bottom:0;}
+.item__id{font-family:var(--num);font-size:12.5px;font-weight:650;color:var(--faint);
+  padding-top:2px;font-variant-numeric:tabular-nums;}
+.item__b h4{margin:0 0 5px;font-size:15.5px;font-weight:700;letter-spacing:-.012em;}
+.item__b p{margin:0 0 9px;font-size:13.5px;line-height:1.55;color:var(--muted);max-width:74ch;}
+.item__b p:last-child{margin-bottom:0;}
+.ev{font-size:13px;color:var(--ink-2);max-width:74ch;}
+.ev b{font-family:var(--num);font-size:12px;font-weight:650;color:var(--brand);}
+.ev q{font-style:normal;color:var(--ink);font-weight:600;}
+.ev q::before{content:"\201C";} .ev q::after{content:"\201D";}
+
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;}
+.tag{display:inline-flex;align-items:center;gap:5px;font-family:var(--num);font-size:11px;
+  font-weight:650;letter-spacing:.02em;padding:3px 9px;border-radius:var(--radius-sm);
+  background:var(--surface-3);color:var(--ink-2);white-space:nowrap;}
+.tag--t1{background:var(--risk-soft);color:var(--risk);}
+.tag--t2{background:var(--warn-soft);color:var(--warn);}
+.tag--a{background:var(--brand-soft);color:var(--brand);}
+.tag--b{background:var(--info-soft);color:var(--info);}
+.tag--c{background:var(--ok-soft);color:var(--ok);}
+.tag--d{background:var(--gold-soft);color:var(--gold-ink);}
+.tag--reuse{background:var(--brand-soft-2);color:var(--brand);}
+
+.note{margin-top:56px;border-top:2px solid var(--ink);padding-top:26px;}
+.note h2{margin:0 0 12px;font-size:18px;font-weight:750;letter-spacing:-.015em;}
+.note p{margin:0 0 12px;font-size:14.5px;line-height:1.6;color:var(--ink-2);max-width:72ch;}
+.note p:last-child{margin-bottom:0;}
+.note strong{color:var(--ink);font-weight:650;}
+</style>
+
+<div class="doc">
+
+<header class="mast">
+  <p class="eyebrow">Andry &middot; gap register against the approved 171</p>
+  <h1>The closing 42<em>screens the run points at but never draws</em></h1>
+
+  <p class="dek">Every affordance on all 171 approved plates was read out of the markup and
+    checked against the screens that exist. The approved work is not altered here &mdash; this is
+    a register of what sits <em>behind</em> it. <strong>42 screens close every dead end</strong>,
+    of which <strong>13 block a journey from completing at all</strong>.</p>
+
+  <p class="dek">The onboarding gap you flagged is real and is the first entry: plate <b>#1</b> is
+    titled <em>Onboarding, slide 2 of 3</em> and its pager draws three dots, but slides 1 and 3
+    were never made. The same shape repeats at <b>#11</b>, <em>KYC verification, step 2 of 3</em>,
+    whose own stepper names an <em>Identity</em> step marked done and a <em>Bank</em> step marked
+    pending &mdash; neither of which exists as a plate.</p>
+
+  <div class="count">
+    <div class="countcard countcard--t1"><b>13</b>
+      <span>Flow-blocking. A named journey cannot be completed without them, or a screen
+        explicitly promises them.</span></div>
+    <div class="countcard countcard--t2"><b>29</b>
+      <span>Named destination missing. A labelled button or link points at a document, list or
+        setting that was never drawn.</span></div>
+    <div class="countcard countcard--tot"><b>42</b>
+      <span>Total to close the run. Falls to <strong>39</strong> if the four legal documents
+        share one viewer template.</span></div>
+  </div>
+</header>
+
+<div class="method">
+  <h2>How this was counted</h2>
+  <p>The published run was parsed for every interactive element, and the count was verified
+    against the live DOM: <strong>1,296 buttons and 35 links across 171 plates</strong>, all of
+    them inert &mdash; no <code>href</code>, no handler, no script on the page. That inertness is
+    expected of static design plates and is not the finding.</p>
+  <p>The finding is narrower. An affordance counts as a <strong>dead end</strong> only when its
+    own label names a destination &mdash; a document, a list, a sub-page, a next step &mdash; and
+    no plate among the 171 depicts that destination. In-place controls (filters, tabs, steppers,
+    segmented switches), system hand-offs (share sheets, telephone numbers, file downloads, the OS
+    camera) and actions that resolve on the plate they sit on are excluded. Each entry below cites
+    the plate and the exact label that raised it.</p>
+  <p>Where a destination was suspected, the whole corpus was searched for it before the entry was
+    written. <em>Security</em>, <em>Currency &amp; region</em>, <em>Points statement</em> and
+    <em>pedigree certificate</em> each appear exactly once in all 171 plates &mdash; on the row
+    that links to them, and nowhere else.</p>
+</div>
+
+<section class="sec">
+  <div class="sec-head"><span class="lbl">01</span><h2>Where the 42 fall</h2>
+    <span class="aside">by track and tier</span></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Track</th><th class="n">Approved</th><th class="n">Flow-blocking</th>
+      <th class="n">Named destination</th><th class="n">To draw</th></tr></thead>
+    <tbody>
+      <tr><td><strong>A &middot; The owner</strong></td><td class="n">100</td><td class="n">13</td><td class="n">13</td><td class="n">26</td></tr>
+      <tr><td><strong>B &middot; The supervisor</strong></td><td class="n">30</td><td class="n">0</td><td class="n">7</td><td class="n">7</td></tr>
+      <tr><td><strong>C &middot; The host</strong></td><td class="n">22</td><td class="n">0</td><td class="n">6</td><td class="n">6</td></tr>
+      <tr><td><strong>D &middot; The operator</strong></td><td class="n">19</td><td class="n">0</td><td class="n">3</td><td class="n">3</td></tr>
+    </tbody>
+    <tfoot><tr><td>All four tracks</td><td class="n">171</td><td class="n">13</td><td class="n">29</td><td class="n">42</td></tr></tfoot>
+  </table></div>
+</section>
+
+<section class="sec reg">
+  <div class="sec-head"><span class="lbl">02</span><h2>The register</h2>
+    <span class="aside">42 entries, each with its evidence</span></div>
+
+  <h3>Tier 1 &middot; Flow-blocking <span class="n">13 screens</span></h3>
+  <p>Without these a user reaches a point the product cannot carry them past, or a plate makes a
+    promise in its own copy that nothing fulfils.</p>
+
+  <div class="item"><div class="item__id">C-01</div><div class="item__b">
+    <h4>Onboarding, slide 1 of 3</h4>
+    <p>The first thing anyone sees. The run currently opens on slide two, so the product has no
+      drawn first impression and no established premise for the two slides that follow.</p>
+    <p class="ev"><b>#1</b> is titled <q>Onboarding, slide 2 of 3</q>; its pager renders three
+      dots with the second filled.</p>
+    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-02</div><div class="item__b">
+    <h4>Onboarding, slide 3 of 3</h4>
+    <p>The hand-off slide. <q>Next</q> on plate #1 advances to a slide that does not exist, and
+      nothing depicts the transition from onboarding into the signed-out market.</p>
+    <p class="ev"><b>#1</b> &rarr; <q>Next</q>, with <q>Step 2 of 3</q> stated beneath it.</p>
+    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-03</div><div class="item__b">
+    <h4>Bank transfer instructions &mdash; account number and reference</h4>
+    <p>The strongest single find in the audit. A plate tells the user in its own body copy that
+      the next screen carries the account number they must pay into. That screen was never drawn,
+      so the primary funding path terminates on a promise.</p>
+    <p class="ev"><b>#18</b> <q>Add funds</q> &rarr; <q>Send to the account number shown on the
+      next screen. Clears in 2 to 10 minutes.</q></p>
+    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-04</div><div class="item__b">
+    <h4>KYC verification, step 1 of 3 &mdash; identity document</h4>
+    <p>The stepper on the one KYC plate that exists marks this step <em>Done</em>, which means the
+      product asserts a screen the user has supposedly already completed and which nobody has
+      designed.</p>
+    <p class="ev"><b>#11</b> stepper: <q>Identity &middot; Done</q>.</p>
+    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-05</div><div class="item__b">
+    <h4>KYC verification, step 3 of 3 &mdash; bank confirmation</h4>
+    <p>Marked <em>Pending</em> in the same stepper. It is also the step that gates the first
+      purchase, which the plate states explicitly.</p>
+    <p class="ev"><b>#11</b> stepper: <q>Bank &middot; Pending</q>; body: <q>This is the only step
+      left before your first purchase.</q></p>
+    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-06</div><div class="item__b">
+    <h4>Reset password &mdash; request</h4>
+    <p>The run has the confirmation but not the request. There is nowhere to enter the address the
+      link is sent to, so the recovery journey has no entrance.</p>
+    <p class="ev"><b>#8</b> &rarr; <q>Forgot password?</q>; <b>#9</b> is <q>Reset password &mdash;
+      link sent</q> and offers <q>Use a different email address</q>, which has no target.</p>
+    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-07</div><div class="item__b">
+    <h4>Reset password &mdash; set a new password</h4>
+    <p>Where the emailed link lands. Without it the recovery journey has no exit either, and the
+      password rules the create-account plate enforces have no second home.</p>
+    <p class="ev"><b>#9</b> &rarr; <q>Open your email app</q> and <q>Resend link</q> both assume
+      a destination behind the link.</p>
+    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-08</div><div class="item__b">
+    <h4>Add a bank account</h4>
+    <p>Three separate plates offer to add or change a payout account and none of them shows the
+      form. This is the account money leaves by, so it also carries the name-match rule that
+      plate #90 exists to enforce.</p>
+    <p class="ev"><b>#19</b> &rarr; <q>Add a bank account</q>; <b>#87</b> &rarr; <q>Change</q>;
+      <b>#90</b> &rarr; <q>Add a different account</q>.</p>
+    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">reused by B and C</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-09</div><div class="item__b">
+    <h4>Add a card</h4>
+    <p>The counterpart for money coming in. The payment-methods plate lists cards and offers to
+      add one; the capture screen does not exist, and the failed-payment plate routes here too.</p>
+    <p class="ev"><b>#19</b> &rarr; <q>Add a card</q>; <b>#20</b> &rarr; <q>Add a different
+      card</q>.</p>
+    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-10</div><div class="item__b">
+    <h4>Terms of Service</h4>
+    <p>Account creation requires agreeing to a document that the product never shows. The consent
+      checkbox and the re-consent plate both link to it.</p>
+    <p class="ev"><b>#6</b>, <b>#7</b> &rarr; <q>Terms of Service</q>; <b>#98</b> &rarr; <q>Read
+      terms of service in full</q>.</p>
+    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">one viewer, four documents</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-11</div><div class="item__b">
+    <h4>Privacy notice &mdash; how we handle your data</h4>
+    <p>Linked from three places, including the KYC upload step where the user is being asked to
+      hand over an identity document. The absence is most acute exactly there.</p>
+    <p class="ev"><b>#6</b>, <b>#7</b> &rarr; <q>Privacy Policy</q>; <b>#11</b>, <b>#19</b> &rarr;
+      <q>How we handle your data</q>; <b>#98</b> &rarr; <q>Read privacy notice in full</q>.</p>
+    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">one viewer, four documents</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-12</div><div class="item__b">
+    <h4>Risk disclosure, in full</h4>
+    <p>The risk gate is a hard stop before purchase and it offers to show the full policy. That
+      policy has no plate, so the gate asks for acceptance of something unreadable.</p>
+    <p class="ev"><b>#13</b> &rarr; <q>Read the full policy</q>; <b>#98</b> &rarr; <q>Read risk
+      disclosure in full</q>.</p>
+    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">one viewer, four documents</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-13</div><div class="item__b">
+    <h4>Ownership agreement</h4>
+    <p>Offered on the purchase confirmation, one tap before money moves. It is the document that
+      defines what a unit actually is.</p>
+    <p class="ev"><b>#31</b> <q>Buy &mdash; confirm</q> &rarr; <q>Read the ownership
+      agreement</q>.</p>
+    <div class="tags"><span class="tag tag--t1">flow-blocking</span><span class="tag tag--a">track A</span><span class="tag tag--reuse">one viewer, four documents</span></div>
+  </div></div>
+
+  <h3>Tier 2 &middot; Named destination missing <span class="n">29 screens</span></h3>
+  <p>The journey still completes, but a labelled control points somewhere that was never drawn.
+    Grouped by the track that raises them.</p>
+
+  <div class="item"><div class="item__id">C-14</div><div class="item__b">
+    <h4>Support &mdash; talk to a person</h4>
+    <p>Three plates offer a human and none shows the channel. The KYC failure plate even publishes
+      opening hours and a response time, which makes the missing screen conspicuous.</p>
+    <p class="ev"><b>#12</b> &rarr; <q>Talk to a reviewer &middot; Mon&ndash;Sat, 08:00&ndash;19:00
+      WAT &middot; usually answers in 4 minutes</q>; <b>#20</b> &rarr; <q>Talk to someone about
+      this payment</q>; <b>#44</b> &rarr; <q>Contact support</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-15</div><div class="item__b">
+    <h4>Help &mdash; all articles</h4>
+    <p>The support hub shows four articles and links to sixty-two. The index does not exist.</p>
+    <p class="ev"><b>#77</b> &rarr; <q>All 62</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-16</div><div class="item__b">
+    <h4>Help &mdash; article</h4>
+    <p>Every article row on the support hub is a dead end; no plate anywhere in the run renders
+      article body copy. This one screen serves all sixty-two.</p>
+    <p class="ev"><b>#77</b> rows &rarr; <q>Proof of life is late</q>, <q>I cannot withdraw</q>,
+      <q>KYC was rejected</q>, <q>How maturity works</q>; <b>#12</b> &rarr; <q>Which documents are
+      accepted</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-17</div><div class="item__b">
+    <h4>Support &mdash; my requests</h4>
+    <p>The hub links to a history of the user's own contacts with support. Nothing depicts it.</p>
+    <p class="ev"><b>#77</b> &rarr; <q>History</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-18</div><div class="item__b">
+    <h4>Security &mdash; password, sign-in devices, two-factor</h4>
+    <p>A profile row that names three distinct settings surfaces. The MFA enrolment and recovery
+      plates exist, but the hub that reaches them, and the device list, do not.</p>
+    <p class="ev"><b>#92</b> &rarr; <q>Security &middot; Password, sign-in devices &middot; 2FA
+      on</q>. The phrase appears nowhere else in the run.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-19</div><div class="item__b">
+    <h4>Currency &amp; region</h4>
+    <p>Named on the profile menu with its current value. Every money figure in the product depends
+      on the rate this screen would govern.</p>
+    <p class="ev"><b>#92</b> &rarr; <q>Currency &amp; region &middot; Naira (&#8358;) &middot;
+      Nigeria &middot; English</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-20</div><div class="item__b">
+    <h4>Points statement</h4>
+    <p>The rewards plate promises a dated ledger of every credit and redemption.</p>
+    <p class="ev"><b>#95</b> &rarr; <q>Points statement &middot; Every credit and redemption,
+      dated</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-21</div><div class="item__b">
+    <h4>Reward redemption &mdash; confirm</h4>
+    <p>Four priced redemption buttons with no confirmation step between the tap and the spend.</p>
+    <p class="ev"><b>#95</b> &rarr; <q>150 pts</q>, <q>1,000 pts</q>, <q>2,500 pts</q>,
+      <q>5,000 pts</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-22</div><div class="item__b">
+    <h4>Referrals &mdash; all</h4>
+    <p>The referral plate summarises invitees and links to the full list.</p>
+    <p class="ev"><b>#94</b> &rarr; <q>View all</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-23</div><div class="item__b">
+    <h4>Pedigree certificate</h4>
+    <p>The genealogy plate shows three generations and offers the certificate itself. That
+      document is a core trust artefact and has no plate.</p>
+    <p class="ev"><b>#26</b> &rarr; <q>View full pedigree certificate</q>. The phrase appears
+      nowhere else in the run.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-24</div><div class="item__b">
+    <h4>Supervisor directory</h4>
+    <p>The assign-supervisor plate shows four candidates and links to twelve. The browsable
+      directory does not exist &mdash; the hosts directory at #71 is a different list.</p>
+    <p class="ev"><b>#67</b> &rarr; <q>See all 12</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-25</div><div class="item__b">
+    <h4>Supervisor record &mdash; filings and ratings</h4>
+    <p>A supervisor's profile cites their filing count and rating count as links. Both are the
+      evidence an owner would want before assigning an animal, and neither opens.</p>
+    <p class="ev"><b>#68</b> &rarr; <q>All 148</q> and <q>All 214</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-26</div><div class="item__b">
+    <h4>Unit transfer &mdash; tracking</h4>
+    <p>The offers plate offers to track a transfer in progress. The owner-side tracking view is
+      undrawn; the host-side confirmation plates are a different actor's screens.</p>
+    <p class="ev"><b>#81</b> &rarr; <q>Track unit transfer</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--a">track A</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-27</div><div class="item__b">
+    <h4>Coverage &mdash; states and host ranches</h4>
+    <p>A settings row naming the supervisor's working area, which determines every assignment they
+      are offered.</p>
+    <p class="ev"><b>#124</b> &rarr; <q>States &middot; Oyo, Osun, Kwara &middot; 2 host ranches,
+      61 animals</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-28</div><div class="item__b">
+    <h4>Payout account &mdash; supervisor</h4>
+    <p>Named twice, including as an onboarding task while an application is under review.</p>
+    <p class="ev"><b>#124</b> &rarr; <q>Payout &middot; GTBank &lowast;&lowast;&lowast;&lowast;4419
+      &middot; paid on the 7th</q>; <b>#104</b> &rarr; <q>Add the account we should pay into</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span><span class="tag tag--reuse">may share C-08</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-29</div><div class="item__b">
+    <h4>Privacy &mdash; what owners see</h4>
+    <p>A supervisor is a named individual carrying a public record. This row is where they would
+      inspect and control that exposure.</p>
+    <p class="ev"><b>#124</b> &rarr; <q>Privacy and what owners see &middot; Name, licence
+      reference, states and filing record</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-30</div><div class="item__b">
+    <h4>Practice filing &mdash; nothing is filed</h4>
+    <p>Offered to applicants waiting on review, and the safest way to learn the filing standard
+      before a real record counts against them.</p>
+    <p class="ev"><b>#104</b> &rarr; <q>Practise a record &mdash; nothing is filed</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-31</div><div class="item__b">
+    <h4>Raise an issue on an animal</h4>
+    <p>The visit checklist offers an escape hatch mid-visit that both raises an issue and calls a
+      vet. It is the welfare path and it opens onto nothing.</p>
+    <p class="ev"><b>#111</b> &rarr; <q>Something is wrong with this animal &middot; Raises an
+      issue and calls the vet before you file</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-32</div><div class="item__b">
+    <h4>Earnings statement &mdash; supervisor</h4>
+    <p>The earnings plate summarises and links to the full history of sixty-one entries.</p>
+    <p class="ev"><b>#121</b> &rarr; <q>All 61</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-33</div><div class="item__b">
+    <h4>Notification settings &mdash; supervisor</h4>
+    <p>A distinct set from the owner's: visit reminders, owner messages, marketing. The owner
+      plate at #51 does not carry these controls.</p>
+    <p class="ev"><b>#124</b> &rarr; <q>Notifications &middot; Visit reminders on, owner messages
+      on, marketing off</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--b">track B</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-34</div><div class="item__b">
+    <h4>Capacity and species</h4>
+    <p>The setting that governs intake, and therefore the at-capacity refusal already drawn at
+      #138.</p>
+    <p class="ev"><b>#148</b> &rarr; <q>Capacity and species &middot; 1,600 places &middot;
+      cattle, sheep, goats</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-35</div><div class="item__b">
+    <h4>Staff and gate access</h4>
+    <p>Who may confirm a transfer and who holds a tag reader &mdash; the permission model behind
+      the escrow confirmations at #139 to #142.</p>
+    <p class="ev"><b>#148</b> &rarr; <q>Staff and gate access &middot; 3 people &middot; 1 can
+      confirm &middot; 3 hold tag readers</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-36</div><div class="item__b">
+    <h4>Payout account &mdash; ranch</h4>
+    <p>A company account rather than a personal one, which is why it may not simply reuse the
+      owner form.</p>
+    <p class="ev"><b>#148</b> &rarr; <q>Payout account &middot; Zenith Bank &bull;&bull;&bull;&bull;8814
+      &middot; Ayalar Ranch Limited</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span><span class="tag tag--reuse">may share C-08</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-37</div><div class="item__b">
+    <h4>Inspection reports &mdash; all</h4>
+    <p>The compliance plate links to four reports going back to February 2025. Only a single
+      report plate exists, at #25, and it is the owner-facing view.</p>
+    <p class="ev"><b>#147</b> &rarr; <q>All inspection reports &middot; 4 reports since Feb
+      2025</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-38</div><div class="item__b">
+    <h4>Earnings statement &mdash; host</h4>
+    <p>Same shape as the supervisor's, on the host's own figures.</p>
+    <p class="ev"><b>#144</b> &rarr; <q>All 37</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-39</div><div class="item__b">
+    <h4>Notification settings &mdash; ranch</h4>
+    <p>The row states that escrow, arrivals and supervisor visits are always on, which is itself a
+      policy worth showing on a screen.</p>
+    <p class="ev"><b>#148</b> &rarr; <q>Notifications &middot; Escrow, arrivals and supervisor
+      visits are always on</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--c">track C</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-40</div><div class="item__b">
+    <h4>Add an operator</h4>
+    <p>The roles console can grant and revoke but has no screen for bringing a new case-worker
+      into the estate.</p>
+    <p class="ev"><b>#171</b> &rarr; <q>Add an operator</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--d">track D</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-41</div><div class="item__b">
+    <h4>Function and grant editor</h4>
+    <p>Three separate controls on the roles console act on a grant, and none of them opens an
+      editor. This is the screen where a conflict flagged on #171 would actually be resolved.</p>
+    <p class="ev"><b>#171</b> &rarr; <q>Add a function</q>, <q>Grant</q>, <q>Split the grant</q>,
+      <q>Remove approve &mdash; resolve the conflict</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--d">track D</span></div>
+  </div></div>
+
+  <div class="item"><div class="item__id">C-42</div><div class="item__b">
+    <h4>Audit log &mdash; export a bundle</h4>
+    <p>Two controls compose an evidence bundle for a regulator or a court. What gets included, and
+      over what range, is not shown anywhere.</p>
+    <p class="ev"><b>#170</b> &rarr; <q>Bundle these 15 entries</q> and <q>Export a bundle</q>.</p>
+    <div class="tags"><span class="tag tag--t2">named destination</span><span class="tag tag--d">track D</span></div>
+  </div></div>
+</section>
+
+<section class="sec">
+  <div class="sec-head"><span class="lbl">03</span><h2>What was deliberately not counted</h2>
+    <span class="aside">so the 42 holds up</span></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Excluded</th><th class="n">Count</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td>In-place controls &mdash; chips, tabs, steppers, segmented switches</td><td class="n">220</td>
+        <td>They change the plate they sit on. A filter chip owes no destination.</td></tr>
+      <tr><td>Tab bars and operator rails</td><td class="n">433</td>
+        <td>Every tab-bar and rail destination is drawn somewhere in the run; these are navigation
+          between existing screens.</td></tr>
+      <tr><td>App-bar buttons &mdash; back, close, search, more</td><td class="n">149</td>
+        <td>Return and dismiss actions, resolved by the plate they came from.</td></tr>
+      <tr><td>System hand-offs &mdash; share sheets, telephone numbers, file downloads, OS camera</td><td class="n">&mdash;</td>
+        <td>The operating system owns the next surface, not Andry. <q>Call the fraud line</q> is
+          complete as drawn.</td></tr>
+      <tr><td>Actions resolving to an existing plate</td><td class="n">&mdash;</td>
+        <td>Checked individually. <q>See what is held</q> &rarr; #91, <q>report it</q> &rarr; #74,
+          <q>All visits</q> &rarr; #108, <q>Fees, in full</q> &rarr; #5.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<div class="note">
+  <h2>Two judgement calls worth your disagreement</h2>
+  <p><strong>The four legal documents could be one screen.</strong> C-10 through C-13 are the same
+    component &mdash; a scrolling document with a title, a version date and an accept affordance
+    &mdash; carrying four different texts. Drawn as one template with four content states the
+    total falls from 42 to 39. They are listed separately because each is linked from a different
+    moment in the journey and a reviewer needs to see each one land.</p>
+  <p><strong>Payout account may be one screen or three.</strong> C-08, C-28 and C-36 all capture a
+    bank account, but the owner's must match a verified personal identity, the supervisor's is
+    personal and paid on a fixed date, and the ranch's is a company account. If the name-match rule
+    at #90 generalises, this is one screen and the total falls to 40 &mdash; or 37 alongside the
+    document viewer. If it does not, three plates are the honest answer.</p>
+  <p>Nothing in the approved 171 was modified, moved or re-rendered to produce this. The register
+    was built by parsing the published run, and the affordance counts were verified against the
+    live DOM at <b>adextetoo.github.io/andry-approved-run</b>: 1,296 buttons, 35 links, 171 plates.</p>
+</div>
+
+</div>
