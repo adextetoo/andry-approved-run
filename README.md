@@ -162,4 +162,13 @@ source HTML files alongside the scripts and run them in the order above.
 
 ## Licence
 
-No licence is granted. This is a private design record; all rights reserved.
+[MIT](LICENSE). Copyright (c) 2026 adextetoo.
+
+Two things the licence does not do, worth stating since this repository is mostly design
+rather than code:
+
+- **It grants no trademark rights.** "Andry" and any marks, logos or brand elements shown
+  in the plates are not licensed by MIT and are not covered here.
+- **It is a software licence.** It fits the build tooling in `tools/` cleanly. If you would
+  rather the plates, written content and design system carried different terms from the
+  code, the usual pairing is MIT for `tools/` and something like CC BY 4.0 for the rest.
